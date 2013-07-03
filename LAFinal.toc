@@ -1,0 +1,37 @@
+\select@language {spanish}
+\contentsline {chapter}{Contenidos}{\es@roman {8}}{section*.2}
+\contentsline {chapter}{\numberline {I}INTRODUCCI\'ON Y MOTIVACI\'ON}{1}{chapter.1}
+\contentsline {chapter}{\numberline {II}SUPERSIMETR\'IA}{13}{chapter.2}
+\contentsline {section}{\numberline {II.1}\'Algebras de Clifford y espinores}{13}{section.2.1}
+\contentsline {subsection}{\numberline {II.1.1}Tensores invariantes bajo el grupo de Lorentz.}{25}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {II.1.2}Identidades entre las matrices $\Gamma $}{27}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {II.1.3}Dimensi\'on $D=4$}{30}{subsection.2.1.3}
+\contentsline {section}{\numberline {II.2}Super\'algebras de Lie}{31}{section.2.2}
+\contentsline {subsection}{\numberline {II.2.1}Super\'algebras de Poincar\`e}{36}{subsection.2.2.1}
+\contentsline {section}{\numberline {II.3}Supermultipletes}{38}{section.2.3}
+\contentsline {chapter}{\numberline {III}SUPERESPACIO}{44}{chapter.3}
+\contentsline {section}{\numberline {III.1}Teor\IeC {\'\i }as de campos supersim\'etricas}{44}{section.3.1}
+\contentsline {section}{\numberline {III.2}El superespacio}{47}{section.3.2}
+\contentsline {section}{\numberline {III.3}Proyectores}{53}{section.3.3}
+\contentsline {section}{\numberline {III.4}Supercampos en el superespacio}{55}{section.3.4}
+\contentsline {subsection}{\numberline {III.4.1}Super Maxwell en $D=4$}{55}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {III.4.2}Supersimetr\IeC {\'\i }a extendida}{65}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {III.4.3}El caso de $D=6$ y $N=1$}{67}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {III.4.4}Super Maxwell en todas las dimensiones}{75}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {III.4.5}Super Maxwell en el superespacio arm\'onico}{76}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {III.4.6}Prepotenciales para super Maxwell}{78}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {III.4.7}Otra forma para $N=2$}{81}{subsection.3.4.7}
+\contentsline {section}{\numberline {III.5}Ap\'endice: $S^2=SU(2)/U(1)$}{83}{section.3.5}
+\contentsline {chapter}{\numberline {IV}ACOPLAMIENTO A SUPER MAXWELL}{89}{chapter.4}
+\contentsline {section}{\numberline {IV.1}Superpart\IeC {\'\i }culas, cuerdas y membranas}{89}{section.4.1}
+\contentsline {section}{\numberline {IV.2}Ecuaciones de movimiento y simetr\IeC {\'\i }a $\kappa $}{93}{section.4.2}
+\contentsline {section}{\numberline {IV.3}La superpart{\'\i }cula acoplada a super Maxwell}{94}{section.4.3}
+\contentsline {chapter}{\numberline {V}CUANTIZACI\'ON}{103}{chapter.5}
+\contentsline {section}{\numberline {V.1}Part\IeC {\'\i }culas masivas}{103}{section.5.1}
+\contentsline {section}{\numberline {V.2}El m\'etodo de los proyectores}{108}{section.5.2}
+\contentsline {section}{\numberline {V.3}Superpart\IeC {\'\i }culas en $D>4$}{116}{section.5.3}
+\contentsline {section}{\numberline {V.4}Superpart\IeC {\'\i }culas con carga central}{117}{section.5.4}
+\contentsline {section}{\numberline {V.5}Part\IeC {\'\i }culas sin masa}{121}{section.5.5}
+\contentsline {section}{\numberline {V.6}Esp\IeC {\'\i }nores puros}{122}{section.5.6}
+\contentsline {chapter}{\numberline {VI}CONCLUSIONES}{126}{chapter.6}
+\contentsline {chapter}{Bibliograf\'{\i }a}{129}{section*.4}

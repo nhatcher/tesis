@@ -1,0 +1,1022 @@
+\chapter{SUPERESPACIO\label{cap2}}
+\section{Teorías de campos supersimétricas}
+En esta corta sección vamos a poner un ejemplo de una sencilla teoría de campos supersimétrica. Esta basada en la acción:
+\begin{gather}
+S=\int d^4x[\p_\mu\phi\p^\mu\phi+\bar\Psi i\bar\sigma^\mu\p_\mu\Psi+F^* F+(m\phi F+\frac{1}{2}m\Psi^2+C.C.)]
+\end{gather}
+Los campos son\\
+$\bullet$ Un campo escalar $\phi(x)$\\
+$\bullet$ Un campo de espin $1/2$, $\Psi^a$\\
+$\bullet$ Un campo auxiliar $F$\\
+Observen que para el campo $F$ no hay dinámica y puede ser fácilmente eliminado del Lagrangiano. Su presencia es necesaria para que el Lagrangiano sea invariante bajo transformaciones de supersimetría. Un campo así se llama \textit{auxiliar}. Otra sorpresa es que el campo fermiónico $\Psi^a(x)$ no puede ser un número complejo. El campo debe tomar valores en un álgebra de Grassmann. En otras palabras debemos seguir la regla de oro
+\begin{gather}
+\Psi^a\Psi^b=-\Psi^b\Psi^a
+\end{gather}
+El hecho de que necesitemos introducir estas extrañas reglas no pertenece a la supersimetría. Usted mismo puede ver fácilmente que no existe ningún Lagrangiano que dependa del campo $\Psi^a(x)$ cuya variación de la ecuación
+\begin{gather}
+\bar\sigma^{\mu\,\da a}\p_\mu\Psi_a=m\ep^{\da\db}\bar\Psi_\db
+\end{gather}
+La única manera de lograr esto es asumiendo la regla de Grassmann. También aparecen en física al realizar la integración funcional de las teorías de calibre como Q.E.D. Su necesidad fue destacada en viejos trabajos de Feynman y B. de Wit relacionados con la gravedad cuántica.\\
+
+Podemos tratar de entender esta relación de muchas maneras, pero parece ser que la que mejor resultados da es simplemente usarla como una buena regla y confiar en que la resultante teoría cuántica este libre de estos problemas. Tendremos ocasión de seguir hablando sobre este punto.\\
+
+Este Lagrangiano es invariante bajo ciertas transformaciones de simetría que mezclan los campos bosónicos con los fermiónicos
+\begin{gather}
+\delta\phi=\ep\Psi,\\
+\delta\Psi=\ep F-\sigma^\mu\p_\mu\phi\sigma^2\ep^*,\\
+\delta F=-i\ep^\dag\bar\sigma^\mu\p_\mu\Psi
+\end{gather}
+El parámetro de la transformación $\ep_a$ es nuevamente un parámetro de Grassmann. Por supuesto en esta teoría podemos construir una serie de generadores de simetría, constantes de movimiento, que satisfacen toda el álgebra de super Poincarè. Claro que hay que hacer una generalización adecuada de los corchetes de Poisson para el caso de de las variables de Grassmann pero finalmente entenderemos que la superálgebra de super Poincarè encuentra aquí una realización explícita. No es nuestro cometido aquí estudiar estas teorías. Haremos el cálculo para otros casos.\\
+
+Este es el multiplete quiral. Como puede comprobarse si se elimina el campo auxiliar el Lagrangiano es sólo invariante por supersimetría si se usan las ecuaciones de movimiento, es decir es invariante on-shell. Los grados de libertad on-shell de este sistema son un espinor $\Psi_a$ y un escalar complejo $\phi$ que representan una partícula de espín $1/2$ y dos des espín $0$.\\
+Los campos $\Psi_a$, $\phi$ y $F$ se llaman campos componentes y son los campos que componen el multiplete off-shell.\\
+
+Podríamos seguir escribiendo Lagrangianos supersimétricos y estudiando sus propiedades, la teoría es inmensamente rica. La teoría de campos supersimétrica es, de lejos, mucho más interesante que la no supersimétrica. Después de un trabajo de Olive y Witten se comprendió que en estas teorías existen solitones estables bajo deformaciones, estados BPS, de una importancia sin igual para la teoría cuántica. El régimen no perturbativo de estas teorías se entiende mucho mejor que el de sus compañeras no supersimétricas. También el régimen perturbativo es mejor, el número de diagramas es muy inferior conforme la supersimetría aumenta y hay casos en los que la teoría es incluso finita. Pero tampoco vamos a estudiar la cuantización de estos sistemas en esta tesis.\\
+
+No siempre se tiene tanto control de una teoría como en este caso. Usualmente la acción que se tiene para una teoría supersimétrica sólo es invariante on-shell, el Lagrangiano supersimétrico off-shell, si existe, no se conoce. Tal es el caso de super Yang-Mills en $D=10$. El Lagrangiano es
+\begin{gather}
+S=\int d^Dx\left(\frac{-1}{4}F_\mn F^\mn+i\Psi^a S\ud{\mu}{a\db}\p_\mu\bar\Psi^\db\right)
+\end{gather}
+\section{El superespacio}
+En 1974 casi inmediatamente despues del modelo de Wess y Zumino Salam y Strathdee introdujeron un concepto muy útil para escribir teorías de campos supersimétricas. Imaginemos que $\Lambda$ es un álgebra de Grassmann cuyos objetos anticonmutan. Los campos de la teoría serán objetos que tomen valores en la parte par o impar de este álgebra y dependan de unos $x^\mu$ que son las coordenadas del espacio tiempo y pertenecen a $\Lambda_P$ y de unos espinores $\theta^a$ que toman valores en la parte impar del álgebra $\Lambda_I$. Los supercampos resultantes $V(x^\mu,\theta^a)$ pueden desarrollarse por Taylor en la variable $\theta^a$. El resultado es un número finito de términos con un número finito de coeficientes que serán campos usuales que sólo dependen de las variables del espacio-tiempo. El punto importante es que este conjunto de campos así construido siempre consiste en un multiplete de supersimtría. Toda teoría bien construida a partir de supercampos es automáticamente supersimétrica.\\
+
+Una pregunta natural surge aquí, ¿son los supercampos objetos físicamente importantes o son sólo una manera conveniente de hacer cálculos? ¿Son las nuevas coordenadas $\theta^a$ una verdadera extensión del espacio tiempo o son sólo una herramienta para contar adecuadamente signos?\\
+
+En nuestro trabajo asumiremos que estas nuevas coordenadas \textit{realmente} parametrizan un nuevo espacio. Nuestro cometido será el de entender geométricamente las teorías físicas formuladas en términos de supercampos.\\
+Para empezar vamos a dar una definición ligeramente más rigurosa de las construcción que hemos hecho del superespacio.\\
+
+Has ahora el tratamiento que hemos dado de la teoría de las superálgebras y, en particular de la de super Poincarè es completamente riguroso. Pero llega el momento en el que tenemos que hacer un ``twist" a la teoría para poder hablar del grupo de super Poincarè. Para ser concretos trabajaremos en lo que sigue con el álgebra de super Poincarè en $D=4$ y $N=1$. Los generadores son $(P_\mu,\,J_\mn,\, Q_a\bar,\, Q_\da)$ y es un álgebra sobe $\mathbb{C}$. Vamos a cambiar esta álgebra por un álgebra definida sobre las variables de Grassmann.\\
+
+El álgebra de Grassmann $\Lambda$ es un álgebra sobre $\mathbb{C}$ que se construye con los generadores $1$, $\xi_i$ con $i=1,...,\infty$ de manera que
+\begin{gather}
+\xi_i\xi_j+\xi_j\xi_i=0
+\end{gather}
+Un elemento cualquiera del álgebra se escribe como
+\begin{gather}
+Z=z_0+\sum_{i}z_i\xi_i+\sum_{i,j}z_{ij}\xi_i\xi_j+...
+\end{gather}
+Donde $z_0$, $z_i$, $z_{ij}$,... son número complejos. Un elemento cualquiera se puede separar en parte impar
+\begin{gather}
+Z=Z_P+Z_I\\
+Z_P=z_0+\sum_{ij}z_{ij}\xi_i\xi_j+....\nonumber\\
+Z_I=\sum_i z_i\xi_i+\sum_{ijk}z_{ijk}\xi_i\xi_j\xi_k+...
+\end{gather}
+La parte impar es siempre de cuadrado cero, como puede probarse fácilmente.\\
+
+Creo que está claro que esta definición dista de ser rigurosa. El problema está en las sumas infinitas. Cada vez que los físicos hacen cálculos con sumas infinitas sin especificar problemas de convergencia dicen que el cálculo es puramente formal. Nosotros no vamos a intentar arreglar este punto (por que no se como hacerlo). Y trabajaremos, como casi toda la literatura física con la sencilla regla de que las variables de Grassmann impares anticonmutan. Dividimos entonces el álgebra de Grassmann en dos partes $\Lambda=\Lambda_P\bigcup \Lambda_I$. Ahora decimos que un elemento de nuestra superálgebra es una combinación
+\begin{gather}
+H=c^\mu P_\mu+l^\mn J_\mn+\chi^a Q_a+\bar \chi^\da\bar Q_\da 
+\end{gather}
+donde $\bar\chi^\da=(\chi^a)^*$\footnote{Los generadores de $\Lambda$ satisfacen la siguiente regla $\xi_i^*=\xi_i$. Dos variables de Grassmann cumplen que $(ab)^*=b^*a^*$} son variables de Grassmann impares y $c_\mu$, $l^{\mn}$ son variables pares. Dada una superálgebra de Lie encontramos el correspondiente grupo exponenciando. De manera que un elemento del grupo esta dado por $e^{iH}$. Con esta definición es fácil darse cuenta de que la transformación que lleva a un elemento $G$ del álgebra a otro elemento $e^{iH}Ge^{-iH}$ es un automorfismo del álgebra. esta es la razón del ``twist" y de las variables de Grassmann.\\ 
+
+Ahora estamos preparados para hablar del superespacio. Dado un grupo $G$ un a pregunta interesante es la de clasificar todas las posibles acciones de este grupo sobre un conjunto $\mathcal{M}$. La acción del grupo sobre $\mathcal{M}$ divide al espacio en clases de equivalencia llamadas órbitas. Supongamos que existe una única órbita (es decir la acción del grupo es transitiva). Sea $H_p$ un subgrupo de $G$ que deja invariante un punto $p\in\mathcal{M}$. Todos estos grupos de isotopia son isomorfos de manera que podemos ver la variedad como un espacio cociente $\mathcal{M}=G/H$ de forma natural. Dicho de otra manera los posibles espacios sobre los que un grupo $G$ actúa transitivamente están clasificados por sus subgrupos. Dado un grupo $G$ y un subgrupo $H$ hay dos formas de hacer el cociente. El subgrupo $H$ divide a $G$ en clases de equivalencia\\
+$\bullet$ $g_1\equiv g_2\iff g_1= g_2 h$, el espacio cociente lo denotamos $G/H$\\
+$\bullet$ $g_1\equiv g_2\iff g_1= h g_2$, el espacio cociente lo denotamos $G\setminus H$
+Veamos como funciona esta construcción en el caso familiar de Poincarè. Tomemos como subgrupo el grupo de Lorentz. Creo que es inmediato comprobar que en este caso el cociente es $\mathbb R^4$. Supongamos que hacemos el cociente por la derecha, de forma que escribimos
+\begin{gather}
+{\mathcal P}/L={\mathbb R}^4
+\end{gather}
+Alguien puede rápidamente advertir que, a pesar de esta construcción \textit{todo} el grupo de Poincarè sigue actuando sobre $\mathbb R^4$. El motivo es que aún sobrevive las transformaciones por la izquierda. El grupo de Poincarè se puede escribir como un producto semidirecto $\mathcal P=T^4\odot L$\footnote{Lo que estamos haciendo es factorizar un elemento del grupo y escribirlo como $e^{ia^\mu P_\mu}e^{i\omega^\mn J_\mn}=e^{ia^\mu P_\mu}\Lambda$}. De manera que un elemento del grupo lo escribimos como $(a^\mu,\Lambda\ud{\mu}{\nu})$. Si $x^\mu$ es un elemento del espacio el grupo lo lleva a $\Lambda\ud{\mu}{\nu}+a^\mu$. Con esto podemos fácilmente escribir
+\begin{gather}
+(a, \Lambda)\times(\tilde{a},\tilde{\Lambda})=(a+\Lambda\tilde{a},\Lambda\tilde{\Lambda})
+\end{gather}
+Si cocientamos por la derecha quiere decir que identificamos con $(a,\Lambda)$ todos los que pueda obtener multiplicado por la derecha por algún $(0,\tilde{\Lambda})$. Claramente entonces $(a_1,\Lambda_1)$ es equivalente a $(a_2,\Lambda_2)$ si y sólo si $a_1=a_2$. El cociente está parametrizado por $\mathbb R^4$. Obviamente en este cociente Lorentz actúa trivialmente, por construcción. Veamos como actúa Poincarè en el cociente. Sea $(a,\Lambda)$ un representante. Si lo multiplicamos por la izquierda por $(\tilde{a},\tilde{\Lambda})$ obtenemos $(\tilde{a}+\tilde{\Lambda}a,\tilde{\Lambda}\Lambda)$ que es la acción que queremos.\\
+
+Veamos como funciona esta construcción para el caso de super Poincarè. Lo que tenemos que hacer es cocientar el super grupo de Poincarè entre uno de sus subgrupos. Claramente este subgrupo debe contener a Lorentz y no a Poincarè. Creo que todo el mundo estará de acuerdo en que Lorentz es la única posibilidad. Escribimos, por tanto un elemento del supergrupo como
+\begin{gather}
+e^{i(a^\mu P_\mu+\xi^a Q_a+\bar \xi_\da \bar Q^\da)}\Lambda
+\end{gather}
+Un elemento del cociente viene parametrizado por $(x^\mu,\theta^a,\bar\theta^\da)$, el superespacio $D=4$ y $N=1$. Para estudiar como actúa super Poincarè sobre este espacio debemos hacer lo mismo que antes. Claramente las translaciones actúan trasladando $x^\mu$, Lorentz áctua separadamente sobre el espacio de espinores y vectores y sólo debemos estudiar que pasa por una transformación generada por $Q_a$. Para ver cómo actúa debemos calcular
+\begin{gather}
+e^{i(\xi^a Q_a-\bar \xi^\da\bar Q_\da)}e^{i(a^\mu P_\mu+\xi^a Q_a+\bar \xi_\da \bar Q^\da)}
+\end{gather}
+Usando la fórmula de Cambell-Hausdorff $e^A e^B=e^{A+B+\frac{1}{2}\con{A,B}+...}$ podemos encontrar las transformaciones finitas
+\begin{gather}
+x^\mu\rightarrow x^\mu-i\xi\sigma^\mu\bar\theta+i\theta\sigma^\mu\bar\xi\\
+\theta^a\rightarrow \theta^a+\xi^a\\
+\bar\theta^\da\rightarrow \bar\theta^\da+\bar\xi^\da
+\end{gather}
+Con esto en la mano es fácil escribir los generadores de super Poincarè como operadores diferenciales sobre los supercampos $V(x^\mu,\theta^a,\bar\theta^\da)$
+\begin{gather}
+P_\mu=-i\p_\mu\\ 
+Q_a=-i\p_a-\s\td{b}\p_\mu\\ 
+\bar Q_\db=i\bar\p_\db+\theta^a\s\p_\mu \\
+J_\mn=-i(x_\mu\p\nu-x_\nu p_\mu)+\theta^a S\du{\mn\,a}{b}\frac{\p}{\p\theta^b}+\bar\theta^\da{\bar S}\du{\mn\,\da}{\db}\frac{\p}{\p\bar\theta^\db} 
+\end{gather}
+Es fácil comprobar que estos operadores satisfacen las reglas del álgebra de super Poincarè que ya hemos estudiado.\\
+Tendremos ocasión de estudiar en más profundidad este superespacio, pero ahora quisiera tener ocasión de explicar que sucede si hacemos $N>1$. En este caso pudiésemos hacer exactamente lo mismo y obtendríamos un superespacio parametrizado por $(x^\mu,\theta^{a\,i},\bar\theta\ud{\da}{i})$ con $i=1,...,N$. Pero ahora hay algo más que podemos hacer. La idea procede la escuela soviética de Dubna y es lo que se ha venido en llamar el superespacio harmónico. El grupo de super Poincarè en este caso se puede agrandar con el conjunto de automorfismos internos. Es fácil ver que este grupo es, al menos, $U(N)$. Simplemente si redefinimos las $Q_{a\,i}$ con una matriz $U\du{i}{j}Q_{a\,i}$ los corchetes de la superálbegra quedan invariantes. Ahora tenemos más opciones para dividir. El grupo de super Poincarè esta agrandado por el grupo de automorfismos internos del álgebra $U(N)$: si llamamos a $\mathcal P$ el grupo generado por $(P_\mu, J_\mn, Q_{ai}, \bar Q\du{\da}{i}, T_r)$ entonces podemos dividir por un supegrupo que contenga a Lorentz y algún subgrupo de $U(N)$. Las posibilidades son muchas y no hay una regla para saber cual elegir. Aunque la construcción es bastante geométrica la pluralidad de posibilidades que nos introduce puede ser molesta. De todas formas el método ha cosechado grandes éxitos algunos de los cuales tendremos ocasión de ver en este estudio. Probablemente el más importante es el de haber sido capaz de escribir una acción off-shell para $N=3$ super Yang-Mills. ¿Porque, sin embargo, no ha sido capaz de tratar el caso $N=4$?\\
+
+Tratemos con algo de profundidad el caso $N=2$. Aquí la lección que parece funcionar es agrandar super Poincarè por $SU(2)$ y cocientar por $U(1)$. Lo que sigue puede considerarse como una introducción algo personal al superespacio armónico.\\
+
+El superespacio ahora será topológicamente ${\mathbb R}^{4|8}\otimes S^2$\footnote{La notación ${\mathbb R}^{n|m}$ índica un vector de $n$ números de Grassmann pares y $m$ impares reales.} y vendrá descrito por $(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i},u\du{i}{?})$ que, como hemos dicho, es una notación redundante pero útil. Un supercampo entonces será una función adecuada de $V(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i},u\du{i}{?})$. La gran ventaja de estos supercampos es que poseen un número infinito de campos en componentes por lo que, como decíamos en la introducción tienen en su alma la posibilidad de evadir los teoremas que dificultan el encontrar una acción off-shell para super Maxwell en $D=10$.\\
+
+Tambien será importante para nosotros representar en el superespacio teorías con cargas centrales. Por simplicidad trabajaremos l caso $D=4$ y $N=2$. En el análisis que hemos hecho del superespacio ordinario nos induce a pensar que el espacio correcto en el que debemos trabajar está parametrizado por las variables $(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i},z,\bar z)$. De manera que los generadores serán
+\begin{gather}
+Z\rightarrow -i\frac{\p}{\p z}\\
+P_\mu\rightarrow -i\p_\mu\\
+Q_{ai}\rightarrow -i\p_{ai}-\sigma\ud{\mu}{a\db}\bar\theta\ud{\db}{i}+\ep_{ab}\ep_{ij}\theta^{bj}\frac{\p}{\p z}\label{Qcentral}\\
+\bar Q\du{\da}{i}\rightarrow i\p\du{\da}{i}-\theta^{ai}\sigma\du{\mu}{a\da}\p_\mu+\ep_{\da\db}\ep^{ij}\bar\theta\du{j}{\db}\frac{\p}{\p \bar z}
+\end{gather}
+\section{Proyectores\label{proyectores}}
+En general los supercampos como los hemos definido no soportan representaciones irreducibles del álgebra de supersimetría incluso despues de imponer la candición $p^2+m^2=0$. En ocasiones puede ser interesante poder descomponer espacio de supercampos en representaciones irreducibles del álgebra de supersimetría. Esto se puede lograr si se dispone de una serie de operadores de proyección $P_i$ que verifiquen
+\begin{gather}
+\sum_i P_i=I\\
+P_iP_j=\delta_{ij}P_i
+\end{gather}
+Encontrar la forma explícita de estos operadores puede no ser sencilla. en $D=4$ y $N=1$ hay sólo tres de estos pero en $D=10$ y $N=1$ hay 15. En $D=4$ el problema fue abordado inicialmente por Sokatchev \cite{Sok75}, por Taylor\cite{Tay80} y en un trabajo que encuentro muy excitante de Rittenberg y Sokatchev \cite{RitSok81} pero la solución general, que ahora exponemos vino de la mano de Siegel y Gates \cite{GatSie81} \cite{GatGriRoeSie}.\\
+
+La idea es básicamente la de expandir un campo es sus componentes quirales. Esto funciona más o menos igual en dimensiones pares $4,6\mod 8$ pero \textit{no} funciona para dimensiones $D=2\mod 8$ como $D=10$. En dimensiones $D=4,6\mod 8$ podemos elegir los fermiones de Weyl pero no podemos \textit{además} imponer Majorana. Esto obliga a que tengamos supercampos $V(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i})$. La condición de quiralidad es
+\begin{gather}
+\bar D\du{\da}{i}V=0
+\end{gather}
+Y su solución es $V=V(x^\mu_I,\theta^{ai})$ Este supercampo contiene $2^{\alpha N}$ donde $\alpha=2^{D/2}$ es la dimensión del espacio de espinores. Dentro de este multiplete sólo cabe una representación irreducible, la de superespín cero que tiene exactamente ese número de grados de libertad. Un supercampo quiral se obtiene a partir de un supercampo arbitrario multiplicando por $\bar D^{\alpha N}$. Sin embargo un supercampo \textit{escalar} arbitrario contiene otras subrepresentaciones además de la quiral. Para saber cuantas representaciones irreducibles hay dentro de un supercampo es muy útil la tabla \ref{tabla:supermulD4}. Por ejemplo en un super campo con $N=4$ hay 42 representaciones de superespín 0, 48 de superespín $1/2$, 27 de superespín $1$, 8 de superespín $3/2$ y 1 de superespín 2 que corresponde a un supermultiplete de superespín 0 en $N=8$. Hecho que no se si está muy claro en la literatura. Para probar esta afirmaciónsólo notemos que el álgebra de las matrices $D_{ai}$ coincide con la de las cargas $Q_{ai}$ y las representaciones irreducibles se construyen de la misma manera solo que ahora el vacío de Fock soporta toda una representación de super Poincarè.\\
+
+¿Cómo extraemos las representaciones irreducibles de un supercampo? La respuesta es idéntica a extraer el componente en espines de un supermultiplete.\\
+En general entonces tenemos el siguiente
+\begin{teorema}
+En dimensión $D=4,6 \mod 8$ y con extensión de supersimetría $N$ un supercampo $V(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i})$ se puede escribir de manera única como
+\begin{gather}
+V=\sum_i V_i
+\end{gather}
+Donde  los $V_i$ se obtienen como 
+\begin{gather}
+V_i=\Proy_i V\\
+\Proy_i\Proy_j=\delta_{ij}\Proy_i\\
+\sum_i \Proy_i = I
+\end{gather}
+Los operadores $\Proy_i$ son, por tanto, operadores de proyección.
+\end{teorema}
+\section{Supercampos en el superespacio}
+En esta sección vamos a tratar de explicar como podemos escribir teorías supersimétricas en función de supercampos. De todos modos vamos a restringir nuestro estudio en gran medida. Vamos a estudiar solamente las teorías de super Yang-Mills. La razón está en que son teorías lo suficientemente complicadas para tener todos los ingredientes de las teorías de supercampos pero tan sencillas como es posible. Las teorías de super gravedad, por ejemplo, son más complicadas. Además el contenido geométrico de estas teorías es enorme. La idea es que si sabemos tratar estas teorías bien sabremos tratar otras más complicadas.
+\subsection{Super Maxwell en $D=4$}
+Empecemos con el tratamiento usual de super Maxwell (en realidad super Yang-Mills, pero eso no nos importará) en el superespacio. El multiplete de super Maxwell consiste on-shell en un fotón y un fotino, y como hemos visto el multiplete off-shell es un fotón, un fotino y un escalar auxiliar. ¿Cómo encontrar un supercampo adecuado?\\
+
+Como muestran los manuales de supersimetr{\'\i}a basta con elegir un supercampo pseudoescalar, es decir invariante bajo cualquier transformaci{\'o}n de Lorentz (hay otras opciones, esta es la m{\'a}s simple). Un supercampo as{\'\i} no se llama escalar sino \textit{vectorial} porque contiene al supermultiplete vectorial, that's life. A{\'u}n as{\'\i} este supercampo contiene demasiados grados de libertad y es necesario imponer algunas restricciones sobre {\'e}l para \textit{matar} los indeseados. Una primera es obligar a que sea real. De manera que tenemos un supercampo $V(x,\theta)$ real. A{\'u}n este supercampo tiene demasiada libertad y lo {\'u}ltimo que necesitamos hacer es decir que significa invariancia de calibre en este caso. La respuesta es que dos supercampos vectoriales son equivalentes de calibre si su diferencia es de la forma $i(\Phi-\Phi^*)$, donde $\Phi(x,\theta)$ es un supercampo quiral. Es decir si $V(x,\theta)$ es un supercampo vectorial entonces la transformaci{\'o}n de calibre adecuada
+\begin{gather}
+V(x,\theta)\rightarrow V(x,\theta)+i(\Phi-\Phi^*)
+\end{gather}
+La raz{\'o}n es porque en el desarrollo en potencias de $\theta$ hay un t{\'e}rmino $A_\mu(x)$ que bajo esa transformaci{\'o}n cambia como un campo de calibre decente. Todo este cuento esta bien narrado en cualquiera de los manuales de supersimetr{\'\i}a aquí s{\'o}lo quiero resaltar las partes de la historia que son relevantes para nosotros.
+\\ Lo m{\'a}s importante de todo esto es darse cuenta que todo el mecanismo es completamente ad hoc. Es decir no hay ninguna raz{\'o}n para decir que deseamos partir de un supercampo \textit{escalar} bajo Lorentz, ni que queramos imponer la condici{\'o}n de realidad, ni para decir que la simetr{\'\i}a de calibre se realiza de la forma mencionada. O bien el {\'u}nico motivo es simplemente porque funciona.
+\\ Claro esa puede ser una raz{\'o}n suficiente para algunos, pero la falta de geometr{\'\i}a es arrecha y puede generar problemas. El primer problema es ?`c{\'o}mo se mueve una superpart{\'\i}cula en presencia de super Maxwell? o mejor como le gustar{\'\i}a decir a Jorge Bellorin ?`c{\'o}mo se acopla una superpart{\'\i}cula a un campo de calibre (con super en alg{\'u}n lado)? El problema no puede responderse tal y como est{\'a}n planteadas las cosas simplemente porque no hay geometr{\'\i}a. !`Ojo! no digo que no podamos dar respuesta a ese problema, estoy seguro de que mirando como transforman cada uno de los t{\'e}rminos uno puede dar una respuesta adecuada. Pero creo que parece evidente que esta pregunta deja en jaque a todo este proceso. Vamos a tratar de dar respuesta a esta pregunta de manera m{\'a}s geom{\'e}trica empezando por otro lado.\\
+
+Supongamos ahora que empezamos con un super campo de calibre $A_M(x,\theta)$ donde $M$ recorre tanto índices del espacio tiempo como espinoriales $M=(\mu,a)$. Esta ser{\'\i}a la generalizaci{\'o}n directa de super Maxwell que existe en todas dimensiones y que tiene much{\'\i}simos m{\'a}s campos de los deseados. La transformaci{\'o}n de calibre, convenientemente definida ser{\'a} $A_M\rightarrow A_M+D_M\Lambda$, donde $\Lambda$ es un supecampo arbitrario. Aqu{\'\i} la geometr{\'\i}a es org{\'a}smica pero insisto hay demasiados campos. Otra vez hay que eliminar de alguna forma los que no queremos. Pero ?`porqu{\'e}? y ?`c{\'o}mo?. Si responde bien a estas dos preguntas en menos de un a{\~n}o ser{\'e} un chico muy feliz. D{\'e}jame responder mal. ?`Porque? simplemente porque estamos haciendo mal geometr{\'\i}a en el superespacio, no hemos identificado bien que es un espacio tangente y los grados de libertad no son los adecuados. ?`C{\'o}mo? cuando sepamos hacer geometr{\'\i}a tendremos respuesta. Lo que vamos a hacer ahora es sacarnos de la manga una serie de ligaduras que debe cumplir $A_M$ de manera que tenga s{\'o}lo los grados de libertad que quiero para m{\'a}s tarde demostrar que estos vínculos surgen de manera natural al pedirle a la superpart{\'\i}cula acoplada como debe ser a super Maxwell que tenga simetr{\'\i}a $\kappa$. De tal suerte que tenemos una forma de responder el como, esto es, exigiendo simetr{\'\i}a kappa. El d{\'\i}a en el que encontremos una raz{\'o}n para esta simetr{\'\i}a tendremos geometr{\'\i}a, ?`convincente? O.K. a los c{\'a}lculos.\\
+
+En 4 dimensiones podemos elegir que los fermiones sean Majorana o Weyl y ambas son equivalentes. Los elegir{\'e} Weyl como todo el mundo hace. Eso quiere decir que el super espacio tiene coordenadas $(x^\mu,\theta^a,\bar\theta^{\dot a}=(\theta^a)^*)$.. Elegimos como en la mayor{\'\i}a de los manuales
+\begin{gather}
+P_\mu=i\p_\mu
+\\ Q_a=-i\p_a+\s\bar\theta^\db\p_\mu
+\\ \bar Q_\da=i\p_\da+\theta^a\s\p_\mu
+\end{gather}
+Satisfacen el {\'a}lgebra adecuada de super Poincar{\`e}. Las derivadas fermi{\'o}nicas se definen como
+\begin{gather}
+D_a=\p_a+i\s\bar\theta^\db\p_\mu
+\\ \bar D_\da=-\p_\da-i\theta^a\s\p_\mu
+\end{gather}
+Anticonmutan con los generadores $Q_a$ y $Q_\da$, pero entre ellas satisfacen el {\'a}lgebra
+\begin{gather}
+\cor{D_a,D_b}=\cor{\bar D_\da,\bar D_\db}=0\\
+\cor{D_a,\bar D_\db}=-2i\s \p_\mu
+\end{gather}
+Alguien podr{\'\i}a preguntarme ?`porqu{\'e} elegimos as{\'\i} las derivadas
+fermi{\'o}nicas?. Los manuales generalmente no dan una explicaci{\'o}n y
+la que dan no me convence. Creo sinembargo que existe una
+respuesta m{\'a}s que convincente y no estoy seguro de que la gente la
+tenga siempre presente. La raz{\'o}n es la siguiente. En el caso
+bos{\'o}nico $\p_\mu$ puede entenderse como un elemento del tangente.
+Si yo hago una transformaci{\'o}n en el espacio esta me induce una
+transformaci{\'o}n en el tangente. El grupo que opera en el tangente
+es Lorentz mientras que en el espacio es Poincar{\`e} (o en general
+Diff$M$). Recuerden que $x^\mu$ es un vector bajo Poincar{\`e} pero
+$\dot x^\mu$ es un vector \textit{s{\'o}lo} bajo Lorentz. En el
+supercaso el grupo que opera en el tangente tiene que ser otra vez
+Lorentz, !`b{\'a}sicamente porque no existe super Lorentz!, recuerden
+que dos transformaciones de supersimetr{\'\i}a me conducen a una
+translaci{\'o}n. Este hecho tan sumamente importante fue descubierto
+por los Rusos y ha generado ciertos errores a lo largo del tiempo.
+De manera que queremos que los elementos del tangente cambien en
+una representaci{\'o}n de Lorentz cuando abajo hago una de super
+Poincar{\`e}. El hecho de que las derivadas fermi{\'o}nicas anticonmuten
+con las supercargas quiere decir que transforman como esp{\'\i}nores de
+Lorentz. Eso es justo lo que queremos. ?`Convenzo? $D_a$ puede
+estar en alg{\'u}n espacio tangente $\p_a$ no. As{\'\i} las cosas definimos
+nuestro supercampo de calibre como
+\begin{gather}
+A_M(x^\mu,\theta^a,\bar\theta^\da)= (A_\mu(x^\mu,\theta^a,\bar\theta^\da), A_a(x^\mu,\theta^a,\bar\theta^\da))
+\end{gather}
+Si $\Lambda(x^\mu,\theta^a,\bar\theta^\da)$ es un supercampo arbitrario entonces una transformaci{\'o}n de calibre ser{\'a}
+\be
+A_M\rightarrow A_M+D_M\Lambda
+\ee
+Entiendo que $D_\mu=\p_\mu$. Ahora en el caso bos{\'o}nico puedo
+imaginar que $\p_\mu$ son derivadas covariantes en un espacio
+plano. En nuestro caso deben serlo las $D_M$. Pero si miramos bien
+ni conmutan ni anticonmutan, el (anti)conmutador de las derivadas
+covariantes esta relacionado con la torsi{\'o}n. Estrictamente:
+\be
+\cor{D_M,D_N}=T_{MN}^{\phantom{MN}L}D_L
+\ee
+En nuestro caso
+\be
+T_{a\db}^\mu=-2i\s\qquad \bar T_{\db a}^\mu=-2i\s
+\ee
+y los dem{\'a}s nulos. Es decir en el espacio plano !`hay torsi{\'o}n!. Puede no ser tan raro si uno piensa que tenemos esp{\'\i}n. Esta es la manera m{\'a}s sencilla de calcular la torsi{\'o}n en el superespacio. La primera ecuaci{\'o}n de este tipo fue obtenida por los rusos. Mas tarde la gente que invent{\'o} supergravedad en el superespacio se vi{\'o} en la necesidad de postularla.\\
+
+El acoplamiento a la superpart{\'\i}cula ser{\'a}
+\be
+A_\mu \dot z^\mu+\dot\theta^aA_a+\bar A_\da\dot{\bar\theta}^\da
+\ee
+Que es real y bajo una transformaci{\'o}n de calibre cambia como $d\Lambda/dt$ como debe ser. $\dot z^\mu=\dot x^\mu+i\theta^a\s\dot{\bar\theta}^\db-i\dot\theta^a\s\bar\theta^\db$.
+\\ Ahora queremos definir la curvatura. Pero tenemos torsi{\'o}n. La manera adecuada es
+\be
+F_{MN}=D_M A_N+(-1)^{MN}D_N A_M-T_{MN}^{\phantom{MN}L}A_L
+\ee
+O en componentes
+\be
+F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\\ F_{\mu a}=\p_\mu A_a-D_a A_\mu
+\\ F_{ab}=D_aA_b+D_b A_a
+\\ F_{a\db}=D_aA_\db+D_\db A_a+2i\s A_\mu
+\ee
+Y sus conjugados, claro. No hace falta hablar de geometr{\'\i}a para escribir estas f{\'o}rmulas. La gente lo hizo meramente observando que son los elementos invariantes de calibre. Pero me gusta esta forma.\\ 
+
+Las identidades de Bianchi se pueden escribir de varias maneras. Tal vez la m{\'a}s sencilla es invocando Jacobi
+\be
+\(\(\mathbb{D}_M,\mathbb{D}_N\),\mathbb{D}_L\)+\(\(\mathbb{D}_L,\mathbb{D}_M\) ,\mathbb{D}_N\)+\(\(\mathbb{D}_N,\mathbb{D}_L\),\mathbb{D}_M\)=0
+\ee
+Donde $\mathbb{D}_M=D_M+A_M$ es la derivada covariante. Por favor
+los corchetes est{\'a}n convenientemente graduados. !`No me hagan
+escribir de m{\'a}s! Otra manera es con geometr{\'\i}a que dice que Bianchi
+significa $dF=0$
+\be
+D_M F_{NL}-T_{MN}^{\phantom{MN}K}F_{KL}+
+D_L F_{MN}-T_{LM}^{\phantom{LM}K}F_{KN}+
+D_N F_{LM}-T_{NL}^{\phantom{NL}K}F_{KM}=0
+\ee
+O la forma m{\'a}s mec{\'a}nica que es meramente ``buscar'' las identidades.
+Estas f{\'o}rmulas son para muchos (Sohnius, por ejemplo) el punto de partida. Volviendo a nuestro problema queremos imponer condiciones sobre el $A_M$ que mate los grados de libertad incorrectos. Lo mejor es imponer condiciones sobre los $F_{MN}$ que son invariantes de calibre. Quisiera hacer un comentario de tremenda importancia. Las condiciones que vamos a imponer deben de ser lineales. Si impongo condiciones no lineales acabar{\'e} con representaciones no lineales de grupo de super Poincar{\'e} dentro de $A_M$. Esta posiblemente sea la salida en 10 dimensiones pero no quiero hablar de eso ahorita.
+\\ Ya que hemos hecho tanta geometr{\'\i}a hasta ahora lo ideal ser{\'\i}a buscar un motivo geom{\'e}trico que nos deje la teor{\'\i}a en nomov (off-shell). Como digo, eso est{\'a} relacionado con la simetr{\'\i}a kappa y lo analizaremos en otra secci{\'o}n. Vamos a repetir las cuentas de Sohnius.
+\\ El se ``di{\'o} cuenta" de que lo adecuado es hacer
+\bea
+F_{ab}=\bar F_{\da\db}=F_{a\db}=\bar F_{\da b}=0\label{nomov}
+\eea
+Como {\'e}l dice, hacer la teor{\'\i}a plana en las direcciones fermi{\'o}nicas. Si $N\neq 1$ o la dimensi{\'o}n mayor que 4 este sistema no sirve... Demostremos que aqu{\'\i} funciona.
+\\ Las dos primeras identidades son
+\be
+D_aA_b-D_bA_a=0
+\ee
+y su conjugada, cuya soluci{\'o}n debe ser \footnote{Precaución. Yo estoy exigiendo que $(A_a)^*=\bar A_\da$, lo que realmente es necesario que esto sea as{\'\i} m{\'o}dulo una transformaci{\'o}n de calibre. Lo mismo sucede en el caso habitual, no tiene nada de malo que el potencial tenga una parte compleja siempre y cuando sea un calibre. De hecho Wess, Zumino, Sohnius y con ellos los dem{\'a}s usan este hecho para imponer un calibre en el que $\bar A_\da=0$. Aqu{\'\i} no estamos haciendo eso, todo el tiempo me mantendr{\'e} con $(A_a)^*=\bar A_\da$, eso no tiene nada de malo, es s{\'o}lo una \textit{preferencia}. Confio que todo sea equivalente, por supuesto. Pero esto es importante porque muchas de sus f{\'o}rmulas no encajan con las nuestras.}
+\be
+A_a=D_a V\qquad \bar A_\da=\bar D_\da V^*
+\ee
+Donde $V$ es un supercampo arbitrario. Es necesario notar que $V$ no est{\'a} un{\'\i}vocamente definido, esto me ha causado muchos quebraderos de cabeza. Cualquier campo $V+i\Phi$, donde $\Phi$ es quiral, da el mismo supercampo $A_M$. La transformaci{\'o}n $V\rightarrow V+i\Phi$ no es una transformaci{\'o}n de calibre sino, si se quiere de precalibre. La tercera ecuaci{\'o}n implica que
+\be
+D_a\bar D_\db V^*+\bar D_\db D_a V+2i\s A_\mu=0
+\ee
+Si multiplicamos por $\bar\sigma_\mu^{\phantom{\mu}\db a}$ y recordamos que $Tr(\bar\sigma_\mu\sigma_\nu)=2\eta_{\mu\nu}$ conclu{\'\i}mos que
+\be
+A_\mu=\frac{i}{4}\bar\sigma_\mu^{\phantom{\mu}\db a}\left[ \left(D_a\bar D_\db +\bar D_\db D_a \right)V_R+i\left(D_a\bar D_\db -\bar D_\db D_a \right)V_I\right]
+\ee
+Eso implica la f{\'o}rmula (he escrito $V=V_R+iV_I$)
+\be
+A_\mu=-\frac{1}{4}\bar\sigma_\mu^{\phantom{\mu}\db a}\left[D_a,\bar D_\db\right] V_I+\p_\mu V_R
+\ee
+De manera que dado $V$ complejo arbitrario podemos hacer una transformaci{\'o}n de calibre que mate la parte real. Eso fija absolutamente el calibre. Pero a{\'u}n hay una indeterminaci{\'o}n en $V_R$ debido a las transformaciones de precalibre de las que hablaba. Dos supercampos complejos que difieran en un campo quiral deben identificarse y, por lo tanttambiénen sus partes imaginarias. Eso implica que $V_I$ y $V_I+i(\Phi-\Phi^*)$ definen el mismo calibre. Es decir los campos $A_\mu$, $A_a$ y $\bar A_\da$ están relacionados por una transformaci{\'o}n de calibre. Dicho de otra manera la transformaci{\'o}n $V\rightarrow V+i(\Phi-\Phi^*)$ \textit{induce} una transformaci{\'o}n de calibre dada por $A_M\rightarrow A_M+D_M(\Phi+\Phi^*)$. !`Ojo! a los signos.\\
+
+Ya hemos demostrado lo que quer{\'\i}amos. Con ello hemos explicado geom{\'e}tricamente porque la construcci{\'o}n de Wess y Zumino funciona.
+\\ Si elegimos el calibre en el que $V_R=0$ tenemos las importantes f{\'o}rmulas:
+\be
+A_\mu=-\frac{1}{4}\bar\sigma_\mu^{\phantom{\mu}\db a}\left[D_a,\bar D_\db\right] V
+\\ A_a=iD_a V
+\ee
+(Quitando el sub{\'\i}ndice I). Entonces:
+\be
+F_{\mu a}=\p_\mu A_a-D_a A_\mu=i\frac{i}{4}\bar\sigma_\mu^{\phantom{\mu}\db b} \left\{D_b,\bar D_\db\right\}D_a V-\frac{1}{4}\bar\sigma_\mu^{\phantom{\mu}\db b}D_a\left[D_b,\bar D_\db\right] V
+\ee
+Que finalmente da
+\bea
+F_{\mu a}=-\frac{1}{2}\bar\sigma_\mu^{\phantom{\mu}\db b}D_b\bar D_\db D_a V\label{FMA}
+\eea
+Necesito un resultado m{\'a}s. Parte del trabajo de Sonhius (!`y mucha otra gente!) es tratar de describir super Maxwell no en t{\'e}rminos de un $A_M$ sin no en t{\'e}rminos de la curvatura $F_{MN}$. Si asumimos as{\'\i} las cosas las identidades de Bianchi no son identidades sino ecuaciones. El trabajo consiste entonces en resolver las ecuaciones de Bianchi suponiendo que $F_{ab}=0$ y compa{\~n}ia.
+\\ Para ello partimos de la ecuaci{\'o}n
+\be
+\(\(\mathbb{D}_a,\mathbb{D}_\db\),\mathbb{D}_b\)+\(\(\mathbb{D}_b,\mathbb{D}_a\) ,\mathbb{D}_\db\)+\(\(\mathbb{D}_\db,\mathbb{D}_a\),\mathbb{D}_b\)=0
+\ee
+Que implica:
+\bea
+\sigma^\mu_{\phantom{\mu}a\db}F_{\mu b}+\sigma^\mu_{\phantom{\mu}b\db}F_{\mu a}=0\label{bian1}
+\eea
+Por otra parte la ecuaci{\'o}n (con los signos adecuadamente elegidos):
+\be
+\(\(\mathbb{D}_\mu,\mathbb{D}_a\),\mathbb{D}_b\)+\(\(\mathbb{D}_b,\mathbb{D}_\mu\) ,\mathbb{D}_a\)+\(\(\mathbb{D}_a,\mathbb{D}_b\),\mathbb{D}_\mu\)=0
+\ee
+implica
+\bea
+D_b F_{\mu a}+D_aF_{\mu b}=0\label{bian2}
+\eea
+Ambas ecuaciones ((\ref{bian1}) y (\ref{bian2})) deber{\'\i}an de ser identidades si introducimos el valor de $F_{\mu a}$ que hemos hallado  en (\ref{FMA}).
+Si multiplicamos por $\bar\sigma_\nu^{\db a}$ y sumamos convenientemente recordando la identidad $Tr[\bar\sigma_\nu\sigma^\mu]=2\delta_\nu^{\phantom{\nu}\mu}$ obtenemos
+\be
+2F_{\nu b}+\bar\sigma_\nu^{\phantom{\nu}\db a} \sigma^\mu_{\phantom{\mu}b\db}F_{\mu a}=0
+\ee
+Si tenemos en cuenta la identidad $\sigma^\mu\bar \sigma_\nu+\sigma_\nu\bar\sigma^\mu=2\delta_\nu^\mu$ llegamos a
+\be
+2F_{\nu b}+\left(\bar\sigma_\nu^{\phantom{\nu}\db a} \sigma^\mu_{\phantom{\mu}b\db}+ \sigma_{\nu\,b\db}\bar \sigma^{\mu\,\db a} \right)F_{\mu a}-\sigma_{\nu\,b\db}\bar \sigma^{\mu\,\db a}F_{\mu a}=0
+\ee
+Que finalmente resulta en
+\be
+4F_{\mu a}=\sigma_{\mu\,a\db}\bar\sigma^{\nu\,\db b}F_{\nu b}
+\ee
+Y se puede escribir como
+\bea
+F_{\mu a}=i\sigma_{\mu\, a\db}\bar W^\db\label{FMA2}
+\eea
+Es f{\'a}cil ver que (\ref{FMA2}) es soluci{\'o}n de (\ref{bian1}) usando la identidad $\sigma^\mu_{\phantom{\mu}a\db}\sigma_{\mu\, b\da}=2\epsilon_{ab}\epsilon_{\da\db}$.
+\\ También disponemos de la f{\'o}rmula inversa, por supuesto.
+\be
+\bar W^\db=\frac{-i}{4}\bar\sigma^{\mu\,\db b}F_{\mu b}
+\ee
+Usando (\ref{FMA}) podemos escribir $\bar W^\db$ en funci{\'o}n de $V$
+\be
+\bar W^\da=\frac{i}{8}\bar\sigma^{\mu\,\da a}\bar\sigma_\mu^{\phantom{\mu}\db b}D_b\bar D_\db D_a V=\frac{i}{8}\epsilon^{\da\db}D^2\bar D_\db V
+\ee
+Para terminar (\ref{bian2}) es
+\be
+\sigma_{\mu\, b\db}D_a\bar W^\db+\sigma_{\mu\, b\db}D_a\bar W^\db=0
+\ee
+Multiplicando por $\sigma^{\mu\, b\dot c}$ tenemos la condici{\'o}n de quiralidad
+\be
+D_a\bar W^\db=0
+\ee
+Quer{\'\i}a escribir todo esto para que quedase todo lo m{\'a}s claro posible comparando con otros m{\'e}todos.\\
+ 
+Ahora deber{\'\i}amos hablar de las ecuaciones de movimiento y Lagrangianos. Desgraciadamente aún no disponemos de una formulación geométrica de super Maxwell semejante a la formulación no supersimétrica así que la única manera de encontrar la acción adecuada es por ensayo y error. Seremos muy breves por esto se encuentra explicado muy bien en muchos manuales (ver especialmente el libro de Wess y Bager)\\
+
+Los libros eneseñan que se puede escribir un Lagrangiano de la componente $\theta^2$ de un supercampo quiral porque esta transforma bajo supersimetría como una derivada total. El lagrangiano que debemos usar es
+\begin{gather}
+{\mathcal L}=W^aW_ a|_{\theta^2}+\bar W_\da W^{\da}|_{\bar \theta^2}=\frac{-1}{4}F_{\mu\, a}F^{\mu\, a}|_{\theta^2}+\frac{-1}{4}\bar F_{\mu\,\da}\bar F^{\mu\,\da}
+\end{gather}
+La ecuación de movimiento que se sigue de este Lagrangiano es
+\begin{gather}
+D_a W^a+\bar D_\da \bar W^\da=0
+\end{gather}
+\subsection{Supersimetría extendida\label{SMN2}}
+Ya hemos descrito con cierta profundidad super Maxwell en $D=4$ y $N=1$ en el superespacio. Vamos a generalizar esto a $N>1$ y despues a $D>4$. 
+Si hacemos $N>2$ en el superespacio de Salam y Strathdee tendremos las super formas
+\begin{gather}
+A_M(x^\mu,\theta^{a\,i},\bar\theta\ud{\da}{i})=(A_\mu,A_{a\,i},\bar A\du{\da}{i})
+\end{gather}
+Igual que antes podemos escribir las curvaturas
+\begin{gather}
+F_\mn=\p_\mu A_\nu-\p_\nu A_\mu\\
+F_{\mu \,ai}=\p_\mu A_{ai}-D_{ai}A_\mu\\
+F_{ai\,bj}=D_{ai}A_{bj}+D_{bj}A_{ai}\\
+F\du{ai\,\db}{j}=D_{ai}\bar A\du{\db}{j}+\bar D\du{\db}{j}A_{ai}-2\delta\du{i}{j}\sigma\ud{\mu}{a\db} A_\mu
+\end{gather}
+Con la misma tecnología que antes debemos imponer restricciones a las $F$'s. Sorprendentemente la historía aqui es competamente diferente. Si imponemos que
+\begin{gather}
+F_{ai\,bj}=F\du{ai\,\db}{j}=0
+\end{gather}
+¡Entonces la teoría es un calibre puro! Parece que lo adecuado es hacer
+\begin{gather}
+F_{ai\,bj}+F_{aj\,bi}=0\\
+F\du{ai\,\db}{j}=0
+\end{gather}
+Sin embargo estas ecuaciones no son ningún paraíso para $N=2$ hacen un trabajo bastante semejante al de $N=1$ pero para $N=3,4$ implican las ecuaciones de movimiento para $A_\mu(x)$. Este es un resultado bastande desolador sobre todo desde el punto de vista geométrico. El hecho de tener que poner restricciones a los campos ya es de por si una mala noticia, especialmente cuando esto se hace sin ningún esquema claro. Pero aquí tropezamos con algo aún peor. Estamos exigiendo que una uno forma tenga que satisfacer las ecuaciones de Maxwell.\\
+
+Tratemos de solucionar estas ecuaciones. La primera ecuación nos dice que
+\begin{gather}
+F_{ai\,bj}+F_{aj\,bi}=0\Longrightarrow F_{ai\,bj}=\ep_{ab}\bar W_{ij}
+\end{gather}
+Donde $\bar W_{ij}$ es un supercampo que verifica $\bar W_{ij}=-\bar W_{ji}$. Para $N=2$ un cálculo largo debido a Sohnius muestra que todas las curvaturas se pueden escribir en términos de $\bar W_{ij}\ep_{ij}\bar W$ y que el campo escalar $\bar W$ satisface las siguientes restricciones
+\begin{gather}
+D_{a\,i}\bar W=\bar D\du{\da}{i}W=0\\
+\ep^{ab}D_{ai}D_{bj}W=\ep^{\da\db}\bar D_{\da i}\bar D_{\db j}\bar W
+\end{gather}
+Voy a analizar muy esquemáticamente la solución en campos de componentes de estas ecuaciones. Más tarde vamos a trabajar con toda profundidad el caso de $D=6$ cuya reducción dimensional da este.\\
+
+La primera es una condición de quiralidad y la segunda una condición de realidad. Estudiemos la primera. Un campo quiral en $D=4$ puede expandirse como
+\begin{gather}
+W=\phi+\lambda_{ai}\theta^{ai}+\Psi_{ai\,bj}\theta^{ai}\theta^{bj}+\chi_{ai}\theta^2\theta^{ai}+\varphi\theta^4
+\end{gather}
+El término $\Psi_{aibj}=\ep_{ij}\Psi_{ab}+\ep_{ab}\Psi_{ij}$ y contribuye con un vector y tres escalares. En total tenemos: un vector, 2 espinor, 5 escalares.\\
+La ecuación de movimiento es muy semejante a la condición de realidad
+\begin{gather}
+\ep^{ab}D_{ai}D_{bj}W=-\ep^{\da\db}\bar D_{\da i}\bar D_{\db j}\bar W
+\end{gather}
+\subsection{El caso de $D=6$ y $N=1$}
+Hagamos ahora el trabajo en $D=6$.\\
+El superespacio es $x^\mu,\theta^a,\bar\theta^\da$. Para hablar de
+super-Maxwell hay que introducir una superconexi{\'o}n $A_\mu,
+A_a,\bar A_\da$. Si dejamos los {\'\i}ndices en la posici{\'o}n
+adecuada todo es bastante similar al caso de 4 dimensiones. Las
+derivadas covariantes ser{\'a}n
+\be
+D_a=\p_a+i{S^\mu}_{a\db}\td{b}\p_\mu\\
+\bar D_\db=-\bar\p_\db-i\theta^a {S^\mu}_{a\db}\p_\mu\\
+\cor{D_a,\bar D_\db}=-2i {S^\mu}_{a\db} \p_\mu
+\ee
+La torsi{\'o}n vendr{\'a} defina por
+\be
+\cor{D_M,D_N}={T_{MN}}^LD_L
+\ee
+La curvatura
+\be
+F_{ab}=D_aA_b+D_bA_a\\ F_{a\db}=D_a\bar A_\db+\bar D_\db
+A_a+2i{S^\mu}_{a\db}A_\mu\\ F_\mn=\p_\mu A_\nu-\p_\nu A_\mu
+\ee
+En este caso las ligaduras sobre la curvatura que dejan la
+teor{\'\i}a off-shell son las mismas que en $D=4$ y $N=1$
+\be
+F_{ab}=\bar F_{\da\db}=F_{a\db}=\bar F_{\da b}=0
+\ee
+Las dos primeras implican que
+\be
+A_a=D_a V\qquad \bar A_\da=\bar D_\da V^*
+\ee
+Y la siguiente
+\be
+D_a\bar D_\db V^*+\bar D_\db D_a V+2i{S^\mu}_{a\db} A_\mu=0\\
+-i(D_a\bar D_\db V_I-\bar D_\db D_a
+V_I)+\cor{D_a}{D_\db}V_R+2i{S^\mu}_{a\db}
+A_\mu=\\=-i\left[D_a,\bar D_\db\right]
+V_I+2i{S^\mu}_{a\db}(A_\mu-\p_\mu V_R)=0
+\ee
+De la misma manera que en 4 dimensiones $S^\mu \bar S^\nu+ S^\nu
+\bar S^\mu=-2\eta^\mn$ lo que implica que $\Tr{(S^\mu\bar
+S^\nu)}=-4\eta^\mn$. \footnote{Ahora, si $\mu$ y $\nu$ son ambos
+diferentes de cero $\Tr(S^\mu\bar S^\mu)=\Tr(S^\nu\bar S^\mu)$. Si
+uno de los dos es cero pero no el otro la traza es cero porque la
+traza de $S^i$ es cero.} De manera que tambien podemos despejar
+$A_\mu$ tal como en 4 dimensiones
+\be
+A_\mu=\frac{1}{8}\bar {S_\mu}^{\db a}\left[D_a,\bar
+D_\db\right]V_I+\p_\mu V_R
+\ee
+Siguiendo el programa al pie de la letra podemos hacer una
+transformaci{\'o}n de calibre que mate la parte real. As{\'\i}
+pues, igual que en cuatro.
+\be
+A_a=iD_a V\\
+A_\mu=\frac{1}{8}\bar {S_\mu}^{\db a}\left[D_a,\bar D_\db\right]V
+\ee
+Introduciendo este valor y usando una identidad llegamos a
+\begin{gather}
+\left[D_a,\bar D_\db\right]V=\left[\bar D_a,
+D_\db\right]V={J_a}^\da{J_\db}^b\left[\bar D_\da, D_b\right]V
+\\ ({\delta_a}^b{\delta_\db}^\da-{J_a}^\da{J_\db}^b)\left[\bar D_\da,
+D_b\right]V=0\label{eqD6}
+\end{gather}
+recordemos que aún tenemos la libertad de calibre $V\rightarrow
+V+i(\Phi-\Phi^*)$. Donde $\Phi$ verifica
+\be
+\bar D_\da\Phi=0
+\ee
+Es fácil solucionar esta ecuación por similitud con $D=4$ se trata
+de una función $\Phi(y^\mu,\theta^a)$ con $y^\mu=x^\mu+i\theta^a
+{S^\mu}_{a\db}\bar \theta^\db$. De modo que
+\be
+\Phi(y^\mu,\theta^a)=
+\phi(y^\mu)+\Psi^{(1)}_a\theta^a+\Psi^{(2)}_{ab}(y^\mu)\theta^a\theta^b+...
+\ee
+Esto nos ayuda a elegir un calibre para $V$ en el que no haya
+ninguna potencia de las $\theta^a$ solas o sus conjugadas, solo
+las mixtas. En $D=4$ este es el bien conocido calibre de Wess y
+Zumino
+\be
+V_{WZ}=A_\mu\s\theta^a\bar\theta^\db+(\lambda_a\theta^a\bar\theta^2+c.c.)+D\theta^2\bar\theta^2
+\ee
+En $D=6$ hay muchos más términos, claro está. Para analizarlos con
+algo de oren definamos la ssignatura de un término como el número
+de variables $\theta^a$ menos el número de variables
+$\bar\theta^\da$. Por ejemplo el término $_2
+H_{a\da}\theta^a\bar\theta^\da$ tiene ssignatura cero. Tenemos
+términos de ssignatura 0, 1, 2 y 3 y sus conjugados que tienen
+ssignaturas de signo contrario. Los términos de ssignatura cero
+son
+\be
+H_{a\da}^{(1)}\theta^a\bar\theta^\da+
+H_{ab\da\db}^{(2)}\theta^a\theta^b\bar\theta^\da\bar\theta^\db
++H_{abc\da\db\dot c}^{(3)}\theta^a\theta^b\theta^c
+\bar\theta^\da\bar\theta^\db\bar\theta^{\dot c}+ H_{abcd\da\db\dot c\dot d}^{(4)}
+\theta^a\theta^b\theta^c\theta^d
+\bar\theta^\da\bar\theta^\db\bar\theta^{\dot c}\bar\theta^{\dot d}
+\ee
+Los de ssignatura 1:
+\be
+\Psi_{ab\da}^{(1)}\theta^a\theta^b\bar\theta^\da+
+\Psi_{abc\da\db}^{(2)}\theta^a\theta^b\theta^c\bar\theta^\da\bar\theta^\db+
+\Psi_{abcd\da\db\dot c}^{(3)}\theta^a\theta^b\theta^c\theta^d
+\bar\theta^\da\bar\theta^\db\bar\theta^{\dot c}
+\ee
+Ssignatura 2:
+\be
+D_{abc\da}^{(1)}\theta^a\theta^b\theta^c \bar\theta^\da +
+D^{(2)}_{abcd\da\db}
+\theta^a\theta^b\theta^c\theta^d
+\bar\theta^\da\bar\theta^\db
+\ee
+Finalmente el de ssignatura 3:
+\be
+\Xi_{abcd\da}\theta^a\theta^b\theta^c\theta^d
+\bar\theta^\da
+\ee
+Es de notar que $\left[\bar D_\da,D_a\right]$ no cambia la
+ssignatura por tanto los cuatro grupos pueden analizarse por
+separado. Vamos a analizar término a término. Primero notemos que
+\be
+\left[\bar
+D_\da,D_a\right]=-2\bar\p_\da\p_a+2i\left({S^\mu}_{a\db}
+\bar\theta^\db\p_\mu\bar\p_\da-\theta^b{S^\mu}_{b\da}\p_\mu\p_a\right)+
+2\theta^b{S^\mu}_{b\da}{S^\nu}_{a\db}\bar\theta^\db\p_\mu\p_\nu
+\ee
+El término $\left[\bar D_\da,D_a\right]V$ sin $\theta^a$ es
+\be
+H_{a\da}^{(2)}
+\ee
+Que debe ser hermítico y satisfacer $JH=-HJ$ lo que implica que
+\be
+H_{a\da}^{(2)}=A_\mu(x){S^\mu}_{a\da}
+\ee
+Los términos con $\theta^a\bar\theta^\da$ son
+\be
+2i{S^\nu}_{b\da}{S^\mu}_{a\db}F_\mn+8H^{(2)}_{ab\da\db}
+\ee
+y deben verificar la ecuación (además de la condición de realidad)
+\be
+i{S^\nu}_{b\da}{S^\mu}_{a\db}F_\mn+4H^{(2)}_{ab\da\db}={J_a}^{\dot\alpha}
+{J_\da}^\alpha\left(i{S^\nu}_{b\dot\alpha}{S^\mu}_{\alpha\db}F_\mn+
+4H^{(2)}_{\alpha b\dot\alpha\db}
+\right)
+\ee
+Para solucionarla definamos por comodidad
+\be
+\hat H_{ab\alpha\beta}\equiv {J_\alpha}^\da{J_\beta}^\db H_{ab\da\db}
+\\ \hat {S^\mu}_{a\beta}\equiv{J_\beta}^\db{s^\mu}_{a\db}
+\ee
+En estos términos la ecuación implica que
+\be
+\hat H_{ba\alpha\beta}+\hat H_{b\alpha a\beta}=\frac{i}{4}F_\mn\left( \hat
+{S^\mu}_{\alpha\beta}\hat {S^\nu}_{b a}+ \hat {S^\mu}_{a\beta}\hat
+{S^\nu}_{b\alpha}\right)
+\ee
+Es decir podemos escribir
+\be
+\hat H_{ab\alpha}=\frac{i}{2}F_\mn\left( \hat
+{S^\mu}_{\alpha\beta}\hat {S^\nu}_{b a}+ \hat {S^\mu}_{a\beta}\hat
+{S^\nu}_{b\alpha}\right)+H(x)\ep_{ab\alpha\beta}
+\ee
+Después de tanta cuenta la moral es bastante simple. La parte
+simétrica de $H^{(2)}$ queda perfectamente determinada mientras
+que la antisimétrica es libre. Es fácil entender entonces que lo
+mismo va a suceder con $H^{(3)}$. Esta vez la parte totalmente
+antisimétrica es cero y no aparecen nuevos campos. Lo mismo
+podemos decir de $H^{(4)}$. Vamos ahora con los campos de
+ssignatura 1.\\
+ 
+Términos en $\theta^a$ en el desarrollo de $\left[\bar
+D_\da,D_a\right]V$:
+\be
+4\Psi_{ab\da}\theta^b
+\ee
+La solución para este término es
+\be
+\Psi_{ab\da}={J_\da}^c\ep_{abcd}\lambda^d(x)
+\ee
+De la misma manera que antes $\Psi^{(2)}$ y $\Psi^{(3)}$ se pueden
+escribir en función de $\lambda^a(x)$ sin que aparezcan nuevos
+términos. Los términos de signatura 2. El más bajo es
+\be
+D^{(1)}_{abc\da}\theta^b\theta^c
+\ee
+Nuestra ecuación implica que es totalmente antisimétrico
+\be
+D^{(1)}_{abc\da}=(D_1(x)+iD_2(x)){J_\da}^d\ep_{abcd}
+\ee
+Donde hemos resltado las componentes reales. En $D^{(2)}$
+naturalmente no surgen más campos ni limitan los existentes. El
+último término de todos (de ssignatura 3) es sencillamente cero.
+De manera que el conjunto de campos off-shell que hemos obtenido
+es
+\begin{itemize}
+\item 1 vector $A_\mu(x)$
+\item 1 espinor $\Psi^a(x)$
+\item 3 escalares $D_1(x)$, $D_2(x)$, $D_3(x)$.
+\end{itemize}
+Este es el contenio correcto de super Maxwell off-shell en $D=6$. Notemos que si reducimos dimensionalmente estos campos a $D=4$ obtenemos el supermultiplete que antes hemos mencionado.\\
+
+No somos los primeros en tratar el caso de $D=6$. Merece la pena hacer una breve comparación con el método de Nillson.\\
+Al igual que en $D=4$ podemos ver que
+\be
+F_{\mu a}=S_{\mu\, a\db}\bar W^\db
+\ee
+Para demostrarlo simplemente calculamos
+\be
+F_{\mu a}=\p_\mu A_a-D_a A_\mu= i\p_\mu D_a V-\frac{1}{8}D_a {\bar
+S_\mu}^{\db b}\left[\bar D_\db, D_b\right]V
+\ee
+Como $\cor{D_a,\bar D_\da}=-i2{S^\mu}_{a\da}\p_\mu$ tenemos que
+\be
+i\p_\mu=\frac{1}{8}\bar {S_\mu}^{\db b}\cor{D_b,\bar D_\db}
+\ee
+y por tanto
+\be
+8F_{\mu a}=D_a\bar {S_\mu}^{\db b}\left(\cor{D_b,\bar
+D_\db}+\left[ D_b,\bar D_\db\right] \right)V
+\ee
+O, lo que es lo mismo
+\be
+F_{\mu a}=\frac{1}{4}D_a\bar {S_\mu}^{\db b} D_b\bar D_\db V=
+-\frac{1}{4}D_b\bar {S_\mu}^{\db b} D_a\bar D_\db V=\frac{1}{8}
+\bar {S_\mu}^{\db b} D_b \left[\bar D_\db, D_a\right]V
+\ee
+Usando el hecho
+\be
+\left[\bar D_\da, D_a\right]V=\frac{-1}{4}{S^\mu}_{a\da}{\bar
+S_\mu}^{\db b}\left[\bar D_\db, D_b\right]V
+\ee
+Finalmente
+\be
+F_{\mu a}=\frac{-1}{32}{S^\nu}_{a\db}D_b \bar {S_\mu}^{\db b}\bar
+{S_\nu}^{\dot c c} \left[\bar D_{\dot c}, D_c\right]V\\
+\bar W^\da=-\frac{1}{6}{\bar S}^{\mu\,\da a}\bar{S_\mu}^{\db
+b}D_aD_b\bar D_\db V
+\ee
+Una pregunta que uno puede hacerse es cómo es posible que exista un prepotencial para $D=6$ y no exista para $D=4$ y $N=2$. Veamos que la reducción dimensional de las ecuaciones en $D=6$ llegan a las correctas de $D=4$. Llamemos $\Gamma^\mu$ a las matrices en $D=6$ y $\gamma^\mu$ a las matrices de Dirac en $D=4$. Como mencionamos en el primer capítulo una de las virtudes de nuestro convenio para las matrices de Clifford es que estan bien adaptadas para la reducción dimensional. Resulta que
+\begin{gather}
+\sigma^{\mn}=\sigma^\mu\bar\sigma^\nu-\sigma^\nu\bar\sigma^\mu
+\end{gather}
+Entonces si $\mu, \nu=0,1,2,3$
+\begin{gather}
+S^\mn=S^\mu\bar S^\nu-S^\nu\bar S^\mu=\con{\gamma^\mu,\gamma^\nu}=\mat{\sigma^\mn & 0\\ 0 & \bar\sigma^\mn}
+\end{gather}
+Es decir, un espinor en $D=6$ desdobla en dos espinores de $D=4$. La regla de oro es
+\begin{gather}
+\theta^\alpha\rightarrow \mat{\theta^{a1}\\ \bar\theta_{\da 2}}\\
+\bar\theta^{\dot\alpha}\rightarrow\mat{\bar\theta\ud{\da}{1}\\ \theta\du{a}{2}}
+\end{gather}
+Discutamos un momento la posición de los índices. Las matrices $S_{\alpha\dot\beta}$ se desdoblan en matrices $2\times 2$
+\begin{gather}
+S=\mat{S_{a\db} & S\du{a}{b}\\ \bar S\ud{\da}{\db} & \bar S^{\db a}}
+\end{gather}
+Con nuestros convenios
+\begin{gather}
+S\ud{\mu}{a\db}=\sigma\ud{\mu}{a\db} \textrm{ para }\mu=0,1,2,3\\
+S\ud{4}{a\db}=S\ud{5}{a\db}=0\\
+S\ud{\mu\,a}{b}=\bar S\du{\mu\,\da}{\db}=0\textrm{ para } \mu=0,1,2,3\\
+{S^5}\du{a}{b}=-{S^4}\du{a}{b}=\delta\du{a}{b}
+\end{gather}
+En esta representación la reducción dimensional de las derivadas covariantes es sencilla. La definición
+\begin{gather}
+D_\alpha=\p_\alpha+i S\ud{\mu}{\alpha\dot\beta}\bar\theta^{\dot\beta}
+\end{gather}
+da lugar a
+\begin{gather}
+D_{a1}=\p_{a1}+iS\ud{\mu}{a\db}\bar\theta^\db\p_\mu+i{S^\mu}\du{a}{b}\theta_b\p_\mu
+\end{gather}
+Y su conjugada. Si hacemos reducción dimensional resulta ser exactamente la derivada covariante en $D=4$.\\
+Vamos con la reducción de las ligaduras de la teoría off-shell en $D=6$. Estas son
+\begin{gather}
+F_{\alpha\beta}=0\\
+F_{\alpha\dot\beta}=0
+\end{gather}
+La primera implica en $D=4$ que $F_{a1\,b1}=F_{a1\,\db 2}=0$. La segunda es más complicada
+\begin{gather}
+{F^{(6)}}_{a1\, b2}=F\ud{(4)}{a1\,b2}+2i\ep_{ab}(A_4+A_5)
+\end{gather}
+Es decir implica la ligadura en cuatro dimensiones
+\begin{gather}
+F_{a1\, b2}+F_{a2\,b1}=0
+\end{gather}
+Las demás ligaduras se obtienen fácilmente.\\
+Pasemos a la cuestión del prepotencial. En $D=6$ podemos hacer $A_\alpha=iD_\alpha V$, en la notación de $D=4$
+\begin{gather}
+A_{a1}=iD_{a1}V
+\bar A\ud{\da}{2}=\bar D\ud{\da}{2}
+\end{gather}
+La reducción consiste en hacer
+\begin{gather}
+A_{a1}=iD_{a1} V|_{x^4=x^5=0}\\
+\bar A\ud{\da}{2}=i\bar D\ud{\da}{2}V|_{x^4=x^5=0}
+\end{gather}
+aquí vemos claramente porque en $D=4$ no existe un prepotencial pese a que en $D=6$ si lo hay.
+\subsection{Super Maxwell en todas las dimensiones}
+En muchas ocasiones se dice que la teoría de super Maxwell existe sólo en dimensiones $D=3,4,6$ y $10$. Lo que es indudablemente cierto es que sólo en estas dimensiones el contendio on-shell puede ser el de un espinor un vector. Pero uno podría pensar que tal vez la generalización adecuada de la teoría de Maxwell al caso supersimétrico puede incluir la propagación de otros campos on-shell. El problema, claro está es encontrar una generalización \textit{adecuada}. Los análisis de las últimas secciones pueden darnos una buena pista. Meramente hagamos que la teoría sea plana en las direcciones fermiónicas. Vamos a hacerlo un poco más estricto.\\
+
+Si trabajamos en dimensión par podemos hacer buena parte del trabajo igual que $D=6$. ¡Copio!\\
+Las derivadas covariantes ser{\'a}n
+\begin{gather}
+D_a=\p_a+i{S^\mu}_{a\db}\td{b}\p_\mu\\
+\bar D_\db=-\bar\p_\db-i\theta^a {S^\mu}_{a\db}\p_\mu\\
+\cor{D_a,\bar D_\db}=-2i {S^\mu}_{a\db} \p_\mu
+\end{gather}
+La torsi{\'o}n vendr{\'a} defina por
+\begin{gather}
+\cor{D_M,D_N}={T_{MN}}^LD_L
+\end{gather}
+La curvatura
+\be
+F_{ab}=D_aA_b+D_bA_a\\ F_{a\db}=D_a\bar A_\db+\bar D_\db
+A_a+2i{S^\mu}_{a\db}A_\mu\\ F_\mn=\p_\mu A_\nu-\p_\nu A_\mu
+\ee
+Ahora simplemente imponemos
+\be
+F_{ab}=\bar F_{\da\db}=F_{a\db}=\bar F_{\da b}=0
+\ee
+Las dos primeras implican que existe un prepotencial $V$
+\be
+A_a=D_a V\qquad \bar A_\da=\bar D_\da V^*
+\ee
+Haciendo exactamente las mismas consideraciones
+\begin{gather}
+A_a=iD_a V\\
+A_\mu=\frac{1}{2^{D/2}}\bar {S_\mu}^{\db a}\left[D_a,\bar D_\db\right]V
+\end{gather}
+Ahora la ecuación para el prepotencial $V$ es más complicada.
+\begin{gather}
+\con{D_a,\bar D_\db}V=\frac{1}{2^{D/2-1}}S\ud{\mu}{a\db}\bar S^{\mu\, \da b}\con{D_b,\bar D_\da}V
+\end{gather}
+En $D=4$ esta ecuación es una identidad y en $D=6$ es la ecuación (\ref{eqD6}) que ya hemos resuelto. El caso $D=10$ es un poco más trucoso porque aún queda poner una condición de Majorana. El primer caso interesante es entonces $D=8$.
+\subsection{Super Maxwell en el superespacio armónico}
+Como hemos dicho el super espacio armónico viene descrito por el conjunto $(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i},u\du{i}{?})$. Una uno forma general vendrá dada por
+\begin{gather}
+A_\mu dz^\mu+A_{ai}d\theta^{ai}+\bar A\du{\da}{i}d\bar\theta\ud{\da}{i}+A_{++}d z^{++}+A_{--}d z^{--}
+\end{gather}
+Las derivadas covariantes base de los campos vectoriales son
+\begin{gather}
+D_M=(D_\mu,D_{ai},\bar D\du{\da}{i},D^{++}, D^{--})
+\end{gather}
+Su álgebra determina la torsión\footnote{Las derivadas actúan sobre las funciones escalares que no dependen de $\rho$. En este caso $\con{D^{++},D^{--}}=0$}
+\begin{gather}
+\cor{D_M,D_N}=T\du{MN}{L}D_L
+\end{gather}
+Y con ella podemos calcular la dos forma de curvatura
+\begin{gather}
+F_{MN}=D_MA_N-D_NA_M-T\du{MN}{L}A_L
+\end{gather}
+Como siempre hay que imponer restriciones. Lo que funciona es hacer
+\begin{gather}
+F_{ai\,bj}+F_{aj\,bi}=0\\
+F\du{ai\, b}{j}=0\\
+F_{++\,--}=0\\
+F_{ai\,++}=0
+\end{gather}
+Veamos primero que esta teoría es exáctamente la misma que describimos en la sección (\ref{SMN2}) con $N=2$ en el superespacio de Salam y Strathdee. La ligadura $F_{++\,--}=0$ implica que $A_{++}=D_{++}U$ y $A_{--}=D_{--}U$. Podemos, por tanto, elegir un calibre en el que $U=0$. Definimos
+\begin{gather}
+F_{a+\,++}=U\ud{i}{+}F_{ai\,++}
+\end{gather}
+Y obtenemos la ecuación
+\begin{gather}
+D_{++}A_{a+}=0
+\end{gather}
+Esta ecuación implica que $A_{a+}=u\ud{i}{+}A_{ai}$ con $A_{ai}=A_{ai}(x^\mu,\theta^{ai},\bar\theta\ud{\da}{i})$ independiente de $u\du{i}{\pm}$. De hecho podemos recuperar $A_{ai}$ via la ecuación
+\begin{gather}
+A_{ai}=\int_{S^2}u_{i-}A_{a+}d\Omega
+\end{gather}
+Esto nos deja sólo con las ecuaciones en el superespacio de Salam y Strathdee.\\
+
+Ahora veamos que las ecuaciones en el superespacio armónico se pueden escribir en función de un prepotencial. Definamos
+\begin{gather}
+F_{a+\,b+}=u\ud{i}{+}u\ud{j}{+}F_{ai\,bj}
+\end{gather}
+Entonces $F_{a+\,b+}=0$ implica que $A_{a+}=D_{a+}V$. El prepotencial $V$ está sometido a la ecuación
+\begin{gather}
+D_{++}D_{a+}V=0
+\end{gather}
+Uno de los exitos de la gente trabajando en el superespacio armónico\index{super espacio armónico} es la de escribir supermaxwell en función de un prepotencial sin restricciones. Es el $V_{++}=D_{++}V$. La condición $D_{a+}V_{++}=0$ es meramente una condición de quiralidad o \textit{analiticidad}. A partir de $V_{++}$ se puede reconstruir toda la teoría, pero de manera no local y algunas cosas son definitivamente más complicadas en este lenguage.
+\subsection{Prepotenciales para super Maxwell}
+Una de nuestras principales motivaciones a la hora de trabjar con super Maxwell ha sido el pensamiento continuo de que puedan surgir de la cuantización de alguna teoría. El hecho de que este prepotencial estuviese restringido como sucede con super Maxwell en $D=6$ y $N=1$ no es tan importante para nosotros. Como hemos visto, sin embargo, no parece existir un prepotencial para super Maxwell con $N>1$. En esta sección vamos a construir estos prepotenciales copiando hasta cierto punto el método introducido por los rusos.\\
+
+El lugar de comienzo son las ligaduras de $N=2$ super Maxwell
+\begin{gather}
+F_{ai\,bj}+F_{aj\,bi}=0\\
+F\du{ai\,\db}{j}=0\label{segunda}
+\end{gather}
+Ahora multiplicamos la primera ecuación por $\lambda^{a+}\lambda^{b+}$
+\begin{gather}
+\lambda^{a+}\lambda^{b+}F_{ai\,bj}=0\implies \lambda^{a+}A_{ai}=\lambda^{a+}D_{ai}U
+\end{gather}
+Por supuesto tambien podemos multiplicar por $\lambda^{a-}\lambda^{b-}$
+\begin{gather}
+\lambda^{a-}A_{ai}=\lambda^{a-}D_{ai}\tilde{U}
+\end{gather}
+Si definimos\footnote{Nota que $V$ es invariante de calibre} $V=\tilde{U}-U$ encontramos
+\begin{gather}
+\lambda^{a+}\lambda^{b-}F_{ai\,bj}=\lambda^{a+}\lambda^{b-}D_{ai}D_{bj}
+\end{gather}
+Si imponemos que $\lambda^{a+}\lambda^{b-}-\lambda^{a-}\lambda^{b+}=\ep^{ab}$ esto implica sobre $V$
+\begin{gather}
+\ep^{ab}D_{ai}D_{bj}V=0
+\end{gather}
+De manera que podemos escribir
+\begin{gather}
+\lambda^{a+}\lambda^{b-}F_{ai\,bj}=\lambda^{a+}\lambda^{b-}\ep_{ab}\ep_{ij}\bar W=\ep_{ij}\bar W
+\end{gather}
+Siendo
+\begin{gather}
+\bar W=\frac{1}{2}\ep^{ij}\lambda^{a+}\lambda^{b-}D_{ai}D_{bj}V
+\end{gather}
+Si permitimos ahora que $V$ dependa de $\lambda\du{a}{\pm}$ esta relación es covariante. Pero necesitamos imponer nuevas ligauras porque no queremos que $A_{ai}$ dependan de estas nuevas variables, o, como mínimo debe existir un calibre en el que no dependen. Eso se consigue fácilmente introduciendo dos potenciales más $A_{++}$ y $A_{--}$ y forzando a que
+\begin{gather}
+F_{++\,--}=D_{++}A_{--}-D_{--}A_{++}=0\\
+F_{ai\,++}=D_{ai}A_{++}-D_{++}A_{ai}=0
+\end{gather}
+La solución de la primera ecuación es $A_{++}=D_{++}T$ y $A_{--}=D_{--}T$ para algún $T$. La segunda ecuación se lee
+\begin{gather}
+D_{++}(D_{ai}T-A_{ai})=0
+\end{gather}
+Si elegimos un calibre en el que $T=0$ esto implica que $D_{++}A_{ai}=D_{--}A_{ai}=0$ como queríamos.\\
+Sólo nos queda por resolver la ecuación (\ref{segunda})
+\begin{gather}
+\lambda^{a+}\bar\lambda^{\db-}F\du{ai\,\db}{j}=\lambda^{a+}\bar\lambda^{\db-}\left(D_{ai}\bar D\du{\db}{j}(\tilde{U}^*-U)+2i\delta\du{i}{j}\sigma\ud{\mu}{a\db}A_\mu\right)=0
+\end{gather}
+Apliquemos este método al cado $D=10$. En este caso, como hemos dicho la ligadura  $F_{ab}=0$ es equivalente a la ligadura
+\begin{gather}
+\lambda^a\lambda^bF_{ab}=0 
+\end{gather}
+para todo $\lambda^a$ que verifique
+\begin{gather}
+\lambda^a S\ud{\mu}{ab}\lambda^b=0\label{nillson}
+\end{gather}
+Es decir, un espinor puro. Vamos a hacer contacto con un trabajo mucho más reciente de Nathan Berkovits.\\
+La restricción (\ref{nillson}) es lo mismo que
+\begin{gather}
+\lambda^a\lambda^bD_a A_b=0
+\end{gather}
+Definamos
+\begin{gather}
+Q_B=\lambda^a D_a\\
+\Psi(x^\mu,\theta^a,\lambda^b)=\lambda^a A_a
+\end{gather}
+Entonces vemos que el supercampo verifica que
+\begin{gather}
+Q_B\Psi=0
+\end{gather}
+Además $(Q_B)^2=0$. Bajo una transformación de calibre $A_a\rightarrow A_a+D_a V$, el supercampo $\Psi$ cambia como
+\begin{gather}
+\Psi\rightarrow\Psi+Q_BV
+\end{gather}
+La única restricción que hay sobre $\Psi$ es que tiene que ser lineal en $\lambda^a$. Levantemos ahora esta restricción aumentando además la libertad de calibre de forma que $V$ pueda depender tambien de $\lambda^a$. Si vemos $Q_B$ como un operador de cohomología todo lo que tenemos que calcular es la cohomología lineal. La afirmación de Berkovits es que la cohomología completa de este operador contiene todos los campos de Vatallin-Vilkovisky para super Maxwell. Nosotros estamos lejos de probar eso.
+\subsection{Otra forma para $N=2$}
+Como hemos visto en $N=1$ un supercampo general contiene varias representaciones irreducibles de la supersimetría. Esto es la fuente de muchos problemas. No se como evitar ese problema para $N=1$ pero si para $N=2$. Resulta que hay una representación es función de supercampos mucho más simple que la de Salam y Strathdee. Simplemente observemos que un supercampo de $N=1$ soporta un representación de toda el álgebra de $N=2$. El motivo es simple. Además de los operadores $Q_a$ y $\bar Q_\da$ que en adelante llamaremos $Q_{a1}$ y $Q\du{\da}{1}$ tenemos las derivadas covariantes que ahora identificaremos como $Q_{a2}=D_{a}$ y $\bar Q\du{\da}{2}=\bar D_a$. De hecho notemos que dentro de un supercampo $V(x^\mu,\theta^a,\bar\theta^\da)$ estan la representación quiral, la antiquiral y la tensorial. En total hay: Un espin 1 (complejo), 4 espines $1/2$, 5 escalares (complejos). Si imponemos una condición de realidad tenemos justo el contenido de campos off-shell de $N=2$ super Maxwell.\\
+
+Ahora debemos construir super Maxwell. No tenemos derivadas covariantes así que lo poco que podemos hacer es
+\begin{gather}
+A_M(x^\mu,\theta_a,\bar\theta_\da)=(A_\mu,A_{ai}, \bar A\du{\da}{i})\\
+F_{ai\,bj}=Q_{ai}A_{bj}+Q_{bj}A_{ai}\\
+F\du{ai\,\db}{j}=Q_{ai}A\du{\db}{j}+\bar Q\du{\db}{j}A_{ai}-2i\delta\du{i}{j}\sigma\ud{\mu}{a\db}A_\mu
+\end{gather}
+¿Qué ligaduras ponemos?. Si imponemos
+\begin{gather}
+F_{ai\,bj}+F_{aj\,bi}=0
+\end{gather}
+Tenemos que $F_{ai\,bj}=\ep_{ab}\ep_{ij}\bar W$. Pero una identidad de Bianchi implica que $Q_{ai}\bar W=0$ que es inaceptable. Si imponemos sólamente
+\begin{gather}
+F\du{ai\,\db}{j}=Q_{ai}\bar A\du{\db}{j}+\bar Q\du{\db}{j}A_{ai}-2i\delta\du{i}{j}\sigma\ud{\mu}{a\db}A_\mu=0
+\end{gather}
+Por un lado esto despeja $A_\mu$ en función de $A_{ai}$ y $\bar A_{\da i}$. 
+\begin{gather}
+A_\mu=\frac{1}{4i}\bar\sigma^{\mu\,\db a}(Q_{ai}\bar A\du{\db}{i}+\bar Q\du{\db}{i}A_{ai})
+\end{gather}
+Introduciendo este resultado en la anterior ecuación tenemos
+\begin{gather}
+2(Q_{ai}\bar A\du{\db}{j}+\bar Q\du{\db}{j}A_{ai})=\delta\du{i}{j}(Q_{ak}\bar A\du{\db}{k}+\bar Q\du{\db}{k}A_{ak})
+\end{gather}
+Escrito en coordenadas
+\begin{gather}
+Q_{a1}\bar A\du{\db}{2}+\bar Q\du{\db}{2}A_{a1}=0\\
+Q_{a2}\bar A\du{\db}{1}+\bar Q\du{\db}{1}A_{a2}=0\\
+Q_{a1}\bar A\du{\db}{1}+\bar Q\du{\db}{1}A_{a1}=Q_{a2}\bar A\du{\db}{2}+\bar Q\du{\db}{2}A_{a2}
+\end{gather}
+La solución de las dos primeras es
+\begin{gather}
+\bar A\du{\db}{1}=\bar Q\du{\db}{1}W,\qquad A_{a1}=Q_{a1}W^*\\
+A_{a2}=Q_{a2}W,\qquad \bar A\du{\da}{1}=\bar Q\du{\da}{1} W^*
+\end{gather}
+Podemos elegir un calibre en el que $W$ es real. En este calibre la tercera ecuación implica que
+\begin{gather}
+\ep^{ij}\con{Q_{ai},\bar Q_{\da j}}W=0
+\end{gather}
+Eso lamentablemente pone la teoría on-shell. Pero nos enseña como hacer las cosas bien. Necesitamos imponer todas las ecuaciones excepto la tercera. Eso se consigue imponiendo la ligadura
+\begin{gather}
+F_{ai\,\db j}+F_{aj\,\db i}=0
+\end{gather}
+Eso implica que puedo escribir todo en función de un campo $W$ real. Fijense que así ya hemos fijado toda la invariacia. Representa justo los grados de liberdad de super Maxwell off-shell.\\
+
+Sin embargo hemos perdido cierta geometría ¿cómo se acopla una partícula es este supercampo?
+\section{Apéndice: $S^2=SU(2)/U(1)$}
+Antes de hablar de todo el superespacio armónico veamos como la geometría de la esfera $S^2$ se puede escribir en términos del cociente $SU(2)/U(1)$. Un elemento de $SU(2)$ se puede parametrizar por
+\begin{gather}
+\mat{a & b\\ -b^* & a^*}
+\end{gather}
+donde $|a|^2+|b|^2=1$, los parámetros de Cayley-Klein. Siguiendo a GIKOS  escribiremos un elemento de $SU(2)$ de manera más redundante pero más simétrica:
+\begin{gather}
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}
+\end{gather}
+Con $(u\du{1}{-})^*=-u\du{2}{+}$ y $(u\du{1}{+})^*=u\du{2}{-}$. Convengamos en bajar y subir los índices $i$ con $\ep^{ij}$ el tensor antisimétrico\footnote{Tomaremos $\ep^{12}=-1$ como los soviéticos}. Usamos el segundo índice para subir y bajar. De manera que
+\begin{gather}
+u^{i+}=\ep^{ij}u\du{j}{+}\qquad u\du{i}{+}=\ep_{ij}u^{j+}
+\end{gather}
+La condición de determinante unidad es $u\du{1}{+}u\du{2}{-}-u\du{1}{-}u\du{2}{+}=1$ que podemos escribir como
+\begin{gather}
+\ep^{ij}u\du{i}{-}u\du{j}{+}=u^{i+}u\du{i}{-}=1
+\end{gather}
+Naturalmente
+\begin{gather}
+\ep^{ij}u\du{i}{\pm}u\du{j}{\pm}=u^{i\pm}u\du{i}{\pm}=0
+\end{gather}
+Sobre este espacio ($S^3$) el grupo actúa de dos maneras diferentes, por la derecha y por la izquierda
+\begin{gather}
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}\rightarrow \mat{a & b \\ -b^* & a^*} \mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}\\
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}\rightarrow \mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}  \mat{a & b \\ -b^* & a^*}
+\end{gather}
+Cuando la acción es por la izquierda los $u\du{i}{?}$ con $?=+,-$ transforman con el índice $i$, en el otro caso con $?$. Esta doble acción del grupo $SU(2)$ sobre si mismo se entiende mejor si uno recuerda que $SO(4)$ es el el álgebra $SU(2)\times SU(2)$. En este caso las funciones definidas sobre $S^3$ se pueden expandir en función de ``armónicos esféricos" generalizados que tienes números cuánticos de \textit{ambos} $SU(2)$, $Y^l_{mm'}$. Vamos a ver esto más de cerca. Primero discutamos un momento los generadores infinitesimales de la acción por la izquierda. Empecemos con $L_1$ asociado a la primera matriz de Pauli
+\begin{gather}
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}\rightarrow \mat{0 & 1 \\ 1 & 0} \mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}= \mat{ u\du{2}{+} & u\du{2}{-}\\ u\du{1}{+} & u\du{1}{-}}
+\end{gather}
+El generador infinitesimal es 
+\begin{gather}
+L_1=u\du{2}{+}\frac{\p}{\p u\du{1}{+}}+u\du{1}{+}\frac{\p}{\p u\du{2}{+}}+u\du{2}{-}\frac{\p}{\p u\du{1}{-}}+u\du{1}{-}\frac{\p}{u\du{2}{-}}
+\end{gather}
+Para la segunda matriz de Pauli el generador es
+\begin{gather}
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}\rightarrow \mat{0 & -i \\ i & 0} \mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}=i\mat{-u\du{2}{+} & -u\du{2}{-}\\ u\du{1}{+} & u\du{1}{-}}\\
+L_2=i\left(-u\du{2}{+}\frac{\p}{\p u\du{1}{+}}+u\du{1}{+}\frac{\p}{\p u\du{2}{+}}-u\du{2}{-}\frac{\p}{\p u\du{1}{-}}+u\du{1}{-}\frac{\p}{u\du{2}{-}}\right)
+\end{gather}
+Los operadores escalera son
+\begin{gather}
+L_{+}=\frac{1}{2}(L_1+iL_2)= u\du{2}{+}\frac{\p}{\p u\du{1}{+}}+u\du{2}{-}\frac{\p}{\p u\du{1}{-}}=u\du{2}{?}\frac{\p}{\p u\du{1}{?}}\\
+L_{-}=\frac{1}{2}(L_1-iL_2)= u\du{1}{+}\frac{\p}{\p u\du{2}{+}}+u\du{1}{-}\frac{\p}{\p u\du{2}{-}}=u\du{1}{?}\frac{\p}{\p u\du{2}{?}}
+\end{gather}
+El último será $L_3$
+\begin{gather}
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}\rightarrow \mat{1 & 0 \\ 0 & -1} \mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}=\mat{-u\du{1}{+} & u\du{1}{-}\\ -u\du{2}{+} & -u\du{2}{-}}\\
+L_3=u\du{1}{+}\frac{\p}{\p u\du{1}{+}}+u\du{1}{-}\frac{\p}{\p u\du{1}{-}}-u\du{2}{+}\frac{\p}{\p u\du{2}{+}}-u\du{2}{-}\frac{\p}{u\du{2}{-}}\\
+L_3=u\du{1}{?}\frac{\p}{\p u\du{1}{?}}-u\du{2}{?}\frac{\p}{\p u\du{2}{?}}
+\end{gather}
+Un cálculo semejante, que omito, muestra que los generadores por la derecha son
+\begin{gather}
+K_1=u\du{i}{-}\frac{\p}{\p u\du{i}{+}}+u\du{i}{+}\frac{\p}{\p u\du{i}{i}}\\
+K_2=i\left(u\du{i}{-}\frac{\p}{\p u\du{i}{+}}-u\du{i}{+}\frac{\p}{\p u\du{i}{i}}\right)\\
+K_3=u\du{i}{+}\frac{\p}{\p u\du{i}{+}}-u\du{i}{-}\frac{\p}{\p u\du{i}{i}}\\
+K_+=u\du{i}{+}\frac{\p}{\p u\du{i}{-}}\qquad K_-=u\du{i}{-}\frac{\p}{\p\du{i}{+}}
+\end{gather}
+Es fácil ver que los $K$'s conmutan con los $L$'s y es la mencionada relación de $SO(4)$ con $SU(2)\times SU(2)$. Observemos que $K^2=L^2$. De manera que podemos elegir una base de funciones propias de $L^2$, $L_z$ y $K_z$ que son las $Y^l_{mm'}$. Cualquier función definida sobre $S^3$ se puede escribir como una combinación lineal de estos armónicos esféricos generalizados. Esto es parte del trabajo de Penrose y Newman sobre el grupo MSB en la época pre-twistor.\\
+Hagamos el cociente tangible. Necesitamos elegir un $SU(2)$ y un $U(1)$. Elijamos la acción por la derecha y $K_3$ como subgrupo. Los operadores $K_\pm$ son los que Newman y Penrose llamaron pomposamente \textit{edth} y \textit{antiedth} y GIKOS $D^{++}$ y $D^{--}$.\\
+
+Para hacer realidad el cociente decimos que $\left[u\du{i}{?}\right]\equiv\left[v\du{i}{?}\right]$ si y sólo si
+\begin{gather}
+u\du{i}{+}=e^{i\phi}v\du{i}{+}\qquad u\du{i}{-}=e^{-i\phi}v\du{i}{-}\label{equiv}
+\end{gather}
+Veamos que efectivamente $\left[u\du{i}{?}\right]$ parametrizan $S^2$. Sean $a$, $b$ los dos parámetros complejos de Cayley-Klein que parametrizan $SU(2)\equiv S^3$ con las transformaciones $a\rightarrow ae^{i\phi}$ y $b\rightarrow be^{-i\phi}$ podemos elegir un representante con $a$ o $b$ real.\\
+Las funciones definidas sobre $S^2$ serán funciones $f(u\du{i}{?})$ invariantes bajo las transformaciones (\ref{equiv}). Necesitaremos escrbir sobre la esfera formas y campos vectoriales. Primero trabajaremos con coordenadas adaptadas al problema. La relación entre los ángulos de Euler ($\alpha,\phi,\rho$) y los parámetros de Cayley-Klein es
+\begin{gather}
+\mat{u\du{1}{+} & u\du{1}{-}\\ u\du{2}{+} & u\du{2}{-}}=
+\mat{
+\cos\left(\frac{\alpha}{2}\right) e^{\frac{i(\phi+\rho)}{2}} & i\sen\left(\frac{\alpha}{2}\right)e^{\frac{i(\phi-\rho}{2}}\\ 
+i\sen\left(\frac{\alpha}{2}\right)e^{\frac{-i(\phi-\rho}{2}} &
+\cos\left(\frac{\alpha}{2}\right) e^{\frac{i(\phi+\rho)}{2}} 
+}\\
+0\leq\alpha\leq \pi,\qquad 0\leq \phi\leq 2\pi,\qquad -2\pi\leq \rho\leq 2\pi
+\end{gather}
+De manera
+\begin{gather}
+d u\du{1}{+}=-\frac{1}{2} \sen\left(\frac{\alpha}{2}\right) e^{\frac{i(\phi+\rho)}{2}}d\alpha+\frac{i}{2}\cos\left(\frac{\alpha}{2}\right) e^{\frac{i(\phi+\rho)}{2}}(d\phi+d\rho)\\
+d u\du{1}{-}=\frac{i}{2} \cos\left(\frac{\alpha}{2}\right) e^{\frac{i(\phi-\rho)}{2}}d\alpha-\frac{1}{2}\cos\left(\frac{\alpha}{2}\right) e^{\frac{i(\phi-\rho)}{2}}(d\phi+d\rho)
+\end{gather}
+Con un poco de cuidado podemos probar la identidad
+\begin{gather}
+2(du^{i+}\otimes d\du{i}{-}+d u^{i-}\otimes du\du{i}{+})=\nonumber\\
+d\alpha\otimes d\alpha +d\phi\otimes d\phi+d\rho \otimes d\rho +\cos\alpha(d\phi\otimes d\rho+d\rho \otimes d\phi)
+\end{gather}
+Que nos muestra como escribir la métrica sobre $S^3$ en función de los parámetros de Cayley-Klein.\\
+Veamos cómo la métrica desciende a $S^2$ a una forma muy conocida. Hemos cocientado por la derecha de manera que los campos vectoriales por la izquierda pasan bien al cociente (los $L_i$). Esto es, imaginemos una curva en $S^3$ parametrizada por
+\begin{gather}
+p(t)=e^{itL}p(0)
+\end{gather}
+Pasa bien al cociente porque la clase de equivalencia $[p(t)]$ está bien definida. Al revés las cosas son diferentes. Una linea en $S^3$ generada por $K_3$ no mueve $S^2$ luego $K_3$ tien que pasar al cociente como cero. Y los otros dos no están bien definidos
+\begin{gather}
+p(t)=p(0)e^{itK_2}
+\end{gather}
+Si elegimos dos $p(0)$ en la misma clase de equivalencia la evolución estará en distintas clases. De manera que
+\begin{gather}
+K_3 f(\Omega)=\iff\frac{\p f}{\p\rho}=0
+\end{gather}
+Donde $f$ es una función definida sobre $S^2$. Además de los campos vectoriales por la derecha y por la izquierda tenemos las uno formas, las de la derecha $\omega_K$ y las de la izquierda $\omega_L$. Consideremos la forma $\omega\ud{3}{L}$ (en un segundo la construímos). En el cociente debe ser cero porque en general $\omega\ud{3}{L}(X)=0$ donde $X$ es un campo arbitrario. Cualquier campo se puede poner como combinación lineal de los $K's$ y en el paso al cociente no estará $K_3$. Ahora, en coordenadas
+\begin{gather}
+\omega\ud{3}{L}=u^{i+}du\du{i}{+}-u^{i-}du\du{i}{+}=i(d\phi+\cos\alpha d\rho)
+\end{gather}
+Si solucionamos esta ecuación y sólo después de encontrar una solución puedo escribir $K_1$ y $K_2$ bien definidas en el cociente. Igualmente las formas
+\begin{gather}
+\omega\ud{1}{L}=u^{i+}du\du{i}{+}-u^{i-}du\du{i}{-}\qquad \omega\ud{2}{L}=i(u^{i-}du\du{i}{-}+u^{i-}du\du{i}{-})
+\end{gather}
+sólo son aceptables una vez resuelta la ecuación. Definimos, por conveniencia
+\begin{gather}
+dz^{++}=u^{i+}du\du{i}{+}\qquad dz^{--}=u^{i-}d\du{i}{-}
+\end{gather}
+Es fácil comprobar que $dz^{++}=(dz^{--})^*$. Recordemos que $dz^{++}$ no está definido hasta que no tengamos una solución $\rho(\alpha,\phi)$. De manera que una uno forma general sobre $S^2$ se puede escribir como $\omega=V_{++}dz^{++}+V_{--}dz^{--}$. Nuevamente tampoco $V_{--}$ posee sentido en este esquema. De hecho podemos ver estas funciones como secciones en determinados fibrados sobre $S^2$. Son lo que alguna vez Penrose llamó \textit{spin weighted functions}.\\
+
+Otro cálculo semejante muestra que la métrica sobre la esfera se puede escribir como
+\begin{gather}
+g=2(dz^{++}\otimes dz^{--}+dz^{--}\otimes dz^{++})=4dz^{++}\otimes dz^{--}=\nonumber\\
+d\alpha\otimes d\alpha +\sen^2\alpha d\phi\otimes d\phi
+\end{gather}

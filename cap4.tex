@@ -1,0 +1,497 @@
+\chapter{CUANTIZACIÓN\label{cap4}}
+\section{Partículas masivas}
+Estudiaremos aquí la acción de las partículas masivas con supersimetría extendida más simple\cite{Cas76b}
+\begin{gather}
+S=\frac{1}{2}\int d\tau\left(e^{-1}\omega^\mu\omega^\nu\eta_\mn-e m^2\right)\label{superparticleL}
+\end{gather}
+donde definimos por conveniencia $\omega^\mu=\dot x^\mu-i\dot\theta^{ai}\sigma\ud{\mu}{a\db}\bar\theta\ud{\db}{i}+i\theta^{ai}\sigma\ud{\mu}{a\db}\dot{\bar\theta}\ud{\db}{i}$. En muchos casos trabajaremos sólo la situación más elemental de $D=4$ y $N=1$ en la que algunos cálculos son más transparentes\\
+
+Al ser una partícula masiva no hay simetría $\kappa$, la única ligadura de primera clase está relacionada con la invariancia de reparametrización de la acción. Los momentos generalizados son:
+\begin{gather}
+\pi_e=0\\
+p_\mu=e^{-1}\omega_\mu\\
+\pi_{ai}=-ip_\mu \sigma\ud{\mu}{a\db}\bar\theta\ud{\db}{i}
+\pi\du{\db}{i}=-ip_\mu \theta^{ai}\sigma\ud{\mu}{a\db}
+\end{gather}
+Usamos corchetes de Poisson canónicos \cite{Cas76b} (ver apéndice a este capítulo)
+\begin{gather}
+\cor{x^\mu,p_\nu}=\delta\ud{\mu}{\nu}\\
+\cor{\theta^a,\pi_b}=-\delta\ud{a}{b}
+\end{gather}
+Hay cargas consevadas relacionadas con la invariancia de super Poincarè. El momento angular es
+\begin{gather}
+J_\mn=L_\mn+S_\mn\\
+L_\mn=x_\mu p_\nu-x_\mu p_\nu\\
+S_\mn=\pi_a{\sigma_\mn}\ud{a}{b}\theta^b+\bar\theta^\da\bar{\sigma_\mn}\du{\da}{\db}\bar\pi_\db
+\end{gather}
+La ligadura primaria $\pi_e$ implica la ligadura de primera clase secundaria $p^2+m^2=0$. Además tenemos las ligaduras de segunda clase
+\begin{gather}
+d_{ai}\equiv \pi_{ai}+ip_\mu \sigma\ud{\mu}{a\db}\bar\theta\ud{\db}{i}\\
+\bar d\du{\db}{i}\equiv \pi\du{\db}{i}+ip_\mu \theta^{ai}\sigma\ud{\mu}{a\db}\\
+\cor{d_{ai},\bar d\du{\db}{j}}=-i\delta\du{i}{j}p_\mu \sigma\ud{\mu}{a\db}\equiv {C_{ai\db}}^j
+\end{gather}
+La naturaleza de segunda clase de estas ligaduras esta atado al hecho de que la matriz ${C_{ai\db}}^j$ no es singular si $m\neq 0$. El procedimiento de Dirac para tratar tales problemas es sustituir los corchetes de Poisson por
+\begin{gather}
+\dir{F,G}=\cor{F,G}-\cor{F,d_{ai}}\hat C\ud{ai\db}{j}\cor{\bar d\du{\db}{j},G}-\cor{F,\bar d\du{\db}{j}}\hat C\ud{ai\db}{j}\cor{d_{ai},G}
+\end{gather}
+Donde la matriz $\hat C\ud{ai\db}{j}=\dfrac{1}{2ip^2}p_\mu\bar \sigma^{\mu\,\da b}\delta\ud{i}{j}$ y verifica
+\begin{gather}
+{C_{ai\db}}^j \hat C\ud{bk\db}{j}=\delta\du{i}{i}\delta\du{a}{b}
+\end{gather}
+Estamos ahora en posición de calcular los corchetes de Dirac para todas las coordenadas y momentos
+\begin{gather}
+\dir{\theta^{ai},\theta^{bj}}=\dir{\pi_{ai},\pi_{bj}}=\dir{p_\mu,p_\nu}=0\label{con1}\\
+\dir{\theta^{ai},\bar\theta\ud{\da}{j}}=\frac{-1}{2ip^2}p_\mu\bar \sigma^{\mu\,\da a}\\
+\dir{x^\mu,\theta^{ai}}=\frac{1}{2p²}p_\nu \sigma^{\nu\,\da a}\theta^b \sigma\ud{\mu}{b\da}\\
+\dir{x^\mu,\bar\theta\ud{\da}{i}}=\frac{1}{2p^2}p_\nu \bar \sigma^{\nu\,\da a} \bar\theta\ud{\db}{i}\sigma\ud{\mu}{a\db}\label{con3}\\
+\dir{x^\mu,x^\nu}=\frac{-\sigma^\mn}{p^2}\label{con2}
+\end{gather}
+donde
+\begin{gather}
+S^\mn=\ep^{\mn\rho\lambda}p_\rho\theta^{ai}\sigma_{\lambda\, a\db}\bar \theta\ud{\db}{i}
+\end{gather}
+La mecánica cuántica de este sistema debiese ser ahora directa. Todo lo que queda por hacer is sustituir los paréntesis de Dirac por conmutadores de Heissenberg\footnote{A nivel cuántico presentamos conmutadores como $\con{A,B}=AB-(-1)^{ab}B$.} siguiendo la regla $\dir{\cdot,\cdot}\rightarrow -i\con{\cdot,\cdot}$.\\
+El problema que debemos afrontar es que no podemos representar las coordenadas $x^\mu$ multiplicativamente porque no commutan. Esto fue notado por primera vez por Casalbuoni.\\
+
+En lugar de calcular los corchetes de Dirac que nos da nuevos problemas pudiesemos intentar otra cosa. Con partículas masivas el conjunto completo de ligaduras es de segunda clase. Podemos dividir las ligaduras en un conjunto de ligaduras de primera clase y otro conjunto que entenderemos como fijación de calibre de estas. Por ejemplo veremos que las $d_{ai}$ se pueden entender como ligaduras de primera clase y las $d\du{\da}{i}$ serán sus fijaciones de calibre. Se ha dicho alguna vez \footnote{La idea surge del mismo trabajo de Casalbuoni\cite{Cas76b} y ha sido aplicada extensivamente por Lusana\cite{Lus83}, Frydryszak \cite{Fry84} y colaboradores} que dado que no podemos imponer todas las ligaduras imponer sólo un conjunto es suficiente porque implica que todos los elementos de matriz son nulos.. Esto es si tenemos un conjunto de ligaduras $(\phi_\alpha,\bar\phi_\alpha)$ e imponemos  $\hat\phi_\alpha\ket{V}=0$ entonces  $\bra{V}\hat{\bar\phi}_\alpha=0$.\\
+
+Llaman a esto el procedimiento de Gupta-Bleuer de cuantización. Pudiese haber alguna malinterpretación aquí porque hay situaciones en los que este procedimiento no funciona correctamente. sin embargo probaremos el siguiente hecho:\\
+Si $\phi_\alpha$ con $\alpha=1,...,N$ es un conjunto de ligaduras de primera clase y $\mathrm{det} \cor{\phi_\alpha,\bar\phi_\alpha}\neq 0$ entonces $\bar\phi_\alpha=0$ es un conjunto admisible de condiciones de fijación de calibre\\
+En el caso bajo estudio se ntiende fácilmente quet $\bar d_\da$ por si solas son un conjunto de ligaduras de primera clase y, por lo tanto, la teoría es equivalente a una en la que sólo este conjunto de ligaduras existe. Ahora somos libres de elegir \textit{otras} condiciones de fijación de calibre si así lo deseamos.\\
+
+Por lo tanto la mecánica cuántica de las superpartículas masivas en $D=4$ y $N$ arbitrario se describe por un supercampo $V(x^\mu,\theta^{a\,i},\bar\theta\ud{\da}{i})$ que verifique
+\begin{gather}
+(P^2+m^2)V=0\\
+\bar D_{\da\,i}V=0
+\end{gather}
+Por tanto la mecánica cuántica de una superpartícula de este tipo viene descrita por un supermultiplete quiral \textit{generalizado}. Notemos que en todos lo casos tenemos una representación irreducible de super Poincarè. Aunque este resultado ya se conocia, como digo desde los tiempos de Casalbuoni, sentimos que nuestro método es más riguroso y, como veremos aplicable a otras circunstancias.\\
+
+Pero podemos lidiar con los corchetes de Dirac si somos capaces de encontrar un conjunto de coordenadas canónicas. La anterior solución nos da una fuerte indicación. En el Lagrangiano original cambiamos variables
+\begin{gather}
+x^\mu_I=x^\mu+i\theta\ud{a}{i}\sigma\ud{\mu}{a\db}\bar\theta^{\db i}
+\end{gather}
+Podemos escribir
+\begin{gather}
+\omega^\mu=\dot x^\mu_I-2i\dot\theta\ud{a}{i}\sigma\ud{\mu}{a\db}\bar\theta^{\db i}
+\end{gather}
+Si calculamos los momentos relativos a estas nuevas coordenadas $(x^\mu_I,\theta^a,\bar\theta^\da)$ encontramos
+\begin{gather}
+p_\mu=e^{-1}\omega_\mu\\
+\pi_{ai}=-2ip_\mu\sigma\ud{\mu}{a\da}\bar\theta\ud{\da}{i}\label{second}\\
+\bar\pi\du{\da}{i}=0\label{first}
+\end{gather}
+Pero veamos que sucede si seguimos la otra ruta. definimos, como antes
+\begin{gather}
+d_{ai}=\pi_{ai}+2ip_\mu\sigma\ud{\mu}{a\da}\bar\theta\ud{\da}{i}\\
+\bar d\du{\da}{i}=\bar \pi\du{a}{i}
+\end{gather}
+Las reglas de conmutación quedan sin cambios
+\begin{gather}
+\cor{d_{ai},\bar d\du{\da}{j}}=\delta\du{i}{j}2i\sigma\ud{\mu}{a\da}p_\mu={C_{ai\da}}^j
+\end{gather}
+Los corchetes de Dirac  se definen siguiendo las mismas reglas y el resultado se calcula fácilmente
+\begin{gather}
+\dir{x^\mu_I,x^\nu_I}=\dir{x^\mu_I,\theta^{ai}}=\dir{\theta^{ai},\theta^{bj}}=0\\
+\dir{x^\mu_I,p_\nu}=\eta_\mn\\
+\dir{\pi_{ai},\theta^{bj}}=-\delta\du{i}{j}\delta\du{a}{b}
+\end{gather}
+La respuesta es, por supuesto, la misma. El espacio resultante es el quiral o antiquiral.\\
+Podríamos trabajar directamente con las relaciones (\ref{con1})-(\ref{con2}) y redescubrir las ecuaciones antes descritas. Como quiera que lo veamos siempre obtenmos la misma respuesta, conmovedor.
+\section{El método de los proyectores}
+Geométricamente las ligaduras de segunda clase restringen la variedad simplectica del espacio de fases mientras que las ligaduras de primera clase lo reducen a una variedad de Poisson foliada.\\
+
+Cuando las ligaduras de segunda clase estan presentes el algoritmo de Dirac encuentra ciertas dificultades. Primero debemos calcular el álgebra de los observables con el corchete de Dirac. En la transición a la teoría cuántica quizá encontremos problemas de ordenamiento además de problemas con la definición operatorial del inverso de la matriz de Dirac. Si estos problemas se resuelven todavía tenemos que representar el álgebra. Como hemos mencionado los corchetes de Dirac son realmente una estructura de Poisson sobre la variedad inducida. A nivel clásico el teorema de Darboux nos asegura que existe un conjunto de coordenadas canónicas. si conseguimos encontrar este conjunto e coordenadas canónicas (por ejemplo las $(x^\mu_I,\theta^{a\,i})$ ) podríamos sentirnos tentados a cuantizar en estas coordenadas. El problema está en que la teoría resultante es probablemente \textit{diferente} de la que queríamos estudiar. Es un hecho bien conocido, incluso por Dirac, que el programa de la cuantización canónica debe ser llevado a cavo en coordenadas cartesianas, si cambiamos de coordenadas y cuantizamos podríamos acabar con algo muy distinto.\\
+
+Esta es la razón por la que las ligaduras de segunda clase son un dolor de cabeza: incluso aún cuando seamos capaces de encontrar un conjunto de coordenadas de Darboux que resuelven las ligaduras no hemos resuelto el problema. Aquí proponemos una nueva solución a este problema que es distinta a cualquier otra solución propuesta hasta ahora. La mayor parte de los métodos que se proponen para estudiar las ligaduras de segunda clase requieren la introducción de campos auxiliares con la idea de hacer una \textit{desfijación de calibre}\footnote{Gauge unfixing} y quedarnos con un conjunto de ligaduras de primera clase. Aquí iremos en la dirección opuesta, vamos a restringir el espacio de Hilbert. Mas tarde o más temprano vamos a necesitar fijar el calibre así que de todas formas debemos lidiar en algún momento con lasligaduras de segunda clase.\\
+
+El hecho de que las ligaduras de segunda clase restrinjan el espacio de fases de la mecánica clásica debiese significar, en la mecánica cuántica que el espacio de Hilbert tiene alguna restricción. Un subespacio determinado se obtiene con un operador de proyección $\Proy$ tal que el espacio de Hilbert sea $\Proy \mathcal{H}$. Los operadores que actúan sobre el espacio físico son aquellos que vienen proyectados del espacio completo $\mathcal{H}$. Ponemos la siguiente conjetura\\
+
+Si un sistema clásico de coordenadas generalizadas y momentos $(q^i,p_j)$ está sujeto a las ligaduras de segunda clase $\phi_\alpha(q^i,p_j)$ que satisfacen el álgebra
+\begin{gather}
+\cor{\phi_\alpha,\phi_\beta}=C_{\alpha\beta}
+\end{gather}
+tal que los corchetes de Dirac están dados por
+\begin{gather}
+\dir{F,G}=\cor{F,G}-\cor{F,\phi_\alpha}C^{\alpha\beta}\cor{\phi_\beta,G}
+\end{gather}
+Entonces existe un operador de proyección tal que el álgebra cuántica puede ser representada en una imagen de Schrödinger generalizada por
+\begin{gather}
+q^i\rightarrow \Proy q^i\Proy\\
+p_i\rightarrow \Proy(-i\hbar\p_i)\Proy
+\end{gather}
+\textbf{Demostración: }(de la conjetura)\\
+
+Hace muchos años ya Herman Weyl propuso un método para traducir cada observable clásico a un equivalente cuántico. La idea básica es naturalmente que si el observable clásico es $f(q^i,p_j)$ entonces el cuántico debe ser $F(Q^i,P_j)$ donde $Q^i$ y $P_j$ son los operadores cuánticos relacionados con la posición y el momento (es decir $Q_i\rightarrow q_i\cdot$ y $P_j\rightarrow -i\p_j$. Por supuesto hay un problema de ordenamiento. La idea de Weyl es la siguiente. Partimos de $f(q,p)$ y hacemos su transformada de Fourier $\hat f(\xi,\eta)$ dada por
+\begin{gather}
+\hat f(\xi,\eta)=\frac{1}{(2\pi)^{n}}\int f(x,p)e^{ix\xi+ip\eta}d^nxd^np\label{transfour}
+\end{gather}
+Entonces, sin más
+\begin{gather}
+F(Q,P)=\frac{1}{(2\pi)^n}\int\omega(\xi,\eta)\hat f(\xi,\eta)e^{i\xi Q+i\eta P}
+\end{gather}
+Donde $\omega(\xi,\eta)$ es alguna función. Con esta definición todo el problema del ordenamiento esta transladado a la función $\omega$. Lo que nosotros proponemos aquí es que este método es válido incluso en presencia de ligaduras de segunda clase. Si existen ligaduras de segunda clase $\phi_\alpha$ la integral (\ref{transfour}) se hará sobre la variedad definida por las ligaduras y no todo $\mathbb{R}^{2n}$. Sea entonces $\mathcal{M}\in \mathbb R^{2n}$ la subvariedad definida por $\phi_\alpha(x,p)=0$. Entonces un observable clásico $f(x,p)$ vendrá representado por
+\begin{gather}
+F(Q,P)=\frac{1}{(2\pi)^n}\int\omega(\xi,\eta)\hat f(\xi,\eta)e^{i\xi Q+i\eta P}\\
+\hat f(\xi,\eta)=\frac{1}{(2\pi)^{n}}\int_{\mathcal M}f(x,p)e^{ix\xi+ip\eta}d\Omega
+\end{gather}
+Es fácil ver que con esta definición el observable relacionado con $\phi_\alpha$ es siempre cero. Más difícil es comprobar que este método es universal y siempre válido.\\
+Aunque carecemos de una prueba general de la conjetura veremos que en este caso la conjetura nos provee con una bella solución.\\
+
+Si queremos buscar un proyector en el espacio de Hilbert de los supercampos es natural buscar uno que proyecte sobre una representación de super Poincarè. Ya hemos estudiado que proyectores existen, sólo tenemos que ver si sirven.\\
+Recordemos que en $D=4$ y $N=1$ tenemos que los operadores que generan el álgebra de super Poincarè en el superespacio son
+\begin{gather}
+P_\mu=-i\p_i\\
+J_\mn=L_\mn+S_\mn=x_\mu P_\nu-x_\mu P_\nu)+\frac{i}{4}(\theta\sigma_\mn\pi+\bar\theta\bar\sigma_\mn\bar\pi)\\
+Q_a=i\pi_a+iP_\mu\sigma\ud{\mu}{a\da}\bar\theta^\da\\
+\bar Q_\da=i\bar\pi_\da+iP_\mu\sigma\ud{\mu}{a\da}\theta^a
+\end{gather}
+estas son, por supuesto, las cargas conservadas obtenidas del Lagrangiano de la superpartícula. Noten que $\pi_a=\frac{\p}{\p\theta^a}$. Esta representación no es irreducible, como sabemos. Recordemos (\cite{Oku84}, \cite{RitSok81}, \cite{GatGriRoeSie}):\\
+\begin{teorema}
+Sea $\Psi(x^\mu,\theta^a,\bar\theta^\da)$ un supercampo que satisface
+\begin{gather}
+(P^2+m^2)\Psi=0
+\end{gather}
+entonces se puede escribir de forma única como ($m\neq 0$)
+\begin{gather}
+\Psi=\Psi_C+\Psi_A+\Psi_T\\
+\Psi_C=\Pcm\Psi\qquad \Psi_A=\Pam \Psi\qquad \Psi_T=\Ptm\Psi
+\end{gather}
+donde los operadores de proyección son
+\begin{gather}
+\Pam =\frac{1}{16m^2}D^2\bar D^2\qquad \Pcm=\frac{1}{16 m^2}\bar D^2 D^2\qquad \Ptm=\frac{-1}{8m^2}\bar D_\da D^2\bar D^\da
+\end{gather}
+\end{teorema}
+Los operadores que repesentan el álgebra de super Poincarè se obtienen proyectando los anteriores. Los operadores $P_\mu$ y $L_\mn$ quedan sin cambios mientras que el operador del momento angular interno se puede escribir de otra forma.  Por ejemplo usando el proyector $\Pc$
+\begin{gather}
+\hat S_\mn=\Pc S_\mn \Pc=\Pc\ep^{\mn\rho\lambda}p_\rho\theta^{ai}\sigma_{\lambda\, a\db}\bar \theta\ud{\db}{i}\Pc
+\end{gather}
+Los operadores de la mecánica cuántica que satisfacen las relaciones de conmutación correctas son
+\begin{gather}
+\Pa =\frac{-1}{16P^2}D^2\bar D^2\qquad \Pc=\frac{-1}{16 P^2}\bar D^2 D^2\qquad \Pt=\frac{1}{8P^2}\bar D_\da D^2\bar D^\da
+\end{gather} 
+\begin{gather}
+\hat x^\mu\rightarrow \Proy x^\mu \Proy\\
+\hat \theta^a\rightarrow \Proy\theta^a \Proy\\
+\hat{\bar\theta}^\da\rightarrow \Proy\bar\theta^\da \Proy
+\end{gather}
+Donde en la parte derecha $x^\mu$ es un operador multiplicativo. Así que uno puede sentirse tentado a pensar que eligiendo alguno de estos operadores de proyección la teoría se puede realizar. En efecto, se puede.
+Empecemos con\\
+\textbf{Quiral}\\
+Necesitamos calcular
+\begin{gather}
+\con{\hat\theta^a,\hat{\bar\theta}^\da},\quad \con{x^\mu,\hat{\bar\theta}^\da},\quad \con{x^\mu,x^\nu}
+\end{gather}
+empecemos con\\
+$\bullet$ $\con{\hat\theta^a,\hat{\bar\theta}^\da}$
+\begin{gather}
+\con{\hat\theta^a,\hat{\bar\theta}^\da}=\Pc\theta^a\Pc\bar\theta^\da \Pc+\Pc\bar\theta^\da \Pc\theta^a\Pc
+\end{gather}
+Usamos la formula
+\begin{gather}
+\con{\Pc,\theta^a}=\frac{-1}{8P^2}\bar D^2 D^a
+\end{gather}
+Con un poco de cuidado podemos probar que
+\begin{gather}
+\con{\hat\theta^a,\hat{\bar\theta}^\da}=\Pc\con{\theta^a,\Pc}\bar\theta^\da \Pc+\Pc\bar\theta^\da\con{\Pc,\theta^a}\Pc=\nonumber\\
+\frac{-1}{8p^2}\Pc\left(-\bar D^2D^a\bar\theta^\da+\bar\theta^\da\bar D^2D^a\right)\Pc=\nonumber\\
+\frac{-1}{8p^2}\Pc\left(-\con{\bar D^2,D^a}\bar\theta^\da+\bar\theta^\da\con{\bar D^2,D^a}\right)\Pc=\nonumber\\
+\frac{-1}{8p^2}\Pc\left(4i\bar\sigma^{\mu\,\db a}\bar D_\db\p_\mu\bar\theta^\da+\bar\theta^\da(-4i\bar\sigma^{\mu\,\db a}\bar D_\db\p_\mu)\right)\Pc=\nonumber
+\Pc\left(\frac{4i}{8p^2}\bar\sigma^{\mu\,\da a}\p_\mu\right) \Pc
+\end{gather}
+Nuestra próxima tarea es\\
+$\bullet \con{x^\mu,\theta^a}$\\
+Los trucos son similares
+\begin{gather}
+\con{\hat x^\mu,\hat \theta^a}=\Pc x^\mu \Pc \theta^a \Pc -\Pc\theta^a\Pc x^\mu \Pc=\Pc x^\mu \con{\Pc, \theta^a} \Pc -\Pc\con{\theta^a,\Pc} x^\mu \Pc
+\end{gather}
+Recuerde que $\con{\Pc,\theta^a}\Pc=0$
+\begin{gather}
+\con{\hat x^\mu,\hat \theta^a}=\frac{-1}{8P^2}\Pc \bar D^2 D^a x^\mu\Pc=\frac{-1}{8P^2}\Pc \con{\bar D^2,D^a} x^\mu\Pc=\nonumber\\
+\frac{-4i}{8P^2}\bar\sigma^{\nu\,\db a}\p_\nu \bar D_\db x^\mu\Pc=\Pc\left(\frac{-ip_\nu}{p^2}\theta^b\sigma\ud{\mu}{b\db}\bar\sigma^{\nu\,\db a}\right)\Pc
+\end{gather}
+El próximo conmutador es también el más difícil\\
+$\bullet \con{\hat x^\mu,\hat x^\nu}$
+\begin{gather}
+\con{\hat x^\mu,\hat x^\nu}=\Pc x^\mu \Pc x^\nu \Pc-\Pc x^\nu \Pc x^\mu \Pc
+\end{gather}
+Usando que
+\begin{gather}
+\con{x^\mu,\Pc}=\con{x^\mu,\frac{-m^2}{p^2}\Pcm}=\frac{-m^2}{p^2}\con{x^\mu,\Pcm}-m^2\con{x^\mu,\frac{1}{p²}}\Pcm
+\end{gather}
+De manera que podemos escribir
+\begin{gather}
+\con{\hat x^\mu,\hat x^\nu}=\Pc\left(\frac{-m^2}{p^2}\Pcm x^\nu+m^2\con{x^\nu,\Pcm}x^\mu\right)\Pc+\nonumber\\
+\Pc\left(-m^2\con{x^\mu,\frac{1}{p²}}\Pcm x^\nu+m^2\con{x^\nu,\frac{1}{p^2}}\Pcm x^\mu\right)\Pc
+\end{gather}
+asumimos que\footnote{El lector puede preferir deducir esta fórmula de los corchetes de Poisson o $0=\con{x^\mu,1}=\con{x^\mu,p^2/p^2}$}
+\begin{gather}
+\con{x^\nu,\frac{1}{p^2}}=\frac{i2}{(p²)²}p^\nu
+\end{gather}
+y usa
+\begin{gather}
+\con{\Pcm,x^\mu}=\frac{1}{16m^2}\left(\bar D^2\con{D^2,x^\mu}+\con{\bar D^2,x^\mu}D^2\right)\\
+\con{D^2,x^\mu}=2iD^a\sigma\ud{\mu}{a\da}\bar\theta^\da\\
+\con{\bar D^2,x^\mu}=-2i\theta^a\sigma\ud{\mu}{a\da}\bar D^\da
+\end{gather}
+De modo que
+\begin{gather}
+=\frac{1}{16p²}\Pc \left(\bar D^2\con{D^2,x^\mu}+\con{\bar D^2,x^\mu}\right)x^\nu\Pc-(\mu\leftrightarrow\nu)+\nonumber\\
+-\frac{2i}{p^2}\Pc\left( x^\mu p^\nu-x^\nu p^\mu\right)\Pc
+\end{gather}
+La segunda linea es simplemente $\frac{-2i}{p^2}L^{\mn}$ donde recordamos al lector que $L^\mn$ es el momento angular orbital. La linea difícil es
+\begin{gather}
+\frac{2i}{16p^2}\Pc \left(\bar D^2 D^a\sigma\ud{\mu}{a\db}\bar\theta^\db-\theta^a\sigma\ud{\mu}{a\db}\bar D^\db D^2\right) x^\nu\Pc-(\nu\leftrightarrow\mu)=\nonumber\\
+\frac{i}{8p^2}\Pc\left(\con{\bar D^2, D^a}\sigma\ud{\mu}{a\da}\bar \theta^\da-\theta^a\sigma\ud{\mu}{a\da}\con{\bar D^a, D^2}\right) x^\nu\Pc-(\nu\leftrightarrow\mu)
+\end{gather}
+ahora usemos
+\begin{gather}
+\con{\bar D^2,D^a}=-4i\bar \sigma^{\mu\,\db a}\bar D_\db\p_\mu\\
+\con{\bar D^\da,D^2}=-4i\bar \sigma^{\mu\,\da a}D_a
+\end{gather}
+para obtener
+\begin{gather}
+=\frac{i(-4i)}{8p^2}\Pc\left(\bar\sigma^{\lambda\,\db a}\sigma\ud{\mu}{a\da}\bar D_\db \p_\lambda\bar\theta^\da x^\nu-\theta^a\sigma\ud{\mu}{a\da}\bar\sigma^{\lambda\,\da b}D_b x^\nu\right)\Pc-(\nu\leftrightarrow\mu)=\nonumber\\
+\frac{1}{2p²}\Pc\left(\sigma^{\nu\,\db a}\sigma\ud{\mu}{a\da}\bar D_\db\bar\theta^\da+\sigma^{\lambda\,\db a}\sigma\ud{\mu}{a\da}\bar D_\db\bar\theta^\da\p_\lambda-\theta^a\sigma\ud{\mu}{a\da}\bar\sigma^{\nu\,\da b}D_b-\theta^a\sigma\ud{\mu}{a\da}\bar\sigma^{\lambda\,\da b}D_bx^\nu\p_\lambda\right)\Pc\nonumber\\-(\nu\leftrightarrow\mu)
+\end{gather}
+Cuando tomemos la parte antisimétrica el primer y tercer términos cancelan. Nos queda
+\begin{gather}
+=\frac{1}{2p²}\Pc\left(-\sigma\ud{\mu}{a\da}\bar\sigma^{\lambda\,\da a}x^\nu\p_\lambda-\sigma\ud{\mu}{a\da}\bar\sigma^{\lambda\,\da a}x^\nu\p_\lambda\right)\Pc-(\nu\leftrightarrow\mu)+\nonumber\\
+\frac{-1}{2p²}\Pc\bar\sigma^{\lambda\,\db a}\sigma\ud{\mu}{a\da}\bar\theta^\da(-i\sigma\ud{\nu}{b\db}\theta^b)\p_\lambda\Pc-(\nu\leftrightarrow\mu)
+\end{gather}
+La primera linea se calcula fácilmente si tomamos n cuenta que $\sigma\ud{\mu}{a\da}\bar\sigma^{\nu\,\da a}=-2\eta^\mn$ y el resultado es $\frac{i2}{p^2}L^{\mn}$ cancelando un resultado previo. La segunda linea es
+\begin{gather}
+\frac{-i}{2p^2}\Pc\theta\left(\sigma^{\nu}\bar\sigma^\lambda\sigma^\mu-\sigma^\mu\bar\sigma^\lambda\sigma^\nu\right)\bar\theta\p_\lambda\Pc=\nonumber\\
+=\frac{-i}{p^2}\Pc\ep^{\nu\lambda\nu\alpha}p\lambda\theta^b\sigma_{\alpha\,b\db}\bar\theta^\db\Pc=\frac{-i}{p^2}S^\mn
+\end{gather}
+Así que finalmente sumando
+\begin{gather}
+\con{\hat x^\mu,\hat x^{\nu}}=\frac{-i}{p²}S^\mn
+\end{gather}
+Por supuesto que todos los cálculos que hemos hecho aquí valen de forma idéntica para el proyector $\Pa$. Pero no para $\Pt$. Es decir hemos logrado representar el álgebra cuántica
+\begin{gather}
+\con{\hat\theta^a,\hat\theta^b}=\con{\hat\pi_{a},\hat\pi_{b}}=\con{\hat p_\mu,\hat p_\nu}=0\\
+\con{\hat \theta^{a},\hat{\bar\theta}^{\da}}=\frac{-i}{2ip^2}\hat p_\mu\bar \sigma^{\mu\,\da a}\\
+\con{\hat x^\mu,\hat \theta^{a}}=\frac{i}{2p²}\hat p_\nu \sigma^{\nu\,\da a}\hat \theta^b \sigma\ud{\mu}{b\da}\\
+\con{\hat x^\mu,\hat{\bar\theta}^{\da}}=\frac{i}{2p^2}\hat p_\nu \bar \sigma^{\nu\,\da a} \hat{\bar\theta}^{\db}\sigma\ud{\mu}{a\db}\\
+\con{\hat x^\mu,\hat x^\nu}=\frac{-i\hat S^\mn}{p^2}
+\end{gather}
+donde
+\begin{gather}
+\hat S^\mn=\ep^{\mn\rho\lambda}\hat p_\rho\hat \theta^{a}\sigma_{\lambda\, a\db}\hat{\bar \theta}^{\db}\label{angularfour}
+\end{gather}
+Si hacemos los cálculos con $\Pt$ en lugar de $\Pc$ todo es idéntico excepto que la ecuación (\ref{angularfour}).\\
+Una vez más hemos probado que la cuantización de la partícula masiva en $D=4$ da como resultado el multiplete quiral. El caso de $N>1$ se puede tratar siguiendo exactamente las mismas lineas. El proyector que deja la teoría en el espacio quiral es proporcional a $\bar D^{2N}D^{2N}$.
+\section{Superpartículas en $D>4$}
+En dimensión mayor que cuatro muchas de las cosas que hemos hecho pueden repetirse. En dimensiones $D=6$ o $D=8$ los cálculos pueden ser más largos pero la situación es más o menos idéntica. El resultado de la cuantización del Lagrangiano (\ref{superparticleL}) es el espacio quiral.\\
+
+Algo diferente sucede en $D=10$. En este caso sólo tenemos un juego de cargas $Q_a$ que satisfacen
+\begin{gather}
+\cor{Q_a,Q_b}=2S\ud{\mu}{ab}p_\mu 
+\end{gather}
+No podemos imponer la condición de quiralidad $D_aV=0$ porque esto implica que $S\ud{\mu}{ab}\p_\mu V=0$ y, por tanto $\p_a V=0$ que junto con $p^2+m^2=0$ nos obligan a que $V=0$. Hay que buscar sólo una combinación  de ellas igual cero.\\
+
+Resulta que existen 8 espinores $\lambda\ud{a}{i}$ con $i=1,..,8$ que satisfacen la siguiente ecuación
+\begin{gather}
+\lambda\ud{a}{i}S\ud{\mu}{ab}\lambda\ud{b}{j}=0\qquad\forall i,j
+\end{gather}
+es decir existe un conjunto de 8 espinores puros ``ortogonales". Estos 8 espinores nos permiten imponer la ecuación más débil
+\begin{gather}
+\lambda\ud{a}{i}D_a V=0\label{ecu:superD10}
+\end{gather}
+Como esto es aún una conjetura no quiero desarrollarlo en mucha profundidad. Aceptemos por un momento que esto es así. en ese caso puedo dividir las ligaduras en dos partes $\lambda^a_i d_a$ y sus conjugados. Podemos nuevamente decir que una es la fijación de calibre de la otra. De forma que \ref{ecu:superD10} es la ecuación que caracteriza al multiplete de la superpartícula. Notemos que la solución a este multiplete es un supercampo $V(x^\mu,\bar\lambda_{ai}\theta^a)$ que es el multiplete de superespín cero en $D=10$. La ecuación de movimiento correcta en $D=10$ es $(P²+m^2)V=0$. La condición \ref{ecu:superD10} es una especie de condición de quiralidad en un espacio octoniónico. Pero de eso hablaremos en otra tesis.\\
+
+También este conjunto de 8 espinores puros nos ayudarían a escribir super Maxwell off-shell. En lugar de imponer
+\begin{gather}
+F_{ab}=0
+\end{gather}
+que, como sabemos implica las ecuaciones de movimiento, impongamos además de la ligadura convencional $S^{\mu\,ab}F_{ab}=0$
+\begin{gather}
+\lambda^a_i\lambda^b_jF_{ab}=0
+\end{gather}
+La solución de esta ecuación es
+\begin{gather}
+\lambda_i^a A_a=\lambda_i^a D_a V
+\end{gather}
+Y aquí la teoría está aún off-shell. Por todos estos motivos es muy deseable encontrar 8 espinores puros ortogonales.
+\section{Superpartículas con carga central}
+En esta sección vamos a realizar la mecánica cuántica de partículas con carga central. El sistema de Azcarraga y Lukiersky \cite{AzkLuk}. Este sistema ha sido analizado por ellos en todas las dimensiones pares. Vamos a estudiar aquí un caso de interés físico relacionado con la teoría $M$. Consideramos en esta sección una superpartícula que proviene del modo cero de una supermembrana enrollada en un dos ciclo. En esencia esto corresponde a una partícula de A-L en $D=9$.\\
+
+La acción para la superpartícula que se deduce de la supermembrana es \cite{HatResSte}
+\begin{equation}
+S=k\int d\tau \left(e^{-1}\omega^m\omega_m -e -i\bar\theta_A\dot\theta_A\right)
+\end{equation}
+donde ahora
+\begin{equation}
+\omega^m=\dot X^m-i\bar\omega_A\gamma^m\dot\omega_A.
+\end{equation}
+Introduzcamos el parámetro de masa $m=2k$ y los proyectores,
+\begin{equation}
+P\pm=\frac{1}{2m}(m\pm\gamma^mp_m).
+\end{equation}
+que satisfacen
+\begin{eqnarray}
+P_+P_+&=&-\frac{1}{4m^2}(p^2+m^2)+P_+\ ,\ \ \ P_-P_-=-\frac{1}{4m^2}(p^2+m^2)+P_-\nonumber \\
+ P_+P_-&=&P_-P_+= \frac{1}{4m^2}(p^2+m^2)\ ,\ \ \ P_++P_-=\mathbb{I}.
+\end{eqnarray}
+Los momentos conjugados a $X^m$ son
+\begin{equation}
+p_m=2ke^{-1}\omega_m\ ,
+\end{equation}
+y los conjugados a $\theta_A$, con $m=2k$ son
+\begin{equation}
+\bar\pi_A=2im\bar\theta_AP_-
+\end{equation}
+o equivalentemente
+\begin{equation}
+\pi_A=-2imP_-\theta_A
+\end{equation}
+Introduciendo el multiplicador de Lagrange $\lambda\equiv\frac{e}{4k}$, el Hamiltoniano puede entonces ser expresado como
+\begin{equation}
+\mathcal{H}=\lambda(p^2+m^2)
+\end{equation}
+sujeto a
+\begin{equation}
+\label{mixture}
+\pi_A+2imP_-\theta_A=0 ,
+\end{equation}
+que es una mezcla de ligaduras de primera y segunda clase.
+El conjunto de ligaduras (\ref{mixture}) junto con
+la condición $p^2+m^2=0$ son equivalentes a
+\begin{eqnarray}
+p^2+m^2=0 \label{IIIa}\\
+P_+\pi_A=0 \label{IIIb}\\
+P_-\pi_A+2imP_-\theta_A=0\label{IIIc}
+\end{eqnarray}
+Ahora (\ref{IIIa}) y (\ref{IIIb}) son de primera clase mientras que (\ref{IIIc}) es una mezcla de ligaduras de primera y segunda clase. Podemos considerar el conjunto,
+\begin{eqnarray}
+p^2+m^2=0 \label{IVa}\\
+\varphi_1=P_+(\pi_1+i\pi_2)=0  \label{IVb}\\
+\ \ \varphi_2=P_+(\pi_1-i\pi_2)=0 \label{IVbb}\\
+\Omega_1=P_-(\pi_1+i\pi_2)+2imP_-(\theta_1+i\theta_2)=0\label{IVc} \\
+\Omega_2=P_-(\pi_1-i\pi_2)+2imP_-(\theta_1-i\theta_2)=0 \label{IVd}
+\end{eqnarray}
+con el corchete
+\begin{eqnarray}
+\{\Omega_1,\Omega_2\}=-4imP_-
+\end{eqnarray}
+Notemos también que los términos simplécticos en la acción canónica $\bar\pi_A\dot\theta_A$ se pueden descomponer como
+\begin{eqnarray}
+\bar\pi_A\dot\theta_A=
+\frac{1}{2}{\overline{(\pi_1+i\pi_2)}}(\dot\theta_1-i\dot\theta_2)+
+\frac{1}{2}{\overline{(\pi_1-i\pi_2)}}(\dot\theta_1+i\dot\theta_2) ,
+\end{eqnarray}
+e identificamos los pares conjugados $(\pi_1+i\pi_2)$,$(\dot\theta_1-i\dot\theta_2)$ y $(\pi_1-i\pi_2)$,$(\dot\theta_1+i\dot\theta_2)$.  Notamos aquí que el par $\Omega_1$ y $\Omega_2$ puede considerarse como una ligadura de primaria clase ($\Omega_1$) y una condición asociada de fijación de calibre ($\Omega_2$). La contribución de este par a la integral funcional cuando se tiene en cuenta como un par de ligaduras de segunda clase o de la manera que lo tratamos aquí es idéntica \cite{GiaResSte91}, \cite{ResSte93}. Con esta observación podemos finalmente definir nuestro sistema como un sistema de calibre restringido por el conjunto de ligaduras de primera clase (\ref{IVa}), (\ref{IVb}) y (\ref{IVc}). Si ahora queremos podemos imponer la condición de fijación parcial de calibre (\ref{IVd}) y el conjunto original se recupera, pero somos libres de imponer un conjunto \textit{diferente} de condiciones de fijación de calibre admisibles dado que la integral funcional debe ser invariante con respecto a esta elección.\\
+
+Para continuar consideramos las condiciones de fijación de calibre,
+\begin{eqnarray}
+P_+(\theta_1-i\theta_2)=0 \\
+P_-(\theta_1-i\theta_2)=0
+\end{eqnarray}
+que corresponden a la simetría generada por $\varphi_1$ y $\Omega_1$ respectivamente. Esta fijación de calibre contribuye a la integral funcional con un factor independiente de los campos. Las variables canónicas $(\pi_1 +i\pi_2)$ y $(\theta_1-i\theta_2)$ se pueden integrar en la integral funcional.\\
+
+Nos queda entonces la acción,
+\begin{eqnarray}
+\mathcal{L}&=&p\dot X+\bar\pi_A\dot\theta_A-\mathcal{H}\\
+&=&p\dot X +
+\frac{1}{2}\overline{(\pi_1-i\pi_2)}(\dot\theta_1+i\dot\theta_2)
+\end{eqnarray}
+ligada por (\ref{IVa}) y (\ref{IVbb}). Introduzcamos las variables $\tilde\theta=\theta_1+i\theta_2$ y
+$\tilde\pi=\frac{1}{2}(\pi_1-i\pi_2)$. Notemos que $\tilde\theta$ es un espinor complejo que no satisface la condición de Pseudo-Majorana $\bar\theta=\theta^T\tilde C$.\\
+Podemos finalmente considerar la fijación parcial del calibre
+\begin{equation}
+P_+(\theta_1+i\theta_2)=0,
+\end{equation}
+y realizar una reducción canónica a
+\begin{eqnarray}
+\mathcal{L}=p\dot X +
+\overline{(P_-\tilde \pi)}(P_-\tilde \theta)
+\end{eqnarray}
+sujeto a la condición de la capa de masas (\ref{IIIa}). El espacio de estados físicos se obtiene considerando supercampos que dependan de $P_-\tilde\theta$  y no de su complejo conjugado. Dado que tenemos que $P_-+P_+=1$ sin usar $p^2+m^2=0$ los grados de libertad en $P_-\tilde\theta$ son exactamente la mitad de los grados en $\tilde\theta$. Hay, por tanto, $2^8$ bosónicos y fermiónicos grados de libertad on-shell. Corresponden a un multiplete en $D=9$, el multiplete $KKB$.
+\section{Partículas sin masa}
+Veamos en esta sección que el caso de las partículas sin masa también es susceptible de análisis por los métodos que venimos empleando. Este caso es el de mayor importancia porque es que más problemas ha creado. La razón está en que el álgebra de ligaduras ($D=4,N=1$)
+\begin{gather}
+\cor{d_a,\bar d_\da}=2{\sigma^\mu}_{a\da}p_\mu
+\end{gather}
+continente tanto ligaduras de primera como de segunda clase, Los métodos tradicionales (Batlin-Vilkovisky) fallan porque se trata de un sistema infinitamente irreducible, ver por ejemplo los trabajos de Álvaro Restuccia y Jorge Stephany donde el conjunto infinito de fantasmas se construye con sumo cuidado \cite{Caicedo:1992wv}, \cite{Restuccia:1993na}, \cite{Restuccia:1993bf}, \cite{Restuccia:1994mc}.\\
+
+Nosotros vamos a intentar obviar este problema. Es claro ahora que $d_a$ no es una fijación de calibre de $\bar d_\da$. Sin embargo si lo es del siguiente conjunto de vínculos
+\begin{gather}
+\bar d^2=0\qquad \bar sigma^{\mu\,\da a}\bar d_\da\qquad d_a
+\end{gather}
+La mecánica cuántica de este sistema me lleva a imponer
+\begin{gather}
+\bar D^2V=\bar sigma^{\mu\,\da a}\bar D_\da\p_\mu V=D_a=0
+\end{gather}
+Eso es probablemente lo que se debe obtener en este caso. Es la representación irreducible más pequeña
+\section{Espínores puros}
+Incluimos en este apéndice algunos resultados conocidos sobre espínores puros y algunas conjeturas. El primero en definir y entender la importancia de los espínores puros fue el mismísimo Elie Cartan \cite{Car38}. Además de el, han sido estudiados por Claude Chevaley \cite{Che56}. Más recientemente mencionemos los trabajos de Budinich y Trautman \cite{BudTra89} y el de Furlan y Razca \cite{FurRac85}. Más modernamente han sido estudiados por Berkovits en diversas ocasiones.\\
+
+Resulta que en ${\mathbb R}^{2n}$ el conjunto de espínores puros proyectivos está en relación uno a uno con las estructuras complejas que pueden ponerse sobre ${\mathbb R}^{2n}$, la llamada variedad de Grassmanianas.
+\begin{defi}
+Un \textbf{espinor puro}\footnote{En esta sección trabajaremos con la métrica euclídea, pero todo se puede generalizar de forma sencilla excepto donde se menciona lo contrario.} es un espinor $\lambda_A$ que verifica que las soluciones $z_\mu$ de la ecuación
+\begin{gather}
+{\Gamma^\mu}\du{A}{B}\lambda_B z_\mu=0\\
+z^\mu\in{\mathbb C}^{2n}
+\end{gather}
+son un espacio de dimensión $n$.
+\end{defi}
+Este espacio es completamente isótropo, es decir si $z^\mu$ y $y^\mu$ son dos vectores en ese espacio entonces $z^\mu y^\nu\eta_\mn=0$. La demostración es simple y se basa en 
+\begin{gather}
+-2z^\mu y^\nu\eta_\mn\delta\du{A}{B}=z_\mu y_\nu\cor{\Gamma^\mu,\Gamma\nu}\du{A}{B}
+\end{gather}
+Si multiplicamos por $\lambda_B$ o $\lambda^A$ obtenemos lo que deseamos. Esto es lo que Penrose \cite{PenRin86} llamó un $\alpha$-plano. Ahora imaginemos que tenemos una matriz $J$ definida en ${\mathbb R}^{2n}$ que en ${\mathbb C}^{2n}$ tiene a los $\vec z_i$ con $i=1,...,n$ como autovectores de valor propio $i$ y a $\vec z_i^*$ como autovectores de valor propio $-i$. La matriz $J$ es, por tanto de cuadrado $-I$. Es decir define una estructura compleja en ${\mathbb R}^{2n}$\footnote{Cuidado aquí. Estamos trabajando con ${\mathbb R}^{2n}$, su complexificado ${\mathbb C}^{2n}$ y ${\mathbb R}^{2n}$ con una estructura compleja $J$ que lo hace isomorfo a ${\mathbb C}^{n}$.}. Esta definición de espinor puro posiblemente no es la mejor pero es muy útil.\\
+Formemos ahora una representación del álgebra de Clifford definiendo
+\begin{gather}
+B_\alpha^+=\Gamma_{2\alpha}+i\Gamma_{2\alpha-1}\\
+B_\alpha^-=\Gamma_{2\alpha}-i\Gamma_{2\alpha-1}\qquad \alpha=1,...,n
+\end{gather}
+entonces definimos un vacío $\ket{\Omega}$ que verifique
+\begin{gather}
+B_\alpha^-\ket{\Omega}
+\end{gather}
+El conjunto completo de estados es
+\begin{gather}
+\ket{\Omega},B_\alpha^+\ket{\Omega},...,(B^+)^n\ket{\Omega}
+\end{gather}
+Que son los $2^n$ estados que hemos construido en el primer capítulo. La matriz de Weyl en esta representación es proporcional a
+\begin{gather}
+W\propto\con{B_1^+,B_1^-}\cdots\con{B_n^+,B_n^-}
+\end{gather}
+No es difícil ver que los estados que se construyen con un número par de $B^+$ tienen son autovalores de $W$ con el mismo valor.
+\begin{gather}
+\ket{\Omega},B_{\alpha_1}^+B_{\alpha_2}^+\ket{\Omega},..
+\end{gather}
+Los que tienen un número impar tienen el otro autovalor. Son los espínores de Weyl.
+\begin{prop}
+Todos los estados de Fock así construídos son espínores puros\cite{FurRac85}.
+\end{prop}
+\demos
+Empecemos por $\ket{\Omega}$. El espacio isótropo correspondiente está generado por los $B^-$. En el caso de $B_1^+\ket{\Omega}$ el espacio isótropo está generado por $B_1^+$, y $B_\alpha^-$ con $\alpha=2,..,n$ y así sucesivamente.
+\enddemos
+También, sin demostración queremos señalar que
+\begin{prop}
+Todo espinor puro es de Weyl.
+\end{prop}
+Es fácil entender que la condición de espinor puro es invariante de Lorentz. Otra definición de espinor puro es la siguiente
+\begin{teorema}
+Un espinor $\lambda_A$ es puro si y sólo si se verifica que
+\begin{gather}
+\lambda_A S\du{\mu_1\cdots\mu_k}{AB}\lambda_B\\
+k=1,...,D/2
+\end{gather}
+\end{teorema}
+Los espínores puros proyectivos parametrizan el conjunto de estructuras complejas sobre ${\mathbb R}^{2n}$. Cada estructura compleja viene dada por una matriz $J$ antisimétrica. Podemos construir entonces una base dada por $e_1,...,e_n,Je_1,...,Je_n$. Una matriz unitaria es una matriz ortogonal que commuta con $J$. Dos estructuras complejas son equivalentes si se pueden relacionar por una matriz unitaria. El conjunto de espínores puros proyectivos está, por tanto parametrizado por el espacio homogéneo $SO(2n)/U(n)$ que tiene dimensión $\binom{2n}{2}-n^2=n(n-1)$. Por ejemplo en $D=5$ el espacio de espínores puros proyectivos es un espacio de dimensión 20. El conjunto de espínores puros tiene dimensión 22. En dimensión 8 el conjunto de espínores puros tiene dimensión 14 igual que el grupo $G_2$.\\
+
+En $D=10$ la última caracterización implica que un espinor puro satisface\footnote{Recuerden que en nuestra notación $S\ud{\mu}{ab}=S\ud{\mu}{a\da}J\du{b}{\da}$}
+\begin{gather}
+\lambda^a S\ud{\mu}{ab}\lambda^b=0
+\end{gather}
+Nuestra conjetura es que podemos construir untotal de 8 espínores puros que verifiquen
+\begin{gather}
+\lambda_i^a S\ud{\mu}{ab}\lambda_j^b=0
+\end{gather}
+La existencia de estos 8 espínores se inspira en \cite{DelGalEA93} la fórmula (13) junto con la condición (15) nos dicen que existen 8 espinores de Majorana-Weyl linealmente independientes que satisfacen la ecuación
+\begin{gather}
+\xi\du{i}{a}S\ud{\mu}{ab}\xi\du{j}{b}=\frac{1}{8}\xi\du{k}{a}S\ud{\mu}{ab}\xi^{k\,b}
+\end{gather}
+Hay una relación con los octoniones. Los espínores puros como hemos dicho parametrizan estructuras complejas. En $D=4$ tengo dos espínores puros cuyo espacio proyectivo nos da una estructura compleja. En $D=6$ tenemos 4 espínores puros que parametrizan tres estructuras complejas, las de los cuaterniones. En $D=10$ tenemos 11 espínores puros, pero sólo 8 forman un espacio vectorial y parametrizan 7 estructuras complejas compatibles. Aunque estas observaciones no suman una prueba son, al menos inquietantes.

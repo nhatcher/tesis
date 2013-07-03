@@ -1,0 +1,122 @@
+\def\be{\begin {eqnarray*}}
+\def\ee{\end {eqnarray*}}
+\def\bea{\begin {eqnarray}}
+\def\eea{\end {eqnarray}}
+
+\def\Tr{\mathrm{Tr}}
+\def\diag{\mathrm{diag}}
+\def\p{\partial}
+\def\da{{\dot a}}
+\def\db{{\dot b}}
+\def\ep{\varepsilon}
+\def\mn{{\mu\nu}}
+\def\s{{\sigma^\mu}_{a\dot b}}
+\def\S{{\Sigma^\mu}_{a\dot b}} 
+\def\g{\gamma^\mu_{\phantom{\mu}ab}}
+\def\({\left\{}
+\def\){\right\}}
+\def\[{\left[}
+\def\]{\right]}
+\def\D{\mathcal{D}}
+\def\G{\mathbb{G}}
+\def\U{\makebox{$U\hspace{-.4cm}\raisebox{.1cm}{$-$}$}}
+\newcommand{\td}[1]{{\bar\theta}^{\dot{#1}}}
+\newcommand{\tdd}[1]{\dot{\bar\theta}^{\dot{#1}}}
+\newcommand{\sg}[2]{{{\sigma^{#1}}_{#2}}}
+\newcommand{\cor}[1]{\left\{#1\right\}}
+\newcommand{\dir}[1]{\left\{#1\right\}_{\textrm{D}}}
+\newcommand{\con}[1]{\left[#1\right]}
+\newcommand{\du}[2]{_{#1}^{\phantom{#1}#2}}
+\newcommand{\ud}[2]{^{#1}_{\phantom{#1}#2}}
+\newcommand{\mat}[1]{\left(\begin{matrix}#1\end{matrix}\right)}
+
+%\newtheorem{\def}{Definición: }
+\def\Pc{\mathbb{P}_\mathrm{C}}
+\def\Pa{\mathbb{P}_\mathrm{A}}
+\def\Pt{{\mathbb{P}_\mathrm{T}}}
+\def\Pcm{\mathbb{P}_\mathrm{C}^m}
+\def\Pam{\mathbb{P}_\mathrm{A}^m}
+\def\Ptm{{\mathbb{P}_\mathrm{T}^m}}
+\def\Proy{\mathbb{P}}
+\def\happy{\rightthumbsup}
+\def\D{\mathcal{D}}
+\def\G{\mathbb{G}}
+\def\U{\makebox{$U\hspace{-.4cm}\raisebox{.1cm}{$-$}$}}
+\def\edth{d}
+
+\def\enddemos{\rightthumbsup \\}
+\def\demos{\textbf{Demostraci\'on:}\\ \ding{46}\hspace{.3 cm}}
+
+\newcommand{\ket}[1]{\left|#1\right>}
+\newcommand{\bra}[1]{\left<#1\right|}
+
+
+\documentclass[12pt,twoside]{report}
+\usepackage{dingbat}
+\usepackage{pifont}
+\usepackage{amssymb,amsmath}
+\usepackage{makeidx}
+\usepackage{tocbibind}
+\usepackage[sf,sl,outermarks]{titlesec}
+%\usepackage{toc}
+\usepackage{fancyhdr}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+%%\usepackage[all]{xy}
+\usepackage[active]{srcltx}
+\usepackage[ps2pdf, hypertex, backref]{hyperref}
+
+%\linespread{1.3}
+\hoffset=-1 cm
+\voffset=-1.5 cm
+\textheight=610pt
+\textwidth=470pt
+\evensidemargin=1 cm
+\oddsidemargin =1 cm
+\title{GEOMETRÍA DEL SUPERESPACIO Y CUANTIZACIÓN COVARIANTE DE LAS SUPERPARTÍCULAS}
+\author{Nicolás Hatcher Andrés}
+
+\makeindex
+
+\newtheorem{teorema}{\leftpointright\hspace{.3 cm} Teorema}[chapter]
+\newtheorem{defi}[teorema]{\leftpointright\hspace{.3 cm} Definición}
+\newtheorem{prop}[teorema]{\leftpointright\hspace{.3 cm} Proposición}
+\newtheorem{lema}[teorema]{\leftpointright\hspace{.3 cm} Lema}
+
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{16 pt}
+
+\titleformat{\chapter}[display]
+  {\Large}
+  {\filleft\MakeUppercase{\chaptertitlename} \Huge \thechapter}
+  {4ex}
+  {\titlerule
+   \vspace{2ex}%
+   \Large\filcenter}
+   [\vspace{2ex}%
+   \titlerule]
+
+
+
+\begin{document}
+\maketitle
+\settocname{Contenidos}
+\tableofcontents
+
+\include{intro}
+\include{cap1}
+\include{cap2}
+\include{cap3}
+\include{cap4}
+\include{conclu}
+\nocite{*}
+
+\bibliographystyle{plain}
+\bibliography{theother}
+
+\end{document}

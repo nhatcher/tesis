@@ -1,0 +1,731 @@
+\chapter{SUPERSIMETRÍA\label{cap1}}
+\section{Álgebras de Clifford y espinores}
+Si vamos a hablar de supersimetría vamos a hablar de fermiones y bosones. Desde un punto de vista matemático los bosones son objetos que transforman bajo una representación del grupo de Lorentz. Los fermiones son, por su parte, objetos que transforman bajo una representación proyectiva del grupo de Lorentz. La representación irreducible más pequeña del recubridor del grupo de Lorentz se llama la representación espinorial y sus objetos son espinores. Resulta que hay una forma muy elegante de describir esta representación espinorial a partir de un álgebra de Clifford. En este capítulo vamos a estudiar los espinores en cada dimensión con sus propiedades y virtudes.\\
+
+Las ecuaciones que definen el álgebra de Clifford son (\cite{WesBag82})
+\begin{equation}
+\cor{\Gamma_\mu,\Gamma_\nu}=-\eta_\mn
+\end{equation}
+Con $\eta_\mn=\diag\{-1,+1,...,+1\}$. Nuestro propósito es encontrar representaciones irreducibles de estas álgebras. Para ello notemos que es suficiente resolver el problema con $D$ par porque si $D$ es impar se soluciona para $D-1$ y añade la matriz $\Gamma_0\Gamma_1\cdots\Gamma_{D-2}$.\\
+\begin{teorema}
+Sea $D=2d$ par entonces la matriz
+\begin{equation}
+W=i^{d+1}\Gamma_0\Gamma_1\cdots\Gamma_{D-1}
+\end{equation}
+satisface las relaciones
+\begin{gather}
+\cor{\Gamma_\mu,W}=0\\
+\cor{W,W}=2I
+\end{gather}
+\end{teorema}
+\demos
+$W$ es producto de un número \textit{par} de matrices $\Gamma_\mu$ anticonmuta con todas menos con una, luego \textit{anticonmuta} con $W$.\\
+
+Por otra parte
+\begin{equation}
+W^2=\ep^2\Gamma_0\Gamma_1\cdots\Gamma_{D-1}\Gamma_0\Gamma_1\cdots\Gamma_{D-1}
+\end{equation}
+La matriz $\Gamma_0$ tiene que pagar un número \textit{impar} de matrices y paga un signo menos, la matriz $\Gamma_1$ atraviesa un número par pero su cuadrado es $-I$, $\Gamma_2$ atraviesa un número impar, contribuye con $-1$. En total:\\
+
+La matriz $\Gamma_0$ contribuye con $1$ porque su cuadrado es $1$.\\
+Todas las demás contribuyen con $(-1)^{D-1}=-1$ porque su cuadrado es $-1$.\\
+Además las pares atraviesan un número impar de matrices contribuyen con $(-1)^{D/2}$\\
+De manera que $W^2=-\ep^2(-1)^{d}$ lo que implica que $\ep=i^{d+1}$
+\enddemos
+La matriz $W$ se llama de Weyl. Trabajaremos en adelante en dimensión par.\\
+
+Dentro del álgebra de Clifford existe un grupo finito de $2\times 2^D$ elementos dado por
+\begin{equation}
+G_C=\{ \pm I,\pm \Gamma_\mu,\pm \Gamma_\mn,....,\pm \Gamma_{\mu_1\mu_2...\mu_D}\}
+\end{equation}
+Busquemos represetaciones irreducibles (\textit{irreps}) de este grupo y veamos que extienden al álgebra. La teoría de representaciones de grupos finitos ahora es de ayuda. Recordemos que el\\
+\begin{teorema}[Burnside]
+El número de representaciones irreps de un grupo finito es igual al número de clases de conjugación. Es más si $d_i$ es la dimensión de la una representación
+\begin{equation}
+|G|=\sum_{i\in\Omega} (d_i)^2
+\end{equation}
+donde $|G|$ es el orden del grupo y $\Omega$ un conjunto que etiqueta las clases de conjugación.
+\end{teorema}
+Haciendo uso de Burnside probamos primero que\\
+\begin{lema}
+Hay $2^D+1$ irreps disequivalentes de $G_C$.
+\end{lema}
+\demos
+Las clases de conjugación de grupo de Clifford son
+\begin{equation}
+[+I],[-I],[\Gamma_\mu],...,[\Gamma_{\mu_0...\mu_{D-1}}]
+\end{equation}
+\enddemos
+Por otra parte el número de representaciones disequivalentes de dimensión 1 es fácilmente calculable. Todos los $\Gamma_\mu=\pm 1$. El número de formas en las que esto puede hacerse es $2^D$ que es exactamente el número de representaciones disequivalentes de dimensión 1. La única manera de satisfacer la ecuación de Burnside es
+\begin{equation}
+2^{D+1}=(2^d)^2+2^D(1^2)
+\end{equation}
+Luego tenemos el siguiente teorema\\
+\begin{teorema}
+El grupo $G_C$ posee $2^D+1$ irreps disequivalentes. De ellas $2^D$ son de dimensión uno y la otra es de dimensión $2^d$ con $d=D/2$.
+\end{teorema}
+Recordemos que toda representación de un grupo finito es equivalente a una unitaria. Asumamos entonces que las $\Gamma_\mu$ son unitarias. De modo que
+\begin{gather}
+(\Gamma_0)^\dag=\Gamma_0\\
+(\Gamma_i)^\dag=-\Gamma_i
+\end{gather}
+La matriz $W$ es real y podemos elegirla como
+\begin{equation}
+\mat{I & 0\\ 0 & -I}
+\end{equation}
+donde $I$ es una matriz unidad de dimensiones $2^{d-1}\times 2^{d-1}$. Llamaremos una representación así de Weyl. Vamos a construir las representaciones buscando matrices
+\begin{equation}
+\Gamma^\mu=\mat{0 & S^\mu\\ \bar S^\mu & 0}
+\end{equation}
+Donde $S^0=\bar S^0=I$ y $\bar S^i=-S^i$. Vamos a construir estas matrices inductivamente.\\
+\begin{prop}
+Sean $\tilde\Gamma^\mu$ las matrices de Clifford en dimensión $D-2$ entonces podemos construir las matrices de Clifford en dimensión $D$ según
+\begin{gather}
+S^i=\tilde\Gamma^i\tilde\Gamma^0\qquad i=1,2,...,D-3\\
+S^{D-2}=i\tilde W\tilde\Gamma^0,\quad S^{D-1}=\tilde{\Gamma^0}
+\end{gather}
+\end{prop}
+\demos
+La ecuación
+\begin{equation}
+\cor{\Gamma^\mu,\Gamma^\nu}=-2\eta^\mn
+\end{equation}
+Implica que las $S^i$ verifican el álgebra de Clifford
+\begin{equation}
+S^\mu\bar S^\nu+S^\nu\bar S^\mu=-2\eta^\mn\iff \cor{S^i,S^j}=2\delta^{ij}
+\end{equation}
+Ahora si $i=1,...,D-3$ entonces
+\begin{equation}
+\cor{S^i,S^j}=\cor{\tilde\Gamma^i\tilde\Gamma^0,\tilde\Gamma^j\tilde\Gamma^0}= \tilde\Gamma^i\tilde\Gamma^0\tilde\Gamma^j\tilde\Gamma^0+ \tilde\Gamma^j\tilde\Gamma^0\tilde\Gamma^i\tilde\Gamma^0= -\cor{\tilde\Gamma^i,\tilde\Gamma^j}=2\delta^{ij}
+\end{equation}
+Para el índice $i=D-2$ todo funciona igual. Su cuadrado es $(S^{D-2})^2=-\tilde W\tilde\Gamma^0\tilde W\tilde\Gamma^0=I$. Y todas anticonmutan con $S^5$ y también su cuadrado es $I$.
+\enddemos
+Notemos las importante propiedad $(S^\mu)^\dag=S^\mu$.\\
+El primer paso en la inducción son las matrices de Dirac para las que reservamos la notación $\gamma^\mu$
+\begin{equation}
+\gamma^\mu=\mat{0 & \sigma^\mu\\ \bar\sigma^\mu & 0}
+\end{equation}
+Notemos que las matrices $(\Gamma^\mu)^*$ también satisfacen el álgebra de Clifford. Como sólo hay una representación irreducible \textit{ambas} deben ser equivalentes
+\begin{equation}
+\tilde{B}\Gamma^\mu \tilde{B}^{-1}=(\Gamma^\mu)^*
+\end{equation}
+Lo mismo sucede con las matrices $-\Gamma^\mu$. La matriz unitaria que realiza el cambio es $W$, es decir $W\Gamma^\mu W=-\Gamma^\mu$. Lo mismo pasa con las matrices $-\Gamma^\mu$, $(\Gamma^\mu)^T$ y $-(\Gamma^\mu)^T$. Existen, por tanto matrices unitarias $B$, $C$ y $\tilde{C}$ tal que
+\begin{gather}
+B\Gamma^\mu B^{-1}=-(\Gamma^\mu)^*\\
+\tilde{C}\Gamma^\mu \tilde{C}^{-1}=(\Gamma^\mu)^T\qquad C\Gamma^\mu C^{-1}=-(\Gamma^\mu)^T
+\end{gather}
+Sólo hay una matriz independiente. Obsérvese que
+\begin{gather}
+B=\tilde{B}W\qquad C=\tilde{C}W\qquad \tilde{C}=\tilde{B}\Gamma^0
+\end{gather}
+En nuestra representación es fácil encontrar $\tilde{B}$. Fijense que las matrices $\Gamma^2,\Gamma^4,...,\Gamma^{D-2}$ son imaginarias puras y las demás reales
+$B$ depende de la paridad de $d=D/2$. Estudiemos ambos casos por separado.\\
+$\bullet$ $(D=2 \mod 4)$ Si $d$ es impar hay un número \textit{par} de imaginarias $d-1=2d_1$
+\begin{equation}
+\tilde{B}=\Gamma^2\Gamma^4\cdots\Gamma^{D-2}
+\end{equation}
+Notemos que si $\Gamma^\mu$ es real anticonmuta con todas y conmuta con $\tilde{B}$ y si es imaginaria anticonmuta con todas menos una y anticonmuta con $\tilde{B}$.\\
+Notemos que el cuadrado de $\tilde{B}$ es
+\begin{equation}
+\tilde{B}^2=\Gamma^2\Gamma^4\cdots\Gamma^{D-2}\Gamma^2\Gamma^4\cdots\Gamma^{D-2}
+\end{equation}
+La matriz $\Gamma^2$ debe pasar $d-2$ matrices, la siguiente $d-3$ en total $\sum_{i=1}^d (d-i)=(d-1)d/2$ además hay un $(-1)^{d-1}=1$. En total $\tilde{B}^2=(-1)^{d_1}I$. Es decir:
+\begin{gather}
+\tilde{B}^2=I\quad\textrm{si } D=2\mod 8\\
+\tilde{B}^2=-I\quad\textrm{si } D=6\mod 8
+\end{gather}
+En este caso la matriz $\tilde{B}$ es real y \textit{diagonal} en cajas
+\begin{gather}
+\tilde{B}=\mat{J & 0\\ 0 & J}\qquad B=\mat{J & 0\\ 0 & -J}
+\end{gather}
+Además
+\begin{gather}
+\tilde{C}=\mat{J & 0\\ 0 & J}\mat{0 & I\\ I & 0}=\mat{0 & J\\ J & 0}\qquad C=\mat{0 & J\\ -J & 0}
+\end{gather}
+Si $D=2\mod 8$ la matriz $J$ es de cuadrado $J^2=I$.
+\begin{gather}
+B^2=\tilde{B}^2=I\qquad C^T=-C\qquad\tilde{C}^T=\tilde{C}
+\end{gather}
+Si $D=6\mod 8$ la matriz $J$ es de cuadrado $J^2=-I$
+\begin{gather}
+B^2=\tilde{B}^2=-I\qquad C^T=C\qquad\tilde{C}^T=-\tilde{C}
+\end{gather}
+$\bullet$ $(D=0\mod 4)$ Si $d$ es par hay un número \textit{impar} de reales $d+1$
+\begin{equation}
+\tilde{B}=\Gamma^0\Gamma^1\Gamma^3\cdots\Gamma^{D-1}
+\end{equation}
+De manera que una real anticonmuta con todas menos una y por tanto \textit{conmuta} con $\tilde{B}$. Y, por supuesto, una compleja anticonmuta con todas y por tanto con $\tilde{B}$.\\
+También aquí calculamos el cuadrado
+\begin{gather}
+\tilde{B}^2=\Gamma^0\Gamma^1\Gamma^3\cdots\Gamma^{D-1} \Gamma^0\Gamma^1\Gamma^3\cdots\Gamma^{D-1}
+\end{gather}
+La matriz $\Gamma^0$ debe atravesar un conjunto par de matrices. Exactamente $d/2$ matrices pasan un número impar de matrices, el cuadrado de todas es $-1$ menos la identidad. Sea $d=2d_1$, entonces $\tilde{B}^2=(-1)^{d_1}I$ otra vez. De modo que
+\begin{gather}
+\tilde{B}^2=I \textrm{ si }D=0\mod 8\\
+\tilde{B}^2=-I\textrm{ si }D=4\mod 8
+\end{gather}
+En esta ocasión $\tilde{B}$ también es real pero es \textit{antidiagonal} por cajas
+\begin{gather}
+\tilde{B}=\mat{0 & J\\ J & 0}\qquad B=\mat{0 & J\\ -J & 0}\\
+\tilde{C}=\mat{J & 0\\ 0 & J}\qquad C=\mat{J & 0\\ 0 & -J}
+\end{gather}
+Si $D=0$ módulo 8 $J^2=I$. En ese caso
+\begin{gather}
+-B^2=\tilde{B}^2=I\qquad J^T=J\qquad C^T=C\qquad \tilde{C}^T=C
+\end{gather}
+En dimensión impar la respresentación se construye añadiendo la matriz $\pm iW$. Las matrices $B$, $\tilde{B}$ son, en principio las mismas que en la dimensión par anterior. Pero, por consistencia, deben verificar
+\begin{gather}
+B(iW)B^{-1}=-(iW)^*\\
+\tilde{B}(iW)\tilde{B}^{-1}=(iW)^*
+\end{gather}
+En cada dimensión sólo una de las ecuaciones se verifica. Esto tiene una sencilla explicación en teoría de grupos. En dimensión par la representación inducida por la representación irreducible del álgebra de Clifford es reducible y por tanto el lemma de Schur no se aplica y puedo tener dos matrices unitarias distintas $U_1$ y $U_2$ que hagan que $U_i G U_i^{-1}=G^*$ de modo que $U_1 U_2^{-1}$ commuta con todos los elementos del grupo y no es proporcional a la identidad. En el caso de la dimensión impar la representación del grupo de rotaciones inducida por la representación irreducible del álgebra de Clifford es irreducible.\\
+
+Veamos cuando aplica cada fórmula. La fórmula $\tilde{B}(iW)\tilde{B}^{-1}=(iW)^*$ es equivalente a decir que $\cor{\tilde{B},W}=0$ y eso sucede cuando $B$ es producto de un número \textit{impar} de matrices gamma. Como hemos visto eso pasa si $D=0\mod 4$. En las otras dimesiones la matriz que existe es $B$.
+Una condición de realidad se puede imponer sobre un espinor de dos formas distintas
+\begin{gather}
+\Psi^*=B\Psi\qquad \Psi^*=\tilde{B}\Psi
+\end{gather}
+Llamaremos a la primera de Majorana y a la segunda de pseudo-Majorana. Para que esto sea posible es necesario que $B^2=I$ o que $\tilde{B}=I$. Si tenemos dos espinores $\Psi^i$ donde $i=1,2$ podemos poner las condiciones
+\begin{gather}
+(\Psi^i)^*=\ep_{ij}B\Psi^j\qquad (\Psi^i)^*=\ep_{ij}\tilde{B}\Psi^j
+\end{gather}
+que llamaremos simpléctico Majorana y pseudo simpléctico Majorana. Para que esto se posible es necesario que $B^2=-I$ o que $\tilde{B}^2=-I$.\\
+El hecho de que las matrices $B$ y $C$ sean reales es algo que depende de la representación. Sin embargo el hecho de que $BB^*$ sea $+I$ o $-I$. Si $BB^*=I$ entonces $B^T=B$ y si es $-I$ tenemos $B^T=-B$. Lo mismo sucede con $\tilde{B}$. Notemos que la matriz $\Gamma^0$ conmuta con $B$ siempre y anticonmuta con $\tilde{B}$. De manera que $C$ es simétrica cuando $B$ es simétrica. Sin embargo las propiedades de $\tilde{B}$ y $\tilde{C}$ son inversas. Las matrices $\Gamma^\mu C$ tienen también simetría definida.
+\begin{gather}
+(\Gamma^\mu C)^T=C^T(\Gamma^\mu)^T=-C^T C\Gamma^\mu C^{-1}=-\Gamma^\mu C^T
+\end{gather}
+Para probar que estas propiedades de simetría no dependen de la representación estudiemos con detalle un ejemplo. Veamos como cambia la matriz $C$ con un cambio de representacion $\Gamma^\mu\rightarrow U\Gamma^\mu U^\dag$. De la definición vemos que la nueva matriz es $UCU^T$ y si $C$ es simétrica o antisimétrica también lo es la nueva matriz. \\
+
+En la siguiente tabla representamos en que dimensiones existe cada tipo se espinor junto con las propiedades de simetría o antisimetría de todas estas matrices.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+$D$ & $BB^*$ & $\tilde{B}\tilde{B}^*$ & M & PM & SimM & PSimM & Sim & AntiSim\\
+\hline
+2 & $I$ & $I$ & Si & Si & No & No & $B,\tilde{B}, \tilde{C}$ & $C$ \\
+\hline
+3 & $I$ & -- & Si & -- & No & -- & $B$ & $C$\\
+\hline
+4 & $I$ & $-I$ & Si & No & No & Si & $B$ & $\tilde{B}$, $C$, $\tilde{C}$  \\
+\hline
+5 & -- & $-I$ & -- & No & -- & Si &  & $\tilde{B}$, $\tilde{C}$ \\
+\hline
+6 & $-I$ & $-I$ & No & No & Si & Si & $C$ & $\tilde{B}$, $B$, $\tilde{C}$\\
+\hline
+7 & $-I$ & -- & No & -- & Si & -- & & $\tilde{B}$, $\tilde{C}$\\
+\hline
+8 & $-I$ & $I$ & No & Si & Si & No & $\tilde{B}$, $C$, $\tilde{C}$ & $B$ \\
+\hline
+9 & -- & $I$ & -- & Si & -- & No & $\tilde{B}$, $\tilde{C}$ &  \\
+\hline
+10 & $I$ & $I$ & Si & Si & No & No & $B$, $\tilde{C}$, $\tilde{B}$ &  $C$ \\
+\hline
+11 & $I$ & -- & Si & -- & No & -- & $B$& $C$\\
+\hline
+\end{tabular}
+\end{center}
+Veamos como estas importantísimas fórmulas están relacionadas con las representaciones espinoriales del grupo de Lorentz. La relación con el grupo de Lorentz se puede ver a partir de la maravillosa identidad
+\begin{equation}
+\eta_ {\mn}x^\mu x^\nu=(\Gamma^\mu x^\nu\eta_\mn)^2
+\end{equation}
+Como diría Feynman, si alguien no se estremece al ver esta fórmula es que no tiene alma.\\
+
+El espacio vectorial de dimensión $2^{D/2}$ donde actúan las matrices de Clifford se llama espacio de espinores de Dirac que son vectores de $2^{D/2}$ componentes.\\
+\begin{teorema}
+Las matrices definidas por
+\begin{equation}
+\Sigma^\mn=\frac{1}{4i}\con{\Gamma^\mu,\Gamma^\nu}
+\end{equation}
+satisfacen el álgebra de Lorentz.
+\end{teorema}
+Una transformación de Lorentz en este espacio viene dada por
+\begin{equation}
+\Lambda_{\frac{1}{2}}=\exp\left(-\frac{i}{2}\omega_\mn\Sigma^\mn\right).
+\end{equation}
+La correspondiente vectorial es
+\begin{equation}
+\Lambda=\exp\left(-\frac{i}{2}\omega_\mn J^\mn\right)
+\end{equation}
+Donde las $J^\mn$ son matrices de índices
+\begin{equation}
+(J^\mn)_{\alpha\beta}=i\left(\delta\ud{\mu}{\alpha}\delta\ud{\nu}{\beta}- \delta\ud{\mu}{\beta}\delta\ud{\nu}{\alpha}\right)
+\end{equation}
+Las matrices $J^\mn$ o $\Sigma^\mn$ satisfacen el álgebra de Lorentz
+\begin{equation}
+\con{J^\mn,J^{\rho\sigma}}=i\left(\eta^{\nu\rho}J^{\mu\sigma}-\eta^{\mu\rho}J^{\nu\sigma}-\eta^{\nu\sigma}J^{\mu\rho}+\eta^{\mu\sigma}J^{\nu\rho}\right)
+\end{equation}
+Las matrices de Clifford-Dirac transforman bien
+\begin{equation}
+(\Lambda_{\frac{1}{2}})^{-1}\Gamma^\mu\Lambda_{\frac{1}{2}}=\Lambda\ud{\mu}{\nu}\Gamma^\nu
+\end{equation}
+La representación espinorial del grupo de Lorentz no es irreducible. En efecto es fácil ver que
+\begin{equation}
+\Sigma^{\mn}=\frac{1}{4i}\mat{S^\mn & 0\\ 0 & \bar S^\mn}
+\end{equation}
+Donde
+\begin{gather}
+S^{\mn}=S^\mu\bar S^\nu-S^\nu\bar S^\mu\\
+\bar S^\mn=\bar S^\mu S^\nu-\bar S^\nu S^\mu
+\end{gather}
+Tenemos entonces dos representaciones espinoriales del grupo de Lorentz, la quiral asociada a $S^\mn$ y la antiquiral asociada a $\bar S^\mn$.\\
+
+Dado un grupo $G$ y una representación siempre podemos encontrar otras representaciones asociadas\\
+$\bullet$ La conjugada\\
+$\bullet$ La dual (traspuesta inversa)\\
+$\bullet$ La dual conjugada\\
+Estas representaciones pueden o no tener alguna equivalencia. Vamos a estudiar que sucede en nuestro caso.\\
+En nuestro caso la representación quiral viene dada por
+\begin{gather}
+S(\Lambda)=\exp\left[\frac{-1}{8}\omega_\mn S^\mn\right]
+\end{gather}
+La representación dual o \textit{contragrediente} vendrá dada por
+\begin{gather}
+S^c(\Lambda)=((S(\Lambda))^{-1})^T=\exp\left[\frac{1}{8}\omega_\mn (S^\mn)^T\right]
+\end{gather}
+Notemos que 
+\begin{equation}
+(S^\mn)^\dag=(\bar S^\nu )^\dag (S^\mu)^\dag-(\bar S^\mu)^\dag (S^\nu)^\dag=-\bar S^{\mn}
+\end{equation}
+gracias a que con nuestra elección $(S^\mu)^\dag=S^\mu$ lo que implica que la representación conjugada dual es la generada por $\bar S^\mn$.\\
+
+Y ahora una discusión muy importante sobre los índices. Supongamos que un espinor quiral tiene índice $\theta_a$ con $a=1,...,d$. Un vector que viva en la representación dual tendrá índice $\theta^a$, el conjugado será $\bar\theta_\da$ y el contragrediente conjugado $\bar\theta^\da$ en una notación que viene de los tiempos de Van der Waerden. Con esta notación noten que una matriz cualquiera de Dirac tiene índices
+\begin{equation}
+A=\mat{A\du{a}{b} & A_{a\db}\\ \bar A^{\da b} & \bar A\du{\da}{\db}}
+\end{equation}
+De manera que las matrices $S^\mu$ tienen índices $S\ud{\mu}{a\db}$ y $\bar S^{\mu\,\da b}$. La matriz $B$ que hace la transformación $B\Gamma^\mu B^{-1}=(\Gamma^\mu)^*$ y lleva de un vector a uno que vive en la conjugada debe tener una estructura:
+\begin{equation}
+B=\mat{B\du{\db}{a} & \bar B_{\da\db}\\ B^{ab} & \bar B\ud{a}{\db}}
+\end{equation}
+Por lo tanto cuando $B$ es diagonal tenemos una matriz de índices $J\ud{\da}{b}$ que convierte índices puntados en no puntados. En estos casos la representación quiral es equivalente a la conjugada (antiquiral). En el caso de que sea antidiagonal tenemos matrices con índices $J^{ab}$ que nos permiten cambiar índices en la posición de abajo por los de arriba y la representación quiral es equivalente a la dual. Concluimos que\\
+\textbf{Proposición: }\\
+Si $D=2\mod 4$ entonces la representación quiral y su conjugada son equivalentes.\\
+Pero si $D=6\mod 8$ la quiral no puede ser \textit{la misma} que la conjugada.
+Si $D=0\mod 4$ entonces la representación quiral y la dual son equivalentes\\
+Pero si $D=4\mod 8$ la quiral no puede ser \textit{la misma} que la dual.\\
+\demos
+Sólo nos falta explicar porque la quiral y la conjugada no pueden ser iguales. La razón es que en estas dimensiones la matriz $J$ es de cuadrado $-I$ y, por tanto, la ecuación $\bar\theta_\da=J\du{\da}{a}\theta_a$ es inconsistente.
+Este tipo de representaciones que son equivalentes a la conjugada pero no pueden elegirse reales se llaman \textit{cuaterniónicas} o \textit{cuasi reales}. La razón por la que la quiral no puede ser equivalente a la dual en $D=4\mod 8$ es nuevamente que $J$ es de cuadrado $-I$ en estas dimesiones.
+\enddemos
+\subsection{Tensores invariantes bajo el grupo de Lorentz.}
+Un problema que se suscita con relativa frecuencia es el siguiente. Dada una representación de un grupo $G$ en matrices $(T_g)\du{i}{j}$ que tipo de tensores permanecen invariantes bajo una transformación. Para concretar imaginemos que $D=4$ y estamos estudiando la representación espinorial del grupo de Lorentz. En ese caso el tensor $\ep_{ab}$ es invariante, pero no lo es, por ejemplo $\delta_{ab}$ y si $\delta\du{a}{b}$... En esta corta sección vamos a tratar de clasificar todos los dos tensores invariantes bajo Lorentz y sacaremos algunas consecuencias muy importantes, todo esto es implicación directa de la sección anterior pero será importante en el futuro que le demos importancia. Me gustaría hacer una teoría que clasifique los tensores invariantes bajo Lorentz en cualquier dimensión y número de índices. De hecho estoy casi convencido de que el asunto se ha estudiado prolijamente, pero yo no se hacerlo mejor.\\
+
+Primero estudiemos el caso de $D$ impar. En ese caso sólo existe $B,C$ ó $\tilde{B},\tilde{C}$. Llamemosla en todo caso $B,C$. sus índice son $C^{AB}$ y $B\du{\dot A}{B}$y la interpretación es la siguiente. Si $\chi_A$ es un espinor de Dirac entonces $\chi^A=C^{AB}\chi_B$ es un espinor de Dirac que transforma con la representación inversa traspuesta. El hecho de que exista la matriz $C$ nos dice que ambas representaciones son equivalentes. El tensor $C^{AB}$ es invariante bajo transformaciones de Lorentz. Y no existen ningún otro $F^{AB}$ que sea invariante porque entonces $F^{-1}C$ conmuta con todos los elementos del grupo y debe ser por tanto múltiplo de la identidad. EL tensor $B\du{\dot A}{B}$ también es invariante e implica que la representación inicial es equivalente a la conjugada. También existe el tensor $(\Gamma^0)^{\dot A B}=\bar C^{\dot A\dot B}B\du{\dot B}{B}$ que lleva un vector de la original a la inversa transpuesta conjugada. Hay que tener en cuenta que la matriz $(\Gamma^0)\du{A}{B}$ que es la primera matriz del álgebra de Clifford es numéricamente igual al anterior tensor pero sus reglas de transformación son completamente distintas.\\
+
+En dimensión par todo es un poco más emocionante. En este caso existen los dos grupos de matrices pero todos ellos se pueden poner en función de una sola matriz $J$. Y como decíamos hay dos posibilidades\\
+$\bullet$ Tenemos $J\du{\da}{b}$ si $D=2\mod 4$\\
+$\bullet$ Tenemos $J_{ab}$ si $D=0\mod 4$\\
+Y también podemos ver que ese es el único tensor invariante de dos índices además de $\delta\du{a}{b}$ y los conjugados, claro.
+\subsection{Identidades entre las matrices $\Gamma$}
+Existen un número de identidades entre las matrices de Dirac que serán muy importantes para nuestro estudio.\\
+
+Para empezar hemos notado que si $C$ es simétrica entonces $\Gamma^\mu C$ es antisimétrica y viceversa. De igual manera $\tilde{C}$ y $\Gamma^\mu\tilde{C}$ tienen las mismas propiedades de simetría. Fíjense que también el producto $\Gamma^\mu\Gamma^\nu C$ (con $\mu\neq \mu)$ es simétrica o antisimétrica
+\begin{gather}
+(\Gamma^\mu\Gamma^\nu C)^T=C^T(\Gamma^\nu)^T(\Gamma^\mu)^T=C^T C\Gamma^\nu \Gamma^\mu C^{-1}=-\Gamma^\mu \Gamma^\nu C^{T}
+\end{gather}
+En general podemos probar que
+\begin{gather}
+(\Gamma^{\mu_1}\Gamma^{\mu_2}\cdots\Gamma^{\mu_n}C)^T=(-1)^{n(n+1)/2}\Gamma^{\mu_1}\Gamma^{\mu_2}\cdots\Gamma^{\mu_n}C
+\end{gather}
+Notemos que todo eso es independiente de la representación (siempre que las $\Gamma^\mu$ sean unitarias. Si partimos de la matriz $C$ podemos dividir el conjunto de todas las matrices en las que tienen la misma simetría que $C$ y las que tienes opuesta\\
+$C$, $\Gamma^{\mu_1}\Gamma^{\mu_2}\Gamma^{\mu_3}C$...\\
+$\Gamma^{\mu}C$, $\Gamma^{\mu_1}\Gamma^{\mu_2}C$\\
+Si $D$ es par entonces estas relaciones de simetría se transforman en relaciones de simetría por un lado y ecuaciones que relacionan matrices $S^\mu$ con las $\bar S^\mu$ por otro. Veámoslo detenidamente. Estudiemos primero el caso $D= 2\mod 4$ (por ejemplo $D=6$ o $D=10$). En este caso tenemos el tensor $J\du{a}{\db}$ porque la representación espinorial y la conjugada son equivalentes. Entonces con un ligero abuso de notación podemos escribir
+\begin{gather}
+S\ud{\mu}{ab}=S\ud{\mu}{a\db}J\ud{b}{\db}
+\end{gather}
+Estas matrices también tienen propiedades de simetría bien definidas. Si $D=2\mod 8$, la matriz $C$ es antisimétrica y por tanto $S^\mu J$ son simétricas, es el caso, por ejemplo de $D=10$. Si $D=6\mod 8$, la matriz $C$ es simétrica y estas matrices son simétricas, es el caso de $D=6$. Notar que $(\bar S^\mu S^\nu J)\ud{\da}{b}$ no tiene propiedades de simetría. El siguiente caso sería $(S^{\mu_1}\bar S^{\mu_2} S^\mu_3 J)_{ab}$ que también tiene propiedades de simetría. Permitame estudiar los dos casos $D=6$ y $D=10$ en profundidad.\\
+
+Notemos que los productos de estas matrices satisfacen un número de identidades debidas a la identidad
+\begin{gather}
+\Gamma^{\mu_1}\cdots\Gamma^{\mu_n}W=\ep \Gamma^{\mu_{n+1}}\cdots\Gamma^{\mu_{D}}
+\end{gather}
+donde todos los índices $\mu_i$ son diferentes. El número $\ep$ depende del orden elegidos de las matrices. A nivel de las matrices $S^\mu$ esto significa que el producto $n$ matrices es igual al producto de $D-n$ matrices. Por ejemplo en $D=4$ tenemos las identidades
+\begin{gather}
+S\ud{1}{a\db}=iS\ud{2}{a\da}S^{1 \da b}S\ud{0}{b\db}
+\end{gather}
+Que covariantemente se escriben como
+\begin{gather}
+S^\mu=i\ep^{\mu\nu\rho\sigma}S_\nu\bar S_\rho S_\sigma
+\end{gather}
+El vector $S^\mu\bar S^\nu$ es autodual
+\begin{gather}
+S^\mu\bar S^\nu=\ep^{\mu\nu\rho\sigma} S_{\rho}\bar S_\sigma
+\end{gather}
+En el caso de $D=4$ esto no son más que maneras altisonantes de escribir $\con{\sigma_i,\sigma_j}=i\ep_{ijk}\sigma_k$
+Creo que el lector ya estará dispuesto a aceptar que en general
+\begin{gather}
+S^{\mu_0}=a\ep^{\mu_0\mu_1\cdots\mu_{D-1}}S_{\mu_1}\bar S_{\mu_2}\cdots S_{\mu_{D-1}}\\
+S^{\mu_0}\bar S^{\mu_1}=b\ep^{\mu_0\mu_1\cdots\mu_{D-1}}S_{\mu_2}\bar S_{\mu_3}\cdots \bar S_{\mu_{D-1}}\\
+...
+\end{gather}
+En el caso $D=6$ las únicas matrices antisimétricas son $S^\mu J=S\ud{\mu}{ab}$. Son matrices $4\otimes 4$ y el número de estas matrices que son simétricas es $\binom{4}{2}=6$. Por la relación de completitud tenemos la identidad\footnote{Sea $V$ un espacio vectorial y $V^*$ y $e_i, \ep^j$ sus respectivas bases. Un elemento del producto tensorial $V\otimes V^*$ se puede entender como una aplicación $V\rightarrow V$ por ejemplo el elemento $e_i\otimes \ep^j$ es la aplicación que al vector $c=c^ke_k$ lo manda al vector $c^j e_i$. De manera que la aplicación correspondiente a el elemento $e_i\otimes \ep^i$ es la identidad. Sea ahora $f_j$ otra base de $V$ relacionada por $f_i=\alpha\du{i}{j}e_j$. Entonces es fácil ver que el elemento $f_j\otimes\ep^j$ es igual a $\Tr(\alpha)I$}:
+\begin{gather}
+S^{\mu\,ab}S_{\mu\,cd}=\delta\ud{a}{c}\delta\ud{b}{d}-\delta\ud{a}{d}\delta\ud{b}{c}
+\end{gather}
+También es una relación de cierre o completitud \index{completitud, relación de} la dada por la ecuación
+\begin{gather}
+S\ud{\mu}{ab}S_{\mu\,cd}=2\ep_{abcd}
+\end{gather}
+Usaremos estas identidades más adelante. Por otra parte en $D=10$ las matrices $S\ud{\mu}{ab}$ son simétricas, como también lo son las matrices $S^{\mu_1}\bar S^{\mu_2} S^{\mu_3}\bar S^{\mu_4} S^{\mu_5}J$. Pero en $D=10$ ese tensor es autodual y sólo la mitad de esas matrices son independientes. De manera que tenemos 
+\begin{gather}
+10+\frac{1}{2}\binom{10}{5}=136
+\end{gather}
+matrices de este tipo. Pero hay $16\otimes 17/2=136$ matrices simétricas, como debe ser. Entonces cualquier matriz simétrica se puede expandir en esta base
+\begin{gather}
+A=l_\mu S^\mu J+l_{\mu_1\cdots\mu_5}S^{\mu_1}\cdots S^{\mu_5}J
+\end{gather}
+donde $l_{\mu_1\cdots\mu_5}$ es autodual, que es la fórmula (5) que aparece en \cite{Nil86}. Tomando trazas podemos comprobar que
+\begin{gather}
+S\ud{\mu}{ab}S^{\nu\,ab}=S\ud{\mu}{a\db}S^{\nu \db a}=-2\eta^\mn 2^{16}\\
+(S^{\mu_1}\cdots S^{\mu_5}J)_{ab}S^{\mu ab}=0\\
+S^{\mu_1}\cdots S^{\mu_5}(S^{\mu_6}\cdots S^{\mu_{10}})=\ep^{\mu_1\cdots\mu_{10}}
+\end{gather}
+Y de ahí podemos calcular los coeficientes $l_\mu$ y $l_{\mu_1\cdots\mu_5}$. Por otro lado toda matriz antisimétrica es de la forma
+\begin{gather}
+S^\mu\bar S^\nu S^\rho J
+\end{gather}
+Hechos que Berkovits usa con toda naturalidad \cite{BerNek05}.
+Un buen ejemplo es la identidad
+\begin{gather}
+\lambda_a\lambda_b=S\ud{\mu}{ab}(\lambda S_\mu\lambda)+\frac{1}{5!2^5}S\ud{\mu_1\cdots\mu_5}{ab}(\lambda S_{\mu_1\cdots\mu_5}\lambda)
+\end{gather}
+Las matrices $S\ud{\mu}{a\db}$ verifican un número de identidades que nos serán útiles\\
+La fundamental
+\begin{equation}
+S\ud{\mu}{a\da}\bar S^{\nu\,\da b}+S\ud{\nu}{a\da}\bar S^{\mu\,\da b}=-2\eta^\mn\delta\du{a}{b}
+\end{equation}
+multiplicando por $\eta_\mn$ y sumando
+\begin{equation}
+S_{\mu\,a\da}\bar S^{\da b}=-D\delta\du{a}{b}
+\end{equation}
+Tomando trazas en la primera ecuación también obtenemos
+\begin{equation}
+S\ud{\mu}{a\da}\bar S^{\nu\,a\da}=-\eta^\mn 2^{D/2-1}
+\end{equation}
+\subsection{Dimensión $D=4$}
+En cuatro dimensiones tenemos las matrices de Dirac en la representación de Weyl
+\begin{equation}
+\gamma^\mu=\mat{0 & \sigma^\mu\\ \bar\sigma^\mu & 0}
+\end{equation}
+donde las matrices de Pauli son
+\begin{equation}
+\sigma^0=I,\quad \sigma^1=\mat{0 & 1\\ 1 & 0}\quad\sigma^2=\mat{0 & -i\\ i & 0} \quad\sigma^3=\mat{1 & 0\\ 0 & -1}
+\end{equation}
+\section{Superálgebras de Lie}
+Como hemos dicho en la introducción existe una interesante generalización del concepto de grupo de Lie. Sin embargo resulta que la generalización de la idea de grupo esta llena de trampas y es mucho más sencillo generalizar la idea infinitesimal del álgebra. Esta sección realmente pudiese eliminarse de esta monografía. No hay nada original aquí y además nada de lo que sigue se fundamenta en lo que aquí se expresa. Sin embargo he notado que en general los físicos tenemos ciertas reticencias a trabajar con superálgebras de Lie y me parece razonable ``perder" dos o tres páginas haciendo que el lector se sienta más seguro con los conceptos que aquí se involucran.\\
+
+Mucha gente no quiere usar la palabra super y llaman espacio vectorial $\mathbb{Z}_2$ graduado a lo que aquí se denomina superespacio vectorial. No les gusta esta definici{\'o}n porque hace pensar que un superespacio no es un espacio. Bryce DeWitt \cite{DeW98} por ejemplo, llama superespacio vectorial a algo muy muy diferente
+(a un m{\'o}dulo sobre un {\'a}lgebra de Grassmman).\\
+\begin{defi}
+Un \textbf{superespacio vectorial} sobre un cuerpo $\mathbb{K}$ es un
+espacio vectorial sobre $\mathbb{K}$ y una descomposici{\'o}n
+preferida $V=G\bigoplus U$. Los elementos de $G$ se llaman pares
+(del alemán gerade) y los de $U$ impares (ungerade)
+\end{defi}
+Una manera distinta, pero equivalente ser{\'\i}a decir que un superespacio vectorial es un espacio vectorial y dos proyectores $P_U$ y $P_G$, tales que
+\be
+P_U+P_G=I\qquad P_UP_G=0\qquad P_x^2=P_x
+\ee
+\textbf{Definici{\'o}n:}
+\\ \textit{Una \textbf{supere{\'a}lgebra} sobre un cuerpo $\mathbb{K}$ es un {\'a}lgebra $(\mathbb{A},\ast,\mathbb{K})$ y una descomposici{\'o}n $\mathbb{A}=\mathbb{G}\bigoplus \mathbb{U}$, de manera que se verifica:
+\be
+g_1\ast g_2\in \G\qquad\forall g_1,g_2\in \G
+\\ g\ast u\in \U\qquad\forall g\in \G,\quad\forall u\in \U
+\\ u_1\ast u_2\in \G\qquad\forall u_1,u_2\in \U
+\ee
+Una super{\'a}lgebra se dice \textbf{conmutativa} si
+\be
+g_1\ast g_2=g_2\ast g_1\qquad\forall g_1,g_2\in \G
+\\ g\ast u=u\ast g\qquad\forall g\in \G,\quad\forall u\in \U
+\\ u_1\ast u_2=-u_2\ast u_1\qquad\forall u_1,u_2\in \U
+\ee}
+\textbf{Definici{\'o}n:}
+\\ \textit{ Una \textbf{super{\'a}lgebra de Lie} es una super{\'a}lgebra en la que se
+verifica
+\\ a) El producto es \textbf{anticonmutativo}
+\be
+g_1\ast g_2=-g_2\ast g_1\qquad\forall g_1,g_2\in \G
+\\ g\ast u=-u\ast g\qquad\forall g\in \G,\quad\forall u\in \U
+\\ u_1\ast u_2=u_2\ast u_1\qquad\forall u_1,u_2\in \U
+\ee
+\\ b) Se tienen las identidades de \textbf{Jacobi}
+\be
+u_1\ast(g_1\ast g_2)+g_2\ast(u_1\ast g_1)+g_1\ast(g_2\ast u_1)=0
+\\ u_1\ast(u_2\ast u_3)+u_2\ast(u_3\ast u_1)+u_3\ast(u_1\ast
+u_2)=0
+\\ g_1\ast(g_2\ast g_3)+g_2\ast(g_3\ast g_1)+g_3\ast(g_1\ast
+g_2)=0
+\\ g_1\ast(u_1\ast u_2)-u_2\ast(g_1\ast u_1)+u_1\ast(u_2\ast g_1)=0
+\\ \forall g_i\in \G,\quad u_i\in \U
+\ee}
+\bigskip\\
+Normalmente escribiremos $a_1\ast a_2=\left[a_1,a_2\right]$.
+Notemos que
+\\ i) Una super{\'a}lgebra de Lie no es un {\'a}lgebra de Lie.
+\\ ii) Muchas personas de bien prefieren llamar superconmutativo,
+superanticonmutativo, superjacobi a lo que yo llamo, conmutativo,
+anticonmutativo, Jacobi. Bien por ellas, para mi es demasiado algo
+como superanticonmutativo.
+\\ iii) La parte par $\G$ de una super{\'a}lgebra de Lie es un {\'a}lgebra
+de Lie.
+\\ iv) En $\U$ hay una representaci{\'o}n de $\G$.
+\\ Las super{\'a}lgebras de Lie son objetos muy interesantes y bien
+conocidos. El problema de la clasificaci{\'o}n de estos objetos esta
+lejos de ser trivial pero es muy interesante. La lista completa de
+las super{\'a}lgebras simples fue dada por Kac \cite{Kac77} en 1975. La
+lista se divide en lo que el llam{\'o} super{\'a}lgebras cl{\'a}sicas, en las
+que la representaci{\'o}n de $\G$ en $\U$ es completamente reducible
+(suma de irreducibles) y las que no. Las primeras también
+clasificadas en dos interesantes art{\'\i}culos \cite{SchNahRit76I} y
+\cite{SchNahRit76II}\footnote{Hay que notar que la definici{\'o}n que yo
+he dado de cl{\'a}sica no es la misma que en \cite{SchNahRit76I}, pero es
+equivalente. La prueba no es trivial}. Vamos a ver si puedo
+describir algunos ejemplos sencillos.
+\\ El {\'a}lgebra $sgl(n,m,\mathbb{C})$. Consideremos las matrices
+complejas $(n+m)\times(n+m)$, ese ser{\'a} nuestro espacio
+$\mathbb{A}$. La parte par ($\G$) ser{\'a}n las matrices
+\be
+\left(\begin{array}{cc} A & 0\\ 0 & B\end{array}\right)
+\ee
+donde $A$ es una matriz $n\times n$ y $B$ $m\times m$. La impares
+$\U$ son
+\be
+\left(\begin{array}{cc} 0 & C\\ D & 0\end{array}\right)
+\ee
+aqui $C$ es una matriz $m\times n$ y a su vez $D$ es $n\times m$.
+El producto en el {\'a}lgebra se define como
+\be
+\left[Q_1,Q_2\right]:=Q_1Q_2-Q_2Q_1 \quad\forall Q_1\in \G
+\\ \left[Q_1,Q_2\right]:=Q_1Q_2+Q_2Q_1\quad\forall Q_1,Q_2\in \U
+\ee
+En otras palabras el \textit{superconmutador} es el conmutador si
+al menos uno de los elementos es par y el anticonmutador si ambos
+son impares. El producto de extiende a cualquier elemento del
+{\'a}lgebra por linealidad. Se que la notaci{\'o}n puede resultar
+fastidiosa pero no quiero introducir t{\'e}rminos nuevos. Esta {\'a}lgebra
+se llama $gl(m,n,\mathbb{C})$ y no es simple. Para conseguir un
+{\'a}lebra simple hemos e imponer alguna condici{\'o}n sobre las matrices.
+\\ a) Super{\'a}lgebras de Lie cl{\'a}sicas:
+\\ a1) Familias de {\'a}lgebras
+\\ $\bullet$ Las {\'a}lgebras \textbf{ortosimpl{\'e}cticas} $osp(2n,m)$
+\\ Se car{\'a}cterizan por las siguientes condiciones
+\be
+\left(\begin{array}{cc} A & C\\ D & B\end{array}\right)
+\ee
+con
+\be
+A^t\Omega+\Omega A=0
+\\ B^t+B=0
+\\ D=C^t\Omega
+\ee
+Siendo $\Omega$ una matriz $2n\times 2n$ de la forma
+\be
+\Omega=\left(\begin{array}{cc} 0 & \mathbb{I}\\ -\mathbb{I} & 0\end{array}\right)
+\ee
+En otras palabras $A$ es una matriz simpl{\'e}ctica $\in sp(2n)$ y $B$
+es ortogonal $\Rightarrow \mathbb{G}=sp(2n)\otimes o(m)$. Un
+ejercicio interesante (que no he realizado) es el de determinar la
+representaci{\'o}n de $sp(2n)\otimes o(m)$ relevante en esta
+super{\'a}lgebra.
+\\ $\bullet$ Las {\'a}lgebras especiales lineales $sl(n,m)$
+Aqu{\'\i} exigimos que $\Tr(A)=\Tr(B)=0$. El {\'a}lgebra de Lie subyacente
+es $sl(n)\otimes sl(m)\otimes gl(1)$
+\\ $\bullet$ Las super{\'a}lgebras $sl(n,n)$ no son simples, el centro
+son matrices proporcionales a la identidad. Dividiendo por este
+ideal obtenemos una super{\'a}lgebra simple cuya {\'a}lgebra es
+$sl(n)\otimes sl(n)$
+\\ $\bullet$ El super{\'a}lgebra de Lie $b(n)$ (o $P(n)$) viene definida por las
+restricciones ($n>2$)
+\be
+A^t+B=0\qquad \Tr A=0
+\\ C^t=C\qquad D^t=-D
+\ee
+en este caso $\G=sl(n)$
+\\ $\bullet$ Las super{\'a}lgebras $d(n)/\lambda$ o $Q(n)$, con $n>2$.
+Definimos primero el {\'a}lgebra $d(n)$ como las matrices que cumplen
+\be
+A=B\qquad A\in gl(n)
+\\ C=D\qquad \Tr D=0
+\ee
+Como antes dividimos por el centro. Otra vez el {\'a}lgebra de Lie
+subyacente es $sl(n)$.
+\\ a2) {\'A}lgebras excepcionales (cl{\'a}sicas)
+\\ $\bullet$ Una familia uniparam{\'e}trica $D(2,1,\alpha)$ de dimensi{\'o}n 17, con
+$\alpha\in\mathbb{R}$ con $\G=sl(2)\otimes sl(2)\otimes sl(2)$.
+\\ $\bullet$ $\Gamma_2$ es una super{\'a}lgebra basada en el {\'a}lgebra
+$G_2\otimes sl(2)$ de dimensi{\'o}n 31. Para la construcci{\'o}n es
+conveniente usar octoniones. Es la {\'u}nica super{\'a}lgebra simple en la
+que un {\'a}lgebra excepcional aparece.
+\\ $\bullet$ Finalmente $\Gamma_3$ esta basada en el {\'a}lgebra $sl(2)\otimes
+o(7)$y es de dimensi{\'o}n 40. En su construcci{\'o}n ayudan mucho las
+{\'a}lgebras de Clifford
+\\ b) Álgebras del tipo de Cartan.
+\\ $\bullet$ $W(n)$ con $n>1$. Sea $V$ un espacio vectorial de
+dimensi{\'o}n $\dim V=n$. $\Lambda V$ es su {\'a}lgebra exterior, que es
+una super{\'a}lgebra. Dada una super{\'a}lgebra de Lie cualquiera
+$(\mathbb{A},\star)$ podemos construir otra llamada de
+superderivaciones de $\mathbb{A}$, $\mathcal{D}(\mathbb{A})$ como
+el conjunto de aplicaciones lineales $D:\mathbb{A}\rightarrow
+\mathbb{A}$ que cumplen
+\be
+D(g_1\star v)=g_1\star D(v)+D(g_1)\star v\qquad\forall g_1\in \G,
+v\in\mathbb{A}
+\\ D(u_1\star u_2)=D(u_1)\star u_2-u_1\star D(u_2)\qquad \forall
+u_1,u_2\in\U
+\ee
+Definimos $W(n)=\mathcal{D}\left(\Lambda V\right)$. Su dimensi{\'o}n
+es $\dim(W(n))=n2^n$.
+\\ $\bullet$ $S(n)$, $\tilde S(2n)$ y $H(n)$, que no describir{\'e}
+(porque no se hacerlo), son sub{\'a}lgebras de la anterior.
+\\ \bigskip
+Eso completa la clasificaci{\'o}n de las super{\'a}lgebras simples. El
+siguiente tema en el que no entrar{\'e} es el de clasificar las
+representaciones irreducibles de las mismas. Para dar cuenta de la
+dificultad de este asunto quisiera mencionar un
+\\ \textbf{Teorema de Djokovic-Hochschild:}
+\\ Sea $(\mathbb{A},\left[\cdot,\cdot\right],\mathbb{C})$ una
+super{\'a}lgebra. Todas sus representaciones finito dimensionales
+serán completamente reducibles si y s{\'o}lo si es producto directo de
+super{\'a}lgebras de Lie del tipo $osp(1,2n)$ y algebras de Lie
+semisimples.\\
+He querido mencionar todos estos resultados por varios motivos. Quiero
+hacer ver que la teor{\'\i}a de las super{\'a}lgebras de Lie es profunda e
+interesante.
+\\ Lo siguiente de lo que quiero hablar es de algo de m{\'a}s inter{\'e}s
+para los f{\'\i}sicos. ?`Hay alguna super{\'a}lgebra de Lie cuya {\'a}lgebra sea
+Poincar{\`e}? La respuesta es que s{\'\i} y la llamamos el {\'a}lgebra de
+super-Poincar{\`e}. Como acabo de decir en este caso $\G=(P_\mu,
+J_\mn)$ y satisfacen el {\'a}lgebra de Poincar{\`e}. Resulta que la
+representaci{\'o}n de $\mathcal{P}$ que hay que elegir para la parte
+impar es la espinorial del {\'a}lgebra de Lorentz.
+\subsection{Superálgebras de Poincarè}
+En esta sección vamos a tratar de clasificar todas las posibles generalizaciones del álgebra de Poincarè en $D$ dimensiones a una superálgebra.  Seguiremos como guía el apéndice del libro de Steven Weinberg \cite{Wei00III}\\
+
+Hay, que yo sepa, dos maneras de encontrar la generalización correcta. La más seguida fue la que fundamenta el importante artículo de Haag, Lopuszansky y Sohnius\cite{HaaLopSoh75} que también expondremos aquí siguiendo las lineas del libro de Weinberg y se trata meramente de usar fuerza bruta. Otra linea interesante es la que se presenta en el sucinto pero siempre interesante libro de Freund \cite{Fre86} en la que se busca primero un álgebra simple que se puede contraer a Poincarè y entonces se generaliza esta álgebra. En cuatro dimensiones el álgebra de anti-de Sitter hace muy bien el trabajo.\\
+
+En general el álgebra de Poincarè $(P_\mu,J_\mn)$ debe ser agrandada con una serie de generadores de la parte impar. Como hemos visto en la sección anterior estos generadores deben soportar una representación de la parte par. En este caso resulta que la única elección posible es $Q_{ai}$ y $\bar Q\du{\da}{i}$ es decir $N$ cargas ($i=1,...,N$) que transforman en la representación espinorial de Lorentz. A este sistema $(P_\mu,J_\mn,Q_{ai},\bar Q\du{\da}{i})$ aún podemos agregarle una serie de generadores bosónicos (con deben conmutar con todos los elementos del álgebra de Poincarè debido al teorema de Coleman-Mandula) pero que pueden tener un álgebra no trivial con la parte impar del álgebra. Estos generadores extra son de dos tipos, o bien mueven el índice $i$ de las cargas supersimétricas o bien mueven los índices $a$ y $\da$. Los primeros han sido estudiados en la literatura, pero los segundos han sido dejados un poco de lado. Además a estos generadores en algunas dimensiones podemos imponer ciertas condiciones de realidad.\\
+
+Empecemos en dimensión $D$ impar. En este caso sólo hay una representación espinorial de Lorentz. Coleman-Mandula nos dice que la parte par del Álgebra debe ser Poincarè producto directo de otro grupo cuyos generadores escribimos\\
+\begin{gather}
+(T_r)\du{i}{j}\qquad Z_{ij}
+\end{gather}
+Donde $i=1,..,N$ y $r$ es un índice que etiqueta el número de generadores. Los $Z_{ij}$ son \textit{cargas centrales} y conmutan con todo elemento del álgebra. De las muchas posibilidades que se pueden tomar para la parte impar la que funciona es elegir una $N$-upla $Q_{ai}$ de representaciones espinoriales. El índice $a$ es un índice de Dirac. Se llaman \textit{cargas supersimétricas} y a $N$ lo llamaremos \textit{extensión} de la supersimetría.\\
+
+Por lo tanto los elementos de la superálgebra son
+\begin{gather}
+P_\mu,\, J_\mn,\, T_r, Z_{ij},\, Q_{ai},\, \bar Q_{\da}^i
+\end{gather}
+Donde $P_\mu$ y $J_\mn$ son los generadores del grupo de Poincarè. EL teorema de Coleman-Mandula nos dice que
+\begin{gather}
+\con{T_r,T_s}=c\du{rs}{t}T_t\\
+\con{P_\mu,T_r}=\con{J_\mn,T_r}=0
+\end{gather}
+Nuestra elección de índices espinoriales fija también los conmutadores
+\begin{gather}
+\con{Q_{ai},P_\mu}=0\\
+\con{Q_{ai},J_{\mn}}={\Sigma_\mn}\du{a}{b} Q_{bi}
+\end{gather}
+Los elementos $T_r$ deben mover el índice $i$ de $Q_{ai}$ pero no el índice de Dirac.
+Falta especificar los conmutadores $\cor{Q_{ai},Q_{bj}}$
+La forma más general es 
+\begin{gather}
+\cor{Q_{ai},Q_{bj}}=G\du{aibj}{\mu}P_\mu+L_{aibj}
+\end{gather}
+\section{Supermultipletes}
+Supermultipletes son representaciones irreducibles del álgebra de supersimetría. Un supermultiplete (en adelante las palabras supermultiplete y multiplete son sinónimas) contiene cierto número de representaciones del álgebra de Poincarè. En supersimetría un estado cuántico libre viene descrito por un multiplete determinado. De manera que el espín de una partícula es un concepto relativo. Primero vamos a repasar muy brevemente las representaciones irreducibles en $D=4$ tanto para fijar convenios y notación como para futura referencia y claro está por coherencia interna del texto. Seremos breves porque esta muy bien explicado en diferentes lugares.\\
+
+Hay varios Casimires en el grupo. Primero están dos que son generalización de Poincarè
+\begin{gather}
+P^2\qquad\rm{y}\qquad C=\frac{-1}{2}C_\mn C^\mn
+\end{gather}
+Donde
+\begin{gather}
+C_\mn=P_\mu C_\nu-P_\nu C_\mu\\
+C_\mu=-\frac{1}{2}\ep_{\mn\lambda\rho}P^\nu L^{\lambda\rho}+\frac{1}{4}\bar\sigma^{\mu\,\da a}\con{Q_{ai},\bar Q\du{\da}{i}}
+\end{gather}
+El vector $C_\mu$ es una especie de generalización de cuadrivector de Pauli-Lubansky (\cite{SalStr74a},\cite{Sok75},\cite{RitSok81}). Además están los generadores de $U(N)$ que son una simetría extra del álgebra.
+\begin{gather}
+T\du{i}{j}=\frac{1}{4}\bar\sigma^{\mu\,\da a}\con{Q_{ai},\bar Q\du{\da}{j}}P_\mu
+\end{gather}
+cuyos Casimires lo son de toda el álgebra.
+En este caso las representaciones están etiquetadas por los autovalores $(m,s)$ de $P^2$ y del vector de Pauli-Lubansky, la masa y el \textit{superespín}. Supongamos que $m\neq 0$ de manera que podemos elegir $P_0=m$, $\vec P=0$ y el álgebra es
+\begin{gather}
+\cor{Q_{ai},\bar Q\du{\da}{j}}=2m\sigma\ud{0}{a\da}\delta\du{i}{j}=2m\delta_{a\da}\delta\du{i}{j}
+\end{gather}
+Esta es casi un álgebra de operadores creación y destrucción. Existe un subespacio \footnote{Debe existir un estado tal que $Q^2\ket{T}\neq 0$} $\ket{\Omega}$ que cumple
+\begin{gather}
+Q_a\ket{p;s}=0
+\end{gather}
+Este subespacio soporta una representación de espín $s$ de $SU(2)$, y es una cuestión de cálculo comprobar que este es también el autovalor de $C$.\\
+
+Construimos los demás estados a partir de estos con $\bar Q_\da$. Lo que hay que hacer ahora es calcular el espín de cada uno de estos estados. Eso puede hacerse con cierto esfuerzo a partir de las reglas de conmutación del álgebra.\\
+
+Escribimos aquí una tabla para referencia
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c||c|c|c||c|c||c|}
+\hline
+\multicolumn{1}{|c|}{ } & \multicolumn{4}{|c||}{N=1} & \multicolumn{3}{|c||}{N=2} & \multicolumn{2}{|c||}{N=3}& \multicolumn{1}{|c|}{N=4}\\
+\hline
+ESPÍN & 0 & $1/2$ & $1$ & $3/2$ & 0 & $1/2$ & $1$ & 0 & $1/2$ & 0\\
+\hline
+0     & 2 & 1     & 0   & 0     & 5 &   4   &  1  & 14 & 14   & 42  \\
+\hline
+$1/2$ & 1 & 2     & 1   & 0     & 4 &   6   &  4  & 14 &  20  & 48 \\
+\hline
+1     & 0 & 1     & 2   & 1     & 1 &   4   &  6  & 6 &  15   & 27  \\
+\hline
+$3/2$ & 0 & 0     & 1   & 2     & 0 &   1   &  4  & 1 &  6    & 8\\
+\hline
+2     & 0 & 0     & 0   & 1     & 0 &   0   &  1  & 0 &  1    & 1\\
+\hline
+\end{tabular}
+\caption{Sumermultipletes masivos en D=4}\label{tabla:supermulD4}
+\end{center}
+\end{table}
+En la tabla mostramos todos los multipletes en $D=4$ y $N=1,2,3,4$ en la que aparecen partículas con $m\neq 0$ y espín $\leq 2$ (asumiendo que los Casimires de $U(N)$ son cero). Por ejemplo si estudiamos el multiplete de superespín $3/2$ y $N=1$ encontramos que tiene una partícula de espín $1$, dos de espín $3/2$ y uno de espín $2$. Sobre algunos multipletes se puede imponer una condición de realidad, eso divide en número de partículas de espín semientero entre dos y hace que los bosónicos sean reales.\\
+
+El multiplete de superespín $0$, lo llamaremos quiral. El multiplete de superespín $1/2$ y $N=1$ se llama tensorial, lineal o transverso.\\
+
+No pretendemos hacer una demostración de esta tabla que puede encontrarse en los númerosos manuales, pero tratando de hacer un programa que nos de estos números encontré una sencilla regla que permite reproducirlos. Si queremos descubrir el contenido de partículas de un multiplete de superespín $j$ y extensión $N$.\\
+
+i) Si $j\geq N/2$ tenemos:\\
+$\bullet$ 1 partícula de espín $j-N/2$\\
+$\bullet$ $\binom{2N}{2}$ partículas de espín $j-N/2+1/2$\\
+...\\
+$\bullet$ $\binom{2N}{s}$ partículas de espín $j-N/2+s/2$\\
+...\\
+ii) Si $j<N/2$. Sea $a=N-2j>0$ y $\alpha=4j+a=2j+N$. Tenemos\\
+$\bullet$ $\binom{2N}{\alpha}-\binom{2N}{\alpha+2}$ partículas de espín 0.\\
+$\bullet$ $\binom{2N}{\alpha-1}-\binom{2N}{\alpha+3}$ partículas de espín $1/2$\\
+....\\
+$\bullet$ $\binom{2N}{\alpha-(a-2)}-\binom{2N}{\alpha+a}=\binom{2N}{4j+2}-\binom{2N}{2N}$ partículas de espín $j+(N+1)/2$\\
+$\bullet$ $\binom{2N}{4j+3}$ partículas de espín $j+(N+2)/2$\\
+...\\
+
+El lector puede verificar que los resultados de la tabla se reproducen fácilmente con esta regla cuya desmostración tampoco es difícil. Desconozco si esta regla se conoce, pero no esta en los manuales que yo conozco. Para que el lector vea la potencia del método calculemos los estados de $N=8$ y superespín 0. Formamos la tabla
+\begin{center}
+\begin{tabular}{ccccccccc}
+4 & 7/2 & 3 & 5/2 & 2 & 3/2 & 1 & 1/2 & 0\\ 
+$\binom{16}{16}$ & $\binom{16}{15}$ & $\binom{16}{14}$ & $\binom{16}{13}$ & $\binom{16}{12}$ & $\binom{16}{11}$ & $\binom{16}{10}$ & $\binom{16}{9}$ & $\binom{16}{8}$ \\ $-$\medskip\\
+  &   & $\binom{16}{0} $& $\binom{16}{1}$ & $\binom{16}{2}$ & $\binom{16}{3}$ & $\binom{16}{4}$ &
+ $\binom{16}{5}$ & $\binom{16}{6}$\\
+\hline
+1 & 16 & 119 & 544 & 1700 & 3808 & 6188 & 7072 & 4862
+\end{tabular}
+\end{center}
+Observemos además que existen $4^N(2s+1)$ estados en una representación de superespín $s$ y extensión $N$. 
+El caso de masa cero se analiza de forma parecida. El este caso se puede encontrar una base en la que $P=(E,0,0,0,E)$. De forma que
+\begin{gather}
+\cor{Q_{ai},\bar Q\du{\da}{j}}=2E\delta\du{i}{j}\mat{1 & 0\\ 0 & 0}
+\end{gather}
+disponemos de la mitad de operadores ``creación'' y los multipletes son radicalmente diferentes. Podemos clasificar cada multiplete por la superhelicidad, que es la helicidad mínima. En este caso es muy sencillo estudiar el contenido de espines para cualquier $N$, de la siguiente manera. Imaginemos que queremos el supermultiplete de helicidad $\lambda$ (un número semientero). Entonces tenemos un estado de helicidad $\lambda$, $\binom{N}{2}$ de helicidad $\lambda+1/2$, $\binom{N}{3}$ de helicidad $\lambda+1$,... y $1$ de helicidad $\lambda+N/2$. Por ejemplo si queremos construir el multiplete que contenga partícula de helicidad $\leq 2$ con $N=8$ entonces debemos empezar con una partícula de helicidad $-2$, de manera que el multiplete total tendrá:\\
+$\bullet$ $\binom{8}{8}=1$ partícula de helicidad $2$\\
+$\bullet$ $\binom{8}{7}=8$ partículas de helicidad $3/2$\\
+$\bullet$ $\binom{8}{6}=28$ partículas de helicidad $1$\\
+$\bullet$ $\binom{8}{5}=56$ partículas de helicidad $1/2$\\
+$\bullet$ $\binom{8}{4}=70$ partículas de helicidad $0$\\
+Que, como es bien sabido, es el multiplete de supergravedad $N=8$.\footnote{Este multiplete es autoconjugado, es decir su conjugado por CPT es el mismo, lo mismo sucede con el multiplete de super Yang-Mills con $N=4$.}\\
+
+La dimensiones mayores se pueden tratar de forma semejante aunque ahora la clasificación es más difícil porque los estados clasifican bajo el grupo pequeño que, en $D=10$, por ejemplo es $SO(9)$. También es interesante el caso con carga central. La idea es siempre desdoblar los operadores hasta conseguir tener un álgebra de operadores de creaciónón y destrucción. Las tablas están bien contenidas en los libros. En general hay determinados valores de la carga central para los que los multipletes tienen un contenido semejante al multiplete masivo y otros semejante al del multiplete sin masa. Todos los estados dentro de un multiplete con carga central tienen masa.
+ 

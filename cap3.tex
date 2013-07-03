@@ -1,0 +1,375 @@
+\chapter{ACOPLAMIENTO A SUPER MAXWELL\label{cap3}}
+\section{Superpartículas, cuerdas y membranas} 
+En esta sección vamos a discutir como es el principio de movimiento de una partícula en el superespacio.\\
+Lo ideal sería disponer de un principio geométrico semejante al de las geodésicas para las partículas en relatividad general o el de Nambu-Goto para la cuerda. Vamos a ver hasta donde podemos llegar siguiendo este principio.\\
+
+Lo primero que debemos hacer es definir en el superespacio la noción de distancia. Seguramente eso puede hacerse con un tensor métrico
+\begin{gather}
+g_{MN}(x^\mu,\theta^a,\bar\theta^\da)=(g_\mn,g_{\mu\, a}, g_{ab},g_{a\db},...)
+\end{gather}
+De manera que copiando la acción para la partícula uno tal vez pueda escribir
+\begin{gather}
+\int d\tau\sqrt{\omega^M\omega^N g_{MN}}
+\end{gather}
+Si queremos que los índices $M$ transformen en el tangente debemos escribir
+\begin{gather}
+\omega^\mu=\dot x^\mu-i\dot\theta^a\sigma\ud{\mu}{a\db}\bar\theta^\db+i\theta^a\sigma\ud{\mu}{a\db}\dot{\bar\theta}^\db\\
+\omega^a=\theta^a\qquad
+\bar \omega^\da=\bar\omega^\da
+\end{gather}
+Ahora debemos buscar el equivalente a la métrica de Minkovski si queremos empezar estudiando el caso de espacio plano. Podemos definir una métrica plana como aquella métrica que sea invariante bajo supersimetría. Del estudio de los tensores invariantes bajo Lorentz del primer capítulo se desprende que la forma más general (módulo un factor) es
+\begin{gather}
+g_\mn=\eta_\mn\quad g_{\mu\, a}=0\quad g_{ab}=\ell\ep_{ab}\quad \bar g_{\da\db}=\ell^*\ep_{\da\db}\quad g_{a\db}=0
+\end{gather}
+La acción para la superpartícula en $D=4$ y $N=1$ será, por tanto
+\begin{gather}
+S=-m\int d\tau\sqrt{-(\omega^\mu\omega^\nu+\ell \dot \theta^2+\ell^*\dot{\bar\theta}^2}
+\end{gather}
+Esta acción fue propuesta por Brink y Schwarz en 1981. El caso de $\ell=0$, que es el de verdadera importancia, fue propuesto por Casalbuoni en 1976.\\
+En lugar de trabajar con esta acción con la raíz cuadrada es preferible trabajar con la acción ``equivalente"
+\begin{gather}
+S=\int d\tau\frac{1}{2}\left(e^{-1}(\omega^\mu\omega^\nu\eta_\mn+\ell \dot \theta^2+\ell^*\dot{\bar\theta}^2)+m^2e\right)
+\end{gather}
+Que además también vale para el caso $m=0$.\\
+Esta sencilla acción es difícil de generalizar a $N>1$ o $D>4$. Vamos primero con el caso $N>1$.\\
+En este caso el tensor métrico tiene otro índice
+\begin{gather}
+g_{MN}=(g_\mn, g_{\mu\,ai},g_{ai\,bj}...)
+\end{gather}
+Como hemos señalado el álgebra tiene una simetría $U(2)$ si queremos preservar esta simetría el tensor más general es sencillamente
+\begin{gather}
+g_{\mn}=\eta_\mn
+\end{gather}
+y todo lo demás es cero. La razón es que un término
+\begin{gather}
+g_{ai\,bj}=\ep_{ab}\ep_{ij}
+\end{gather}
+No tiene las propiedades de simetría adecuadas $\ep_{ab}\ep_{ij}\dot\theta^{ai}\dot\theta^{bj}=0$.\\
+Si decidimos no preservar esta simetría interna del álgebra tenemos más opciones porque podemos
+\begin{gather}
+g_{ai\,bj}=\ell_{ij}\ep_{ab}\\
+\ell_{ij}=\ell_{ji}
+\end{gather}
+De manera que la acción se leería
+\begin{gather}
+S=\int d\tau\frac{1}{2}\left(e^{-1}(\omega^\mu\omega^\nu\eta_\mn+\ell_{ij}\ep_{ab} \dot \theta^{ai}\dot\theta^{bj}+{\ell^{ij}}^*\ep^{\db\da}\dot{\bar\theta}\ud{\da}{i}\dot{\bar\theta}\ud{\db}{j})+m^2e\right)
+\end{gather}
+En dimensiones mayores las cosas pueden ser muy diferentes. En particular en dimensión $D=6$ o $D=10$ notar de nuestro previo análisis que no hay ningún dos tensor antisimétrico $J_{ab}$ que haga las veces de $\ep_{ab}$ y sólo hay un posible término en la acción, sólo hay una métrica plana.\\
+
+Otra cosa distinta es la partícula en el superespacio harmónico en $N=2$ y $D=4$. Aquí podemos encontrar una familia triparamétrica de métricas \textit{planas}
+\begin{gather}
+g=\eta_\mn \omega^\mu\otimes \omega^\nu+\ell_1\Lambda_{ij}d\theta^{ai}\otimes d\theta^{bj}+c.c.+\ell_2dz^{++}\otimes dz^{--}
+\end{gather}
+Donde, como siempre $\hat\omega^\mu=dx^\mu-i\theta^{ai}\sigma\ud{\mu}{a\db}d\bar\theta\ud{\db}{i}-id\theta^{ai}\sigma\ud{\mu}{a\db}\bar\theta\ud{\db}{i}$.\\
+El otro término es \mbox{$\Lambda_{ij}=u\du{i}{+}u\du{j}{-}+u\du{i}{-}u\du{j}{+}$}. Que en coordenadas podemos escribir como
+\begin{gather}
+\Lambda=\mat{i\sen(\alpha)e^{i\phi} & \cos\alpha\\ cos\alpha & i\sen\alpha e^{i\phi}}
+\end{gather}
+Así que podemos escribir un principio geométrico para estas partículas
+\begin{gather}
+S=\frac{1}{2}\int(e^{-1}\dot g-em^2)d\tau
+\end{gather}
+Donde $\dot g$ es simplemente
+\begin{gather}
+\dot g=\eta_\mn\omega^\mu\omega^\nu+\ell_1\ep_{ab}\dot\theta^{ai}\dot\theta^{bj}+c.c.+\ell_2\dot z^{++}\dot z^{--}
+\end{gather}
+Por otra parte es posible escribir acciones que son invariantes bajo un álgebra supersimétrica con un término central en el álgebra. Trabajaremos el caso $D=4$ y $N=2$. La métrica plana en este caso es complicada
+\begin{gather}
+g_\mn=\eta_{\mn}\qquad g_{ai\, z}=\theta_{ai}\qquad g_{ai\,bj}=\theta_{ai}\theta_{bj}\\
+g_{zz}=\frac{1}{2i}\qquad g_{z\,\bar z}=0
+\end{gather}
+Probemoslo con cuidado. Para que la acción sea invariante por Poincarè es suficiente (y necesario) que todos los índices esten bien contraídos y que no aparezca ninguna dependencia en $x^\mu$. La invariancia por el generador $Z$ nos obliga a que la acción no pueda depender de $z$. Lo único que hay que comprobar es que pasa bajo una transformación de supersimetría. Por comodidad repetimos la fórmula (\ref{Qcentral})
+\begin{gather}
+Q_{ai}=-i\p_{ai}-\sigma\ud{\mu}{a\db}\bar\theta\ud{\db}{i}+\ep_{ab}\ep_{ij}\theta^{bj}\frac{\p}{\p z}
+\end{gather}
+Con esta fórmula podemos calcular las transformaciones sobre $\theta^{ai}$ y $z$:
+\begin{gather}
+\delta z=\cor{i\xi^{ai}Q_{ai},z}=i\xi^{ai}\theta_{ai}\\
+\delta \theta^{ai}=\cor{i\xi^{bj}Q_{bj},\theta^{ai}}=\xi^{ai}
+\end{gather}
+Estudiemos el término
+\begin{gather}
+T=i\dot\theta^{ai}\theta_{ai}\dot z+\frac{1}{2}\dot\theta^{ai}\theta_{ai}\theta_{bj}\dot\theta^{bj}+\frac{1}{2}\dot z^2
+\end{gather}
+Por partes\footnote{Notar que: $\xi^{ai}\chi_{ai}=\ep_{ab}\ep_{ij}\xi^{ai}\chi^{bj}=-\chi^{ai}\xi_{ai}$}
+\begin{gather}
+\delta\left(\frac{1}{2}\dot z^2\right)=\dot z\delta\dot z=i\dot z\xi^{ai}\dot\theta_{ai}=-i\dot z\dot\theta^{ai}\xi_{ai}\\
+\delta\left(\frac{1}{2}\dot\theta^{ai}\theta_{ai}\theta_{bj}\dot\theta^{bj}\right)= \dot\theta^{ai}\xi_{ai}\theta_{bj}\dot\theta^{bj}=-\dot\theta^{bj}\theta_{bj}\dot\theta^{ai}\xi_{ai}\\
+\delta\left(i\dot\theta^{ai}\theta_{ai}\dot z\right)=i\dot\theta^{ai}\xi_{ai}\dot z+i\dot\theta^{ai}\theta_{ai}(-i\dot\theta^{bj}\xi_{bj})
+\end{gather}
+La acción correcta que es invariante bajo el álgebra de super Poincarè $N=2$ con cargas centrales es
+\begin{gather}
+\int e^{-1}\left(\omega^\mu\omega^\nu\eta_\mn+\ell (T+T^*)\right)d\tau
+\end{gather}
+\section{Ecuaciones de movimiento y simetría $\kappa$}
+Estudiemos ahora las ecuaciones de movimiento que surgen de los principios variacionales que hemos propuesto. Empecemos con una superpartícula con $N$ arbitrario.
+\begin{gather}
+S=\frac{1}{2}\int d\tau\left(e^{-1}\omega^\mu\omega^\nu\eta_\mn-em^2\right)\label{superparla}
+\end{gather}
+Las ecuaciones de Euler-Lagrange que se siguen son
+\begin{gather}
+\frac{d}{d\tau}\left(e^{-1}\omega^\mu\right)=0\\
+\frac{d}{d\tau}\left(-e^{-1}\omega_\mu i S\ud{\mu}{a\da}\bar\theta\ud{\da}{i}\right)=ie^{-1}\omega_\mu S\ud{\mu}{a\da}\dot{\bar\theta}\ud{\da}{i}
+\end{gather}
+La solución de la primera ecuación es
+\begin{gather}
+p_\mu=e^{-1}\omega_\mu=cte
+\end{gather}
+La segunda es equivalente a
+\begin{gather}
+p_\mu S\ud{\mu}{a\da}\dot{\bar\theta}\ud{\da}{i}=0 \label{massless}
+\end{gather}
+La solución de esta ecuación es muy diferente si $m=0$ o si $m\neq 0$. En el segundo caso la matriz $p_\mu S\ud{\mu}{a\da}$, no es singular (su cuadrado es $p^2I$) e implica que la solución de la ecuación es
+\begin{gather}
+\omega^\mu=\omega_0^\mu+p^\mu\tau\\
+\theta^{ai}=\theta_0^{ai}
+\end{gather}
+En el caso sin masa la solución completa de la ecuación (\ref{massless}) es
+\begin{gather}
+\dot{\bar\theta}^\da= p_\mu S^{\mu\,\da a}\dot\kappa(\tau)
+\end{gather}
+donde $\kappa(\tau)$ es una función (grassmaniana) arbitraria. La solución arbitraria es
+\begin{gather}
+x^\mu=x_0^\mu+ip^\nu\sigma\du{\nu}{a\da}\sigma\ud{\mu}{a\db}\bar\kappa_\da\bar\theta_0^\db-ip^\nu\sigma\du{\nu}{b\db}\sigma\ud{\mu}{a\db}\theta^a_0\kappa_b+p^\mu\tau\\
+\theta^a=\theta_0^a+p^\mu\sigma\du{\mu}{a\db}\bar \kappa_\db (\tau)\label{strightlines}
+\end{gather}
+Esto es extraño, nos esta diciendo que una linea recta en el superespacio no es simplemente un par de funciones $(x^\mu(\tau),\theta^{ai}(\tau))$. Entonces llegamos a un punto problemático, ¿que es una linea en el superespacio? La física nos está enseñando que son lineas rectas pero ¿que hay de las lineas que no son rectas?\\
+Notemos que, en $D=4$ y $N=1$ si incluímos el término en la acción $\ell\dot\theta^2+\ell^*\dot{\bar\theta}^2$ no existe esta libertad pero las ecuaciones se vuelven no lineales y más difíciles de resolver.\\
+
+Este hecho de que las soluciones de las ecuaciones de movimiento dependan de una función arbitraria está relacionado con el hecho de que el Lagrangiano (\ref{superparla}) posee una simetría extra. Estudiaremos algo más sobre esta simetría en el capítulo que sige donde haremos la mecánica cuántica de estos sistemas.
+\section{La superpart{\'\i}cula acoplada a super Maxwell}
+Una de las virtudes del enfoque geométrico en el que venimos insistiendo es el hecho de que el acomplamiendo de las partículas y otros objetos al los campos electromagnéticos sigue una linea bien definida. Siempre es posible, claro está, estudiar el acoplamiento de una particula con un supermultiplete de Maxwell definido de manera no geométrica, pero la manera fundada en geometría es, probablemente, menos debatible y más fácil de generalizar.\\
+
+Nosotros simplemente añadiremos un nuevo término a la acción de la partícula libre dado por
+\begin{gather}
+S=\int d\tau\left(\frac{1}{2}e^{-1}(\omega^\mu)^2+A_\mu\omega^\mu+\dot \theta^a A_a+\bar A_\da\dot{\bar\theta}^\da\right)
+\end{gather}
+Donde, como es habitual
+\begin{gather}
+\dot \omega^\mu=\dot x^\mu-i\dot\theta^a\s\bar\theta^\db+i\theta^a\s\dot{\bar\theta}^\db
+\end{gather}
+Esta acci{\'o}n es real e invariante de calibre. Notemos que uno podr{\'\i}a decir que no es necesario que $\bar A_\da=(A_a)^*$ sino que sean igual m{\'o}dulo un calibre, pero entonces siempre existe un calibre que los lleva a su forma normal. Vamos a atacar las ecuaciones de Euler-Lagrange.
+\be
+p_\mu=\frac{\p L}{\p\dot x^\mu}=e^{-1}\omega_\mu+A_\mu
+\\ \frac{\p L}{\p x^\mu}=\p_\mu A_\nu\omega^\mu+\dot \theta^a\p_\mu A_a+\bar \p_\mu A_\da\dot{\bar\theta}^\da
+\ee
+La primera ecuaci{\'o}n es
+\be
+\frac{d}{d\tau}\left[e^{-1}\omega_\mu\right]= F_{\mu\nu}\omega^\nu+\dot\theta^aF_{\mu a}+\bar F_{\mu\da}\dot{\bar\theta}
+\ee
+Seguimos
+\be
+\pi_a=\frac{\p L}{\p \dot\theta^a}=e^{-1}\dot z^\mu\left(-i\s\bar\theta^\db\right)+A_\mu\left(-i\s\bar\theta^\db\right)+A_a
+\\ \frac{\p L}{\p\theta^a}=e^{-1}\omega_\mu i\s\dot{\bar\theta}^\db+A_\mu i\s\dot{\bar\theta}^\db-\dot\theta^b\p_aA_b+\p_aA_\mu\omega^\mu+\p_a\bar A_\da\dot{\bar\theta}^\db
+\ee
+Despu{\'e}s de organizar las cosas coherentemente y usar la anterior ecuaci{\'o}n de movimiento la historia no queda tan fea
+\be
+2e^{-1}\dot z_\mu i\s\dot{\bar\theta}^\db=\dot\theta^b
+F_{ab}+\dot{\bar\theta}^\da F_{a\da}+F_{a\mu}\dot z^\mu
+\ee
+Me gustar{\'\i}a hacer ver que estas ecuaciones no son independientes, es decir que hay ligaduras entre las ecuaciones de Euler-Lagrange. Lo cual podr{\'\i}a llevar a pensar que existe alguna simetr{\'\i}a de calibre (``inverso'' del segundo teorema de N{\"o}ther). Poniendo la teor{\'\i}a nomov ($F_{ab}=F_{a\da}=0$ y $F_{a\mu}=i\sigma_{\mu\,a\db}\bar W^\db$), estas ecuaciones son
+\be
+2e^{-1}\dot z_\mu i\s\dot{\bar\theta}^\db=i\s \bar W^\db\dot z_\mu
+\ee
+O mejor escritas
+\be
+i\dot z_\mu\s\left(2e^{-1}\dot{\bar\theta}^\db-\bar W^\db\right)=0
+\ee
+Pero la matriz $\omega_\mu\s$ es singular (!`su cuadrado es cero!)
+\\ Por otra parte también podemos estudiar el {\'a}lgebra de ligaduras. Est{\'e} {\'a}lgebra habla directamente de simetr{\'\i}as.
+\\ En nuestro caso son
+\be
+\phi \equiv\left(p_\mu-A_\mu\right)^2
+\\ d_a\equiv\pi_a+i\s\bar\theta^\db p_\mu-A_a
+\\ \bar d_\db\equiv\bar\pi_\db+i\theta^a\s p_\mu+\bar A_\db
+\ee
+La primera es una ligadura secundar{\'\i}a y las otras primar{\'\i}as.\\
+Los corchetes se calculan f{\'a}cilmente
+\begin{gather}
+\cor{d_a,d_b}=-F_{ab}
+\\ \cor{d_a,\bar d_\db}=-2i\s (p_\mu-A_\mu)-F_{a\db}
+\\ \cor{d_a,\phi}=2(p^\mu-A^\mu)F_{a\mu}
+\end{gather}
+Y, como siempre, conjugados. La pregunta adecuada ahora debe ser ?`bajo qu{\'e} condiciones tenemos alguna simetr{\'\i}a extra? De otra forma, ?`qu{\'e} debemos imponerle a la curvatura para que existan m{\'a}s ligaduras de primera clase?. En lugar de atacar esa pregunta de frente vamos a hacer algo m{\'a}s sencillo. Supongamos que las condiciones para que el supercampo $A_M$ de s{\'o}lo super Maxwell son las que hemos analizado. En ese caso las ligaduras toman la forma
+\be
+\cor{d_a,d_b}=0\\
+\cor{d_a,\bar d_\db}=-2i\s (p_\mu-A_\mu)\\
+\cor{d_a,\phi}=2(p^\mu-A^\mu)F_{a\mu}
+\ee
+Para evitar la ligadura secundaria, {\'A}lvaro propone, observando que $F_{\mu a}=i\sigma_{\mu\,a\db}\bar W^\db$ con $D_a \bar W^\db=0$ elegir la ligadura
+\be
+\psi=\phi-W^ad_a-\bar d_\da \bar W^\da
+\ee
+Entonces las ligaduras son
+\be
+\cor{d_a,d_b}=0\\
+\cor{d_a,\bar d_\db}=-2i\s (p_\mu-A_\mu)\\
+\cor{d_a,\psi}=D_a W^b d_b
+\ee
+Este conjunto de ligaduras cierra en el álgebra. Lo que sucede aquí en pocas palabras es que si imponemos la condición de que la teoría este off-shell ($F_{ab}=F_{a\db}=0$) entonces hay nuevamente vínculos de primera clase.\\
+
+Analicemos ahora el problema al revés. Supongamos que la simetría \textit{kappa} es algo fundamental. Entonces supongamos que hay una linea solución de las ecuaciones de la superpartícula en el espacio plano. Es natural exigir que nada dependa de la clase de equivalencia de todas las soluciones que están conectadas por un $\kappa$-transformación. Mas específicamente lo que queremos es que el término
+\begin{gather}
+\Lambda=\int d\tau \left(A_\mu\omega^\mu+\dot \theta^a A_a+\bar A_\da\dot{\bar\theta}^\da\right)
+\end{gather}
+no dependa de la función $\kappa(\tau)$ en las ecuaciones (\ref{strightlines})
+\begin{gather}
+x^\mu=x_0^\mu+ip^\nu\sigma\du{\nu}{a\da}\sigma\ud{\mu}{a\db}\bar\kappa_\da\bar\theta_0^\db-ip^\nu\sigma\du{\nu}{b\db}\sigma\ud{\mu}{a\db}\theta^a_0\kappa_b+p^\mu\tau\\
+\theta^a=\theta_0^a+p^\mu\sigma\du{\mu}{a\db}\bar \kappa_\db (\tau)
+\end{gather}
+De manera que queremos:
+\begin{gather}
+\delta_\kappa\Lambda=0
+\end{gather}
+Así que
+\be
+\delta_\kappa \Lambda=\int d\tau\left(\delta A_\mu
+p^\mu+A_\mu\delta p^\mu+ \delta\dot \theta^aA_a+\theta^a\delta
+A_a+\delta\bar A_\da\dot{\bar\theta}^\da+\bar
+A_\da\delta\dot{\bar\theta}^\da\right)
+\ee
+Las variaciones son fáciles de calcular
+\be
+\delta A_\mu=\delta\theta^aD_aA_\mu+\bar D_\da
+A_\mu\delta\bar\theta^\da
+\\ \delta A_a=\delta\theta^bD_b A_a+\bar D_\db
+A_a\delta\bar\theta^\db
+\ee
+Un comentario técnico aquí es preciso. $e^{-1}\dot z^\mu$ es lo que debiese ser llamado momento
+y es invariante bajo la simetría $\kappa$, $p_\mu$ no lo es
+\be
+\delta p^\mu= 2\dot\theta^a\s\delta\bar\theta^\db+...
+\ee
+El término $\delta\dot\theta^aA_a$ si se integra por partes nos da
+\be
+-\delta\theta^a\dot A_a=\left(\p_\mu A_a p^\mu+\dot\theta^b D_b
+A_a+\bar D_\db A_a\dot{\bar\theta}^\db\right)\delta\theta^a
+\ee
+Coleccionando términos similares con cuidado se obtiene el siguiente conjunto de ecuaciones:
+\begin{gather}
+F_{\mu a}p^\mu\delta\theta^a=0
+\\ F_{ab}\dot\theta^a\delta\theta^b=0
+\\ \left(D_a\bar A_\db+\bar D_\db
+A_a-2\s
+A_\mu\right)\dot{\bar\theta}^\db\delta\theta^a=F_{a\db}\dot{\bar\theta}^\db\delta\theta^a=0
+\end{gather}
+Observe que el término $A_\mu$ en la última ecuación viene de la variación 
+$\delta p^\mu$.
+\\
+En este punto es importante recordar que
+\be
+\delta\theta^a=\sigma^{\mu\,
+a\db}\delta\bar\epsilon_\db p_\mu
+\ee
+Así que si queremos que la variación sea cero para todo $\delta\epsilon_b$ necesitamos
+\be
+F_{\mu a}\sigma^{\nu\, a\db}p^\mu p_\nu=0
+\\ \sigma^{\mu\, a\da} \sigma^{\nu\, b\db} F_{ab}p_\mu p_\nu=0
+\\ \sigma^{\mu\, a\da} \sigma^{\nu\, b\db}F_{a\db}p_\mu p_\nu=0
+\ee
+Si insistimos en que estas ecuaciones sean ciertas para todo $\epsilon_a$,
+$\delta\epsilon_a$ y todo $p_\mu$ tal que $p^2=0$ tenemos
+\begin{gather}
+\sigma_\nu^{\phantom{\nu}a\db}F_{\mu\,a}+\sigma_\mu^{\phantom{\mu}a\db}F_{\nu\,a}=
+\eta_{\mu\nu}\bar W^\db\label{firstone}
+\\ \left(\sigma^{\mu\, a\da} \sigma^{\nu\, b\db}+\sigma^{\nu\, a\da} \sigma^{\mu\,
+b\db}\right)F_{ab}=\eta^\mn G^{\da\db}\label{secondone}
+\\ \left(\sigma^{\mu\, a\da} \sigma^{\nu\, b\db}+\sigma^{\nu\, a\da} \sigma^{\mu\,
+b\db}\right)F_{a\db}=\eta^\mn G^{b\da}\label{thirdone}
+\end{gather}
+Donde $W_a$, $G^{\da\db}$ y $G^{a\db}$ son funciones arbitrarias
+Uno por uno. Resolvamos la primera ecuación (\ref{firstone}). Multiplique
+por $\sigma^\mu_{\phantom{\mu} b\db}$ en ambos lados y sume
+\be
+\sigma_\nu^{\phantom{\nu}a\db}\sigma^\mu_{\phantom{\mu} b\db} F_{\mu a}+2F_{\nu b}= \sigma_{\nu\,b\db}\bar
+W^\db
+\ee
+Ahora use
+\be
+\sigma_{\mu\,b\db}\sigma_\nu^{\phantom{\nu}a\db}=
+\sigma_{\mu\,b\db}\sigma_\nu^{\phantom{\nu}a\db}+
+\sigma_{\nu\,b\db}\sigma_\mu^{\phantom{\mu}a\db}-
+\sigma_{\nu\,b\db}\sigma_\mu^{\phantom{\mu}a\db}=\eta_\mn\delta_b^{\phantom{b}a} -
+\sigma_{\nu\,b\db}\sigma_\mu^{\phantom{\mu}a\db}
+\ee
+identidad que nos ayude a escribir
+\be
+4F_{\nu a}-\sigma_{\nu\,b\db}\sigma^{\mu\, a\db}F_{\mu a}=
+\sigma_{\nu\,b\db}\bar W^\db
+\ee
+Esto es
+\be
+F_{\nu a}=\frac{1}{4}\sigma_{\nu\,b\db}\left(\bar W^\db+
+\sigma^{\mu\, a\db}F_{\mu a}\right)=\sigma_{\nu\,b\db}\bar G^\db
+\ee
+Donde escribimos $\bar G^\db=\frac{1}{4}\left(\bar W^\db+
+\sigma^{\mu\, a\db}F_{\mu a}\right)$. Introducimos este valor en la ecuación (\ref{firstone}) encontramos naturalmente
+\be
+\bar G^\db=\frac{1}{2}\bar W^\db
+\ee
+Así que finalmente la solución es
+$F_{\mu
+a}=\frac{1}{2}\sigma_{\mu\,a\db}\bar W^\db$. Probablemente exista una mejor manera de obtener este resultado...\\ 
+
+Ha llegado el momento de analizar la ecuación (\ref{secondone}). Primer paso, tomamos trazas sobre $\mn$
+\be
+\sigma_\mu^{\phantom{\mu} a\da} \sigma^{\mu\,
+b\db}F_{ab}=4 G^{\da\db}
+\ee
+Usando una de nuestras identidades favoritas
+\be
+\epsilon^{ab}\epsilon_{\da\db}F_{ab}=2G^{\da\db}
+\ee
+Ahora $\epsilon^{ab}F_{ab}=0$ porque $\epsilon^{ab}$ es antisimétrico
+y $F_{ab}$ es simétrico. De manera que $G^{\da\db}=0$. El truco que hace el trabajo ahora es multiplicar por $\sigma_\mu^{\phantom{\mu}c\dot
+c}\sigma_\nu^{\phantom{\nu}d\dot d}$ y encontrar que
+\be
+F^{cd}\left(\epsilon^{\da \dot c}\epsilon^{\db\dot d}+
+\epsilon^{\da \dot d}\epsilon^{\db\dot c}\right)=0
+\ee
+que inescapablmente implica $F_{ab}=0$. Miramos ahora hacia la tercera y más difícil de las ecuaciones (\ref{thirdone}).
+Contracción de índices como antes sólo dice que $G^{a\db}=F^{a\db}$. Esto significa que podemos reescribir el sistema
+\be
+\left(\sigma^{\mu\, a\da} \sigma^{\nu\, b\db}+\sigma^{\nu\, a\da} \sigma^{\mu\,
+b\db}-\eta^\mn\epsilon^{ab}\epsilon^{\da\db}\right)F_{a\db}=0
+\ee
+que también conduce a $F_{a\db}=0$.\\ 
+
+Otra forma geométrica de entender estas restriciones fue propuesta por Witten en su artículo sobre la interpretación twistorial de super Yang-Mills en diez dimensiones. La idea fundamental es exigir que existan supercampos covariantemente constantes
+\be 
+\dot
+z^\mu\D_\mu\Phi+\dot\theta^a\D_a\Phi-\dot{\bar\theta^\da}\D_\da\Phi=0
+\ee
+El problema es que para que esta ecuación tenga sentido tiene que ser cierto para cada $\kappa(\tau)$. 
+Si $z_1^M$ y $z_2^M$ son dos soluciones equivalentes de la condición de integrabilidad, se tiene que cumplir que
+\begin{gather}
+\left[\dot z_1^M\D_M,\dot z_2^M\D_M\right]\Phi=\dot z_1^M\dot
+z_2^N\left(F_{MN}+T_{MN}^{\phantom{MN}L}\D_L\right)\Phi=0
+\end{gather}
+Donde
+\be
+\dot z_1^\mu=\dot z_2^\mu=p^\mu
+\\ \dot z_1^a=\dot\theta_1^a=p^\mu\sigma_\mu^{\phantom{\mu}a\db}\dot{\bar\kappa}_{1\,\db}(\tau)
+\\ \dot z_2^a=\dot\theta_2^a=p^\mu\sigma_\mu^{\phantom{\mu}a\db}\dot{\bar\kappa}_{2\,\db}(\tau)
+\ee
+En componentes
+\be
+p^\mu p^\nu F_\mn+p^\mu\dot\theta_2^aF_{\mu
+a}+p^\mu\dot{\bar\theta}_2^\da\bar F_{\mu
+\da}+\dot\theta_1^ap^\mu F_{a\mu}+\dot{\bar\theta}_1^\da p^\mu\bar
+F_{\da\mu}+\\+ \dot\theta_1^a\dot \theta^2
+F_{ab}+\dot{\bar\theta}_1^\da\dot{\bar\theta}_2^\db \bar
+F_{\da\db}+\dot\theta_1^a\dot{\bar\theta}_2^\db\left(F_{a\db}-i\s\D_\mu\right)+
+\dot{\bar\theta}_1^\db\dot\theta_2^a \left(\bar F_{\db
+a}-i\s\D_\mu\right)\Phi=0
+\ee
+Paso a paso. $p^\mu p^\nu F_\mn=0$ por simetría. Si la teoría esta off-shell $F_{\mu a}=i\s\bar W^\db$ and $\dot\theta_1^ap^\mu
+F_{a\mu}=0$ y compañia debido a las ecuaciones de movimiento. El término $\theta^a\dot{\bar\theta}^\db\s$ es cero debido a una complicada identidad de Fierz. Por lo tanto si la teoría esta off-shell las condición de integrabilidad se satisface.\\
+
+En otras palabras si exigimos $F_{ab}=F_{a\db}=0$ entonces existen campos covaraintemente constantes. ¿qué pasa con el inverso?. Si insistimos en la integrabilidad entonces las siguientes ecuaciones deben cumplirse
+\be
+p^\mu\dot\theta^aF_{\mu a}=0
+\\ \dot\theta_1^a\dot\theta_2^b F_{ab}=0\qquad \dot\theta_1^a\dot{\bar\theta}_2^\db
+F_{a\db}=0
+\ee
+

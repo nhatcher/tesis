@@ -1,0 +1,265 @@
+\def\be{\begin {eqnarray*}}
+\def\ee{\end {eqnarray*}}
+\def\bea{\begin {eqnarray}}
+\def\eea{\end {eqnarray}}
+
+%\def\be{\begin{gather}}
+%\def\ee{\end{gather}}
+%\def\bea{\begin{gather}}
+%\def\eea{\end{gather}}
+
+
+
+\def\Tr{\mathrm{Tr}}
+\def\diag{\mathrm{diag}}
+\def\p{\partial}
+\def\da{{\dot a}}
+\def\db{{\dot b}}
+\def\ep{\varepsilon}
+\def\mn{{\mu\nu}}
+\def\s{{\sigma^\mu}_{a\dot b}}
+\def\S{{\Sigma^\mu}_{a\dot b}} 
+\def\g{\gamma^\mu_{\phantom{\mu}ab}}
+\def\({\left\{}
+\def\){\right\}}
+\def\[{\left[}
+\def\]{\right]}
+\def\D{\mathcal{D}}
+\def\G{\mathbb{G}}
+\def\U{\makebox{$U\hspace{-.4cm}\raisebox{.1cm}{$-$}$}}
+\newcommand{\td}[1]{{\bar\theta}^{\dot{#1}}}
+\newcommand{\tdd}[1]{\dot{\bar\theta}^{\dot{#1}}}
+\newcommand{\sg}[2]{{{\sigma^{#1}}_{#2}}}
+\newcommand{\cor}[1]{\left\{#1\right\}}
+\newcommand{\dir}[1]{\left\{#1\right\}_{\textrm{D}}}
+\newcommand{\con}[1]{\left[#1\right]}
+\newcommand{\du}[2]{_{#1}^{\phantom{#1}#2}}
+\newcommand{\ud}[2]{^{#1}_{\phantom{#1}#2}}
+\newcommand{\mat}[1]{\left(\begin{matrix}#1\end{matrix}\right)}
+
+%\newtheorem{\def}{Definición: }
+\def\Pc{\mathbb{P}_\mathrm{C}}
+\def\Pa{\mathbb{P}_\mathrm{A}}
+\def\Pt{{\mathbb{P}_\mathrm{T}}}
+\def\Pcm{\mathbb{P}_\mathrm{C}^m}
+\def\Pam{\mathbb{P}_\mathrm{A}^m}
+\def\Ptm{{\mathbb{P}_\mathrm{T}^m}}
+\def\Proy{\mathbb{P}}
+\def\happy{\rightthumbsup}
+\def\D{\mathcal{D}}
+\def\G{\mathbb{G}}
+\def\U{\makebox{$U\hspace{-.4cm}\raisebox{.1cm}{$-$}$}}
+\def\edth{d}
+
+\def\enddemos{\rightthumbsup \\}
+\def\demos{\textbf{Demostraci\'on:}\\ \ding{46}\hspace{.3 cm}}
+
+\newcommand{\ket}[1]{\left|#1\right>}
+\newcommand{\bra}[1]{\left<#1\right|}
+
+
+\documentclass[12pt,twoside]{report}
+\usepackage{dingbat}
+\usepackage{pifont}
+\usepackage{amssymb,amsmath}
+\usepackage[dvips]{graphicx}
+\usepackage{makeidx}
+\usepackage{tocbibind}
+\usepackage[sf,sl,outermarks]{titlesec}
+%\usepackage{pdfpages}
+%\usepackage{toc}
+\usepackage{fancyhdr}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+%%\usepackage[all]{xy}
+\usepackage[active]{srcltx}
+\usepackage[ps2pdf, hypertex, backref]{hyperref}
+
+\linespread{1.3}
+%\hoffset=1 cm
+\voffset=1.5 cm
+\textheight=525pt
+\textwidth=440pt
+\evensidemargin=1 cm
+\oddsidemargin =1 cm
+\title{GEOMETRÍA DEL SUPERESPACIO Y CUANTIZACIÓN COVARIANTE DE LAS SUPERPARTÍCULAS}
+\author{Nicolás Hatcher Andrés}
+
+\makeindex
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+
+\newtheorem{teorema}{\leftpointright\hspace{.3 cm} Teorema}[chapter]
+\newtheorem{defi}[teorema]{\leftpointright\hspace{.3 cm} Definición}
+\newtheorem{prop}[teorema]{\leftpointright\hspace{.3 cm} Proposición}
+\newtheorem{lema}[teorema]{\leftpointright\hspace{.3 cm} Lema}
+
+
+
+\titleformat{\chapter}[display]
+  {\Large}
+  {\filleft\MakeUppercase{\chaptertitlename} \Huge \thechapter}
+  {4ex}
+  {\titlerule
+   \vspace{2ex}%
+   \Large\filcenter}
+   [\vspace{2ex}%
+   \titlerule]
+
+
+
+\begin{document}
+%\maketitle
+%\includepdf{Portada.pdf}
+\include{hoja1.eps}
+%\includegraphics{hoja2.eps}
+%\includegraphics{hoja3.eps}
+\renewcommand{\thepage}{\roman{page}}
+\pagestyle{fancy}
+\fancyhead{}
+%%\fancyhead[LO]{\rightmark}
+%%\fancyhead[RE]{\leftmark}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\thepage}
+%%\setlength{\headheight}{16 pt}
+\fancyfoot{}
+\fancypagestyle{plain}{
+\fancyhead{}
+}
+%*************3 PAGINAS DEL JURADO******************%
+
+\setcounter{page}{4}
+\include{agradecimientos}
+\include{resumen}
+
+\settocname{Contenidos}
+\tableofcontents
+
+
+
+
+\include{intro}
+\include{cap1}
+\include{cap2}
+\include{cap3}
+\include{cap4}
+\include{conclu}
+\nocite{*}
+\linespread{1}
+\bibliographystyle{plain}
+\bibliography{theother}
+%\bibliography{all}
+
+%\printindex
+\end{document}
+
+@Article{,
+author = "",
+title= "",
+journal = ,
+volume = ,
+number = ,
+pages = "",
+year = 19
+}
+
+\section{Introduction and summary}
+Superparticles\index{superparticles} were first described by Casalbuoni \cite{Cas76b} almost 30 years ago. They are particles moving through Salam and Strahdee superspace. The system has internal angular momentum and built in supersymmetry. As a simple model of a classical particle with internal angular momentum the model bears some resemblance with a model for a relativistic top studied by Hanson and Regge \cite{HanReg74}. The real interest in the model arose with the advent of the superstring action \cite{GreSch84} and the understanding of the complicated set of constraints that appear in the canonical analisys. Siegel \cite{Sie83} was the first to discover that the massless superparticle posseses an extra local fermionic symmetry called kappa symmetry. This strange symmetry became so important that stood as a guiding principle that was used to select valid Lagrangians. The superstring and the supermembrane actions were discovered impossing this symmetry. More remarkable it was discovred that if we imposse Siegel symmetry to the action of a supermembrane in a background field we obtaint the whole set of eleven dimensional supergravity equations for the component fields.\\
+But the virtues of supersymmetry are acompanied with problems. In th process of the canonical analisys of the massless superparticle it was found that the set of first class constraints that generate kappa symmetry were tied with a set of second class constraints. With time it become evident that it was not possible to split this constraints in a covariant and irreductible way. Over the years many new ways to deal with the problem of covariant quantization of the superparticle and superstring were proposed with a variety of success. Many of this methods needed to include a infinite tower of ghosts and the meaning of the resulting BRST operator became unclear to say the least. Some of this beautifull ideas were linked to harmonic superspace were the set of infinite fields appeared in an organized way. But the method of harmonic analisys did not solve the main problem of $D=10$ which was the main interest. Infinite fields appeared also in the work of twistor theory with several different versions of what a twistor should be like in ten dimensions. Very interesting geometrical ideas related to twistor theory were inherent in the work of doubly suppersymmetric particles and strings where Siegel symetry were understood as a diffeomorphism of the superworld-line\footnote{This conjeture raises the following question, why massive particles do not posses kappa symmetry?}. Prety as it might be the idea never succeeded in a covariant quatization of a supperstring nor provided an off shell structure for super Yang Mills fields in ten dimensions.\\
+In more modern times a set of remarkcable and profound ideas have ben put foward by Nathan Berkovits. This powerfull machinery has an astounding advantag over previous work: it is applicable. With his work on pure spinors th spectrum of the theories is readly commputed and his techniques are even capable of computing string loops covariantly.\\
+The drawback of the method relies on its foundations. It is not at all clear how to go all the way from the superstring action to the superstring BRST operators described by Berkovits \footnote{Many groups have made substantial work to fill this gap but since there is no general consensus we feel it is justified to say that the problem remains unsolved}\\
+A different question is that of massive superparticles. In general (if central charges are absent) they do not posses kappa symmetry and the problem of finding the correct quantum mechanics of those systems should be a comparatevely simple one. It is courious though that the problem has not been treated properly in the specialiced litterature, as far as we know. Before we embark ourselves into the dull task of the quatum mechanics of the superstring we should be able to find the quantum mechanics of this simpler model. Indeed in this paper we will concentrate in the simplest case of $D=4$ and $N=1$. Increasing $N$ does not result in an increased dificulty but increasing the dimension does raise new problems. In a further publication we shall work out the $D=10$ case.\\
+In the case of massive superparticle there are only second class constraints (besides the mass-shell condition) and Dirac procedure can be applied strightfoward. The problem is that the resulting algebra of brackets is difficult to implement quantum mechanicaly because $\con{x^\mu,x^\nu}\neq 0$.\\
+We solve the problem in two ways. First we find a set of coordinates that satisfy canonical commutation relations. This will be quite easy the result being the chiral coordinates.\\
+In a second moment we will show how Dirac brackets can be represented in general and apply this new method to the present problem where we shall the result of the previous method and a new possibility.\\
+This second posibility is applicable to other circumstances as the $D=10$ massive superpaticle.
+
+
+
+\section{D=10}
+Aunque una gran parte del trabajo que hemos llevado a cabo es
+pr{\'a}cticamente id{\'e}ntica en diez dimensiones hay algunas
+``sutilezas" que hacen que las cosas sean infin{\'\i}tamente m{\'a}s
+dif{\'\i}ciles.
+\\ Empezamos con Super-Maxwell.
+Lo primero que deber{\'\i}amos hacer es escribir una acci{\'o}n nomov. Pero no podemos, no sabemos. Tampoco podemos escribir un supercampo que contenga super Maxwell.
+\\ Pero s{\'\i} podemos hacer geometr{\'\i}a.
+\\ Los fermiones ahora son Majorana-Weyl y tienen 16 componentes reales. La elecci{\'o}n de matrices gamma que me gusta son matrices gamma $16\times 16$ sim{\'e}tricas reales, que son realmente la parte antidiagonal de las matrices de Dirac. Las derivadas ferimi{\'o}nicas son
+\be
+D_a=\p_a+\theta^b\g\p_\mu
+\ee
+Sus reglas de conmutaci{\'o}n son
+\be
+\left\{D_a,D_b\right\}=2\g\p_\mu
+\ee
+Es decir
+\be
+\left\{D_M,D_N\right\}=T_{MN}^{\phantom{MN}L}D_L
+\ee
+con $T_{ab}^{\phantom{ab}\mu}=2\g$
+Otra vez tenemos un supercampo $A_M(x^\mu,\theta^a)$. Las curvaturas son
+\be
+F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\\ F_{\mu a}=\p_\mu A_a-D_a A_\mu
+\\ F_{ab}=D_a A_b+D_b A_a-2\g A_\mu
+\ee
+Veamos que sinenbargo la condici{\'o}n $F_{ab}=0$ es demasiado restrictiva, implica las ecuaciones de movimiento. En este caso la identidad de Bianchi
+\be
+\(\(\mathbb{D}_a,\mathbb{D}_b\),\mathbb{D}_c\)+\(\(\mathbb{D}_c,\mathbb{D}_a\) ,\mathbb{D}_b\)+\(\(\mathbb{D}_b,\mathbb{D}_a\),\mathbb{D}_c\)=0
+\ee
+se escribe como
+\be
+\gamma^\mu_{\phantom{\mu}ab}F_{\mu c}+\gamma^\mu_{\phantom{\mu}ca}F_{\mu b}+\gamma^\mu_{\phantom{\mu}bc}F_{\mu a}=0
+\ee
+Seguir{\'e} en otro momento.
+\\ Quiero explicar algo m{\'a}s importante. En cuatro dimensiones la ligadura $F_{a\db}=0$ es \textit{segura}. Es lo que llaman un \textit{ligadura convencional}. Me ha costado un poco entender porque es importante as{\'\i} que perm{\'\i}tame explicarlo. Si yo tengo un supercampo arbitrario siempre puedo conseguir otro tal que $F_{a\db}=0$, es decir esa ligadura no tiene contenido din{\'a}mico y no puede implicar las ecuaciones de movimiento. Vamos a verlo m{\'a}s de cerca. Esa ligadura nos permite resolver $A_\mu$, de manera que ya no es un campo din{\'a}mico. Si tengo un campo arbitrario yo le puedo sumar algo proporcional a $\sigma_\mu^{\phantom{\db a}}F_{a\db}$ que haga que $F_{a\db}=0$. Si vamos ahora a $D=10$ para poder despejar $A_\mu$ s{\'o}lo necesito que $\g F_{ab}=0$. Pero en $D=10$ esto est{\'a} lejos de implicar que $F_{ab}=0$. En $D=10$ esa es la ligadura convencional o de \textit{redefinici{\'o}n} como le gusta decir a Sohnius, yo prefiero segura porque sabemos qeu no interfiere con las ecuaciones de movimiento. La brillante idea de Nilsson en los a{\~n}os '80 fue la de hacer $F_{ab}=\lambda_a\lambda_b$, donde $\lambda_a$ es un espinor puro que en $D=10$ verifican la
+important{\'\i}sima ecuaci{\'o}n
+\be
+\lambda^a\g\lambda^b=0
+\ee
+Esta elecci{\'o}n implica trivialmente la ligadura convencional pero
+impone m{\'a}s restricciones. El motivo por el que esta idea es tan
+buena es que los $\lambda^a$ son esp{\'\i}nores bos{\'o}nicos que conmutan
+y s{\'o}lo por eso evaden los teoremas de imposibilidad de encontrar
+SuperMaxwell nomov. Pero hay m{\'a}s, viven en una respresentaci{\'o}n
+no-lineal del grupo de Lorentz (con tiempo la estudiaremos porque
+es tremendamente interesante). Campos de este estilo tambien estan
+fuera del alcance de estos teoremas. Estos supercamos estan
+llamados a la fama. Berkovits los usa para realizar la
+cuantizaci{\'o}n covariante de la superpart{\'\i}cula. De hecho eso es
+exactamente lo que nosotros estamos haciendo aqu{\'\i}, \textit{las
+palabras son diferentes}, pero el contenido es el mismo. Dicho con
+adornos, la cuantizaci{\'o}n adecuada de la superpart{\'\i}cula debe ser
+super Maxwell. De uno tiene un operador BRST \textit{de verdad}
+para la superpart{\'\i}cula tiene super Maxwell nomov y al rev{\'e}s si
+tiene super Maxwell nomov tiene un operador BRST para la super
+part{\'\i}cula. No es raro que estos dos problemas hayan ido de la mano
+todos estos a{\~n}os. Pero sigamos con nuestros c{\'a}lculos.
+\\ Lo siguiente ahora es escribir el Lagrangiano de la superpart{\'\i}cula acoplada a super Maxwell. Ahora es m{\'a}s f{\'a}cil y bello que en $D=4$ porque no tenemos ese poco puntos ladillando por todas partes
+\be
+S=\int d\tau\left(\frac{1}{2}e^{-1}\dot z^\mu\dot z_\mu+\dot z^\mu A_\mu+\theta^a A_a\right)
+\ee
+Con $\dot z^\mu=\dot x^\mu+\theta^a\g\dot \theta^b$
+\\ Ahora las ecuaciones de Euler-Lagrange son
+\be
+\frac{d}{d\tau}\left[e^{-1}\dot z_\mu\right]=\dot z^\nu F_{\mu\nu}+\dot\theta^aF_{\mu a}= \dot z^M F_{\mu M}
+\\ 2e^{-1}\dot z_\mu\g\dot\theta^b=\dot z^\mu F_{\mu a}+\dot\theta^bF_{ba}=\dot z^MF_{Ma}
+\ee
+con notaci{\'o}n espero que obvia.
+\\ La pregunta del mill{\'o}n es ahora, ?`bajo que condiciones son estas ecuaciones dependientes?. Si $F_{ab}=\lambda_a\lambda_b$ ?`son dependientes?. A{\'u}n no lo s{\'e}.
+\\ Por otra parte tenemos el {\'a}lgebra de simetr{\'\i}as. Los v{\'\i}nculos de primera clase relevantes son
+\be
+\phi\equiv(p_\mu-A_\mu)^2
+\\ d_a\equiv\pi_a+(p_\mu-A_\mu)\g\theta^b-A_a
+\ee
+Sus reglas de conmutaci{\'o}n
+\be
+\left\{d_a,d_b\right\}=2(p_\mu-A_\mu)\g-F_{ab}
+\\ \left\{d_a,\phi\right\}=2(p^\mu-A^\mu)F_{\mu a}
+\ee
+?`C{\'o}mo extraer de estos v{\'\i}nculos ligaduras de primera clase?
+\section{?`Qu{\'e} es la simetr{\'\i}a \textit{kappa}?}
+En el mejor de los mundos, en el que lograsemos a partir de la simetr{\'\i}a kappa imponer las condiciones necesarias para tener los campos nomov a{\'u}n nos quedar{\'\i}a entender esta simetr{\'\i}a. ?`Porqu{\'e} aparece? Adelanto que no tengo ni idea, lo que sigue son s{\'o}lo malas sugerencias.
+\\ Por un lado uno puede verse tentado a pensar que podr{\'\i}a estar relacionado con alg{\'u}n tipo de simetr{\'\i}a superconforme. Hay varias cosas que pueden poner esta idea sobre un suelo m{\'a}s s{\'o}lido. Es una simetr{\'\i}a que aparece para el caso de masa nula. Podemos verla de una manera m{\'a}s bonita. Si nos olvidamos por completo de ligaduras y dem{\'a}s lo que uno entiende es que el {\'a}lgebra de super Poincar{\`e} se extiende de manera no trivial con las derivadas fermi{\'o}nicas $D_a$. Dicho de otra forma los operadores $P_\mu$, $M_{\mu\nu}$, $Q_a$, $D_a$ forman un (super){\'a}lgebra de Lie. La mejor queja es que esta no es, ni se parece al {\'a}lgebra superconforme. Pero alguien podr{\'\i}a criticar la manera en la que definimos el {\'a}lgebra superconforme. Por ejemplo, la manera habitual es tratar de busca una suerte de ``supersimetrizaci{\'o}n'' del {\'a}lgebra conforme. Desde luego parece una idea intuitivamente agradable pero ?`cual es el contenido geom{\'e}trico de esta {\'a}lgebra?. Fij{\'e}monos que el {\'a}lgebra superconforme as{\'\i} definida es una extensi{\'o}n de Lorentz, no de Poincar{\'e}. ?`Y si lo que comunmente llamamos {\'a}lgebra superconforme fuese ``misleading"? ?`Por qu{\'e} no definir {\'a}lgebra superconforme al {\'a}lgebra de simetr{\'\i}a de la superpart{\'\i}cula sin masa?
+\\ El siguiente problema que hay que enfrentar es que la simetr{\'\i}a kappa es de calibre. La idea aqui es \textit{suponer} que el {\'a}lgebra de superconforme es de dimensi{\'o}n infinita. Si esto es as{\'\i} parte de ella se realizar{\'\i}a como una simetr{\'\i}a de calibre y otra parte (que contiene a super-Poincare) no. Esta forma de pensar explicar{\'\i}a muchos de los problemas asociados a la superpart{\'\i}cula y la raz{\'o}n de ser de la simetr{\'\i}a kappa.
+\\ Una opci{\'o}n que a mi me gusta m{\'a}s es la siguiente. ?`Que tal si el espacio de reprsentaci{\'o}n que estamos eligiendo (el superespacio es reducible pero no descomponible?.
